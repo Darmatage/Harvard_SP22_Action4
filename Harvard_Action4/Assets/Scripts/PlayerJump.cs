@@ -22,8 +22,10 @@ public class PlayerJump : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(isAlive);
-        Debug.Log(IsGrounded());
+        Debug.Log("isAlive variable is: " + isAlive);
+        Debug.Log("IsGrounded variable is: " + IsGrounded());
+
+
         if ((Input.GetButtonDown("Jump")) && (IsGrounded()) && (isAlive == true))
         {
             Jump();
@@ -38,6 +40,10 @@ public class PlayerJump : MonoBehaviour
         //Vector2 movement = new Vector2(rb.velocity.x, jumpForce);
         //rb.velocity = movement;
     }
+
+	// || means or
+	// && means and
+	// == means equals
 
     public bool IsGrounded()
     {
