@@ -22,8 +22,8 @@ public class PlayerJump : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("isAlive variable is: " + isAlive);
-        Debug.Log("IsGrounded variable is: " + IsGrounded());
+        //Debug.Log("isAlive variable is: " + isAlive);
+        //Debug.Log("IsGrounded variable is: " + IsGrounded());
 
 
         if ((Input.GetButtonDown("Jump")) && (IsGrounded()) && (isAlive == true))
