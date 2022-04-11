@@ -40,7 +40,7 @@ public class PlayerCrouch : MonoBehaviour
         if ((groundCheck != null) || (enemyCheck != null))
         {
             return true;
-            //Debug.Log("I can crouch now!");
+            Debug.Log("I can crouch now!");
         }
         return false;
     }
