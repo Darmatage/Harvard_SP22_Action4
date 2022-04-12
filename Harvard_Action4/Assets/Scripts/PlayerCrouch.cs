@@ -24,12 +24,13 @@ public class PlayerCrouch : MonoBehaviour
         if ((Input.GetButtonDown("Crouch")) && (IsGrounded()) && (isAlive == true))
         {
             torso.SetActive(false);
-            animator.SetBool("Crouch", true);
+            //animator.SetBool("Crouch", true);
         }
-        else
+		
+        if (Input.GetButtonUp("Crouch") == true)
         {
             torso.SetActive(true);
-            animator.SetBool("Crouch", false);
+            //animator.SetBool("Crouch", false);
         }
     }
 
@@ -40,7 +41,6 @@ public class PlayerCrouch : MonoBehaviour
         if ((groundCheck != null) || (enemyCheck != null))
         {
             return true;
-            Debug.Log("I can crouch now!");
         }
         return false;
     }
