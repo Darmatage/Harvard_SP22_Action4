@@ -21,6 +21,8 @@ public class GameHandler : MonoBehaviour {
 
       private string sceneName;
 
+      public static string SceneDied = "MainMenu";
+
       void Start(){
             player = GameObject.FindWithTag("Player");
             sceneName = SceneManager.GetActiveScene().name;
@@ -28,6 +30,11 @@ public class GameHandler : MonoBehaviour {
             //      playerHealth = StartPlayerHealth;
             //}
             updateStatsDisplay();
+
+            string thisLevel = SceneManager.GetActiveScene().name;
+            if ((thisLevel != "SceneLose") && (thisLevel != "SceneWin")){
+                 SceneDied = thisLevel;
+           }
       }
 
       public void playerGetMoney(int newMoney){
@@ -93,5 +100,9 @@ public class GameHandler : MonoBehaviour {
 
       public void Credits() {
             SceneManager.LoadScene("Credits");
+      }
+
+      public void ReplayGame (){
+           SceneManager.LoadScene(SceneDied);
       }
 }
