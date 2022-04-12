@@ -12,6 +12,8 @@ public class PlayerJump : MonoBehaviour
     public LayerMask groundLayer;
     public LayerMask enemyLayer;
     public bool isAlive = true;
+	public bool myGroundCheck = false;
+	public float groundRange = 2f;
     //public AudioSource JumpSFX;
 
     void Start()
@@ -30,14 +32,7 @@ public class PlayerJump : MonoBehaviour
             Jump();
             // animator.SetTrigger("Jump");
             // JumpSFX.Play();
-			//turn on is flying
-			//turn of is grounded
         }
-		
-		if (IsGrounded() == true){
-			//turn of is flying
-			//turn on is grounded
-		}
     }
 
     public void Jump()
@@ -53,13 +48,15 @@ public class PlayerJump : MonoBehaviour
 
     public bool IsGrounded()
     {
-        Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 2f, groundLayer);
-        Collider2D enemyCheck = Physics2D.OverlapCircle(feet.position, 2f, enemyLayer);
+        Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, groundRange, groundLayer);
+        Collider2D enemyCheck = Physics2D.OverlapCircle(feet.position, groundRange, enemyLayer);
         if ((groundCheck != null) || (enemyCheck != null))
         {
+			Debug.Log("I can jump now!");
+			myGroundCheck = true;
             return true;
-            //Debug.Log("I can jump now!");
         }
+		myGroundCheck = false;
         return false;
     }
 }

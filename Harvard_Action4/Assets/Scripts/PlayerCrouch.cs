@@ -40,6 +40,7 @@ public class PlayerCrouch : MonoBehaviour
         Collider2D enemyCheck = Physics2D.OverlapCircle(feet.position, 2f, enemyLayer);
         if ((groundCheck != null) || (enemyCheck != null))
         {
+			Debug.Log("I can crouch now!");
             return true;
         }
         return false;
