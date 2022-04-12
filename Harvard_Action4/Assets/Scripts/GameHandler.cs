@@ -7,12 +7,12 @@ using UnityEngine.SceneManagement;
 public class GameHandler : MonoBehaviour {
 
       private GameObject player;
-      public static int playerHealth = 100;
-      public int StartPlayerHealth = 100;
-      public GameObject healthText;
+      //public static int playerHealth = 100;
+      //public int StartPlayerHealth = 100;
+      //public GameObject healthText;
 
-      public static int gotTokens = 0;
-      public GameObject tokensText;
+      public static int gotMoney = 0;
+      public GameObject moneyText;
 
       public bool isDefending = false;
 
@@ -25,41 +25,41 @@ public class GameHandler : MonoBehaviour {
             player = GameObject.FindWithTag("Player");
             sceneName = SceneManager.GetActiveScene().name;
             //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
-                  playerHealth = StartPlayerHealth;
+            //      playerHealth = StartPlayerHealth;
             //}
             updateStatsDisplay();
       }
 
-      public void playerGetTokens(int newTokens){
-            gotTokens += newTokens;
+      public void playerGetMoney(int newMoney){
+            gotMoney += newMoney;
             updateStatsDisplay();
       }
 
-      public void playerGetHit(int damage){
-           if (isDefending == false){
-                  playerHealth -= damage;
-                  if (playerHealth >=0){
-                        updateStatsDisplay();
-                  }
-                  player.GetComponent<PlayerHurt>().playerHit();
-            }
+      //public void playerGetHit(int damage){
+      //     if (isDefending == false){
+      //            playerHealth -= damage;
+      //            if (playerHealth >=0){
+      //                  updateStatsDisplay();
+      //            }
+      //            player.GetComponent<PlayerHurt>().playerHit();
+       //     }
 
-           if (playerHealth >= StartPlayerHealth){
-                  playerHealth = StartPlayerHealth;
-            }
+      //     if (playerHealth >= StartPlayerHealth){
+       //           playerHealth = StartPlayerHealth;
+      //      }
 
-           if (playerHealth <= 0){
-                  playerHealth = 0;
-                  playerDies();
-            }
-      }
+      //     if (playerHealth <= 0){
+      //            playerHealth = 0;
+      //            playerDies();
+      //      }
+      //}
 
       public void updateStatsDisplay(){
-            Text healthTextTemp = healthText.GetComponent<Text>();
-            healthTextTemp.text = "HEALTH: " + playerHealth;
+            //Text healthTextTemp = healthText.GetComponent<Text>();
+            //healthTextTemp.text = "HEALTH: " + playerHealth;
 
-            Text tokensTextTemp = tokensText.GetComponent<Text>();
-            tokensTextTemp.text = "GOLD: " + gotTokens;
+            Text moneyTextTemp = moneyText.GetComponent<Text>();
+            moneyTextTemp.text = "MONEY: " + gotMoney;
       }
 
       public void playerDies(){
@@ -80,7 +80,7 @@ public class GameHandler : MonoBehaviour {
 
       public void RestartGame() {
             SceneManager.LoadScene("MainMenu");
-            playerHealth = StartPlayerHealth;
+            //playerHealth = StartPlayerHealth;
       }
 
       public void QuitGame() {

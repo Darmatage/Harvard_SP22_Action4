@@ -25,13 +25,19 @@ public class PlayerJump : MonoBehaviour
         //Debug.Log("isAlive variable is: " + isAlive);
         //Debug.Log("IsGrounded variable is: " + IsGrounded());
 
-
         if ((Input.GetButtonDown("Jump")) && (IsGrounded()) && (isAlive == true))
         {
             Jump();
             // animator.SetTrigger("Jump");
             // JumpSFX.Play();
+			//turn on is flying
+			//turn of is grounded
         }
+		
+		if (IsGrounded() == true){
+			//turn of is flying
+			//turn on is grounded
+		}
     }
 
     public void Jump()
