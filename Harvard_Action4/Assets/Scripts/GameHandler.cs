@@ -3,9 +3,18 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class GameHandler : MonoBehaviour {
 
+	  public static int playerStat;
+	  
+      public static bool GameisPaused = false;
+      public GameObject pauseMenuUI;
+      public AudioMixer mixer;
+      public static float volumeLevel = 1.0f;
+      private Slider sliderVolumeCtrl;	  
+	  
       private GameObject player;
       //public static int playerHealth = 100;
       //public int StartPlayerHealth = 100;
@@ -22,24 +31,51 @@ public class GameHandler : MonoBehaviour {
       private string sceneName;
 
       public static string SceneDied = "MainMenu";
+	  
+	  public static bool gotitem1 = false;
+      public static bool gotitem2 = false;
+      public static bool gotitem3 = false;
+	  
+	  void Awake (){
+		  SetLevel (volumeLevel);
+				GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
+                if (sliderTemp != null){
+					sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
+                    sliderVolumeCtrl.value = volumeLevel;
+                }
+      }
 
       void Start(){
-            player = GameObject.FindWithTag("Player");
-            sceneName = SceneManager.GetActiveScene().name;
-            //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
-            //      playerHealth = StartPlayerHealth;
-            //}
-            updateStatsDisplay();
+		  player = GameObject.FindWithTag("Player");
+          sceneName = SceneManager.GetActiveScene().name;
+          //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
+          //      playerHealth = StartPlayerHealth;
+          //}
+          updateStatsDisplay();
 
-            string thisLevel = SceneManager.GetActiveScene().name;
-            if ((thisLevel != "SceneLose") && (thisLevel != "SceneWin")){
-                 SceneDied = thisLevel;
-           }
+          string thisLevel = SceneManager.GetActiveScene().name;
+          if ((thisLevel != "SceneLose") && (thisLevel != "SceneWin")){
+               SceneDied = thisLevel;
+          }
+		   
+		  pauseMenuUI.SetActive(false);
+          GameisPaused = false;
+      }
+	  
+	  void Update (){
+		  if (Input.GetKeyDown(KeyCode.Escape)){
+			  if (GameisPaused){
+				  Resume();
+			  }
+              else{
+				  Pause();
+              }
+          }
       }
 
       public void playerGetMoney(int newMoney){
-            gotMoney += newMoney;
-            updateStatsDisplay();
+		  gotMoney += newMoney;
+		  updateStatsDisplay();
       }
 
       //public void playerGetHit(int damage){
@@ -60,7 +96,23 @@ public class GameHandler : MonoBehaviour {
       //            playerDies();
       //      }
       //}
+	void Pause(){
+		pauseMenuUI.SetActive(true);
+		Time.timeScale = 0f;
+		GameisPaused = true;
+		}
 
+    public void Resume(){
+		pauseMenuUI.SetActive(false);
+		Time.timeScale = 1f;
+		GameisPaused = false;
+	}
+
+    public void SetLevel (float sliderValue){
+		mixer.SetFloat("MusicVolume", Mathf.Log10 (sliderValue) * 20);
+		volumeLevel = sliderValue;
+    }
+		
       public void updateStatsDisplay(){
             //Text healthTextTemp = healthText.GetComponent<Text>();
             //healthTextTemp.text = "HEALTH: " + playerHealth;
