@@ -21,7 +21,9 @@ public class GameHandler : MonoBehaviour {
       //public GameObject healthText;
 
       public static int gotMoney = 0;
+	  public static int gotInvestment = 0;
       public GameObject moneyText;
+	  public GameObject investText;
 
       public bool isDefending = false;
 
@@ -32,9 +34,7 @@ public class GameHandler : MonoBehaviour {
 
       public static string SceneDied = "MainMenu";
 	  
-	  public static bool gotitem1 = false;
-      public static bool gotitem2 = false;
-      public static bool gotitem3 = false;
+	  public static bool onBank = true;
 	  
 	  void Awake (){
 		  SetLevel (volumeLevel);
@@ -72,9 +72,15 @@ public class GameHandler : MonoBehaviour {
               }
           }
       }
-
-      public void playerGetMoney(int newMoney){
-		  gotMoney += newMoney;
+	  
+	  public void playerInvestMoney(int money){
+		  gotMoney -= money;
+		  gotInvestment += money;
+		  updateStatsDisplay();
+      }
+	  
+	  public void playerGetMoney(int money){
+		  gotMoney += money;
 		  updateStatsDisplay();
       }
 
@@ -119,6 +125,8 @@ public class GameHandler : MonoBehaviour {
 
             Text moneyTextTemp = moneyText.GetComponent<Text>();
             moneyTextTemp.text = "MONEY: " + gotMoney;
+			Text investTextTemp = investText.GetComponent<Text>();
+            investTextTemp.text = "Investment: " + gotInvestment;
       }
 
       public void playerDies(){

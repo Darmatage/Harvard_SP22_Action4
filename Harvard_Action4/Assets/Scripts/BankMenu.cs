@@ -4,44 +4,54 @@ using UnityEngine;
 
 public class BankMenu : MonoBehaviour
 {
-    public GameHandler gameHandler;
-    public static bool ShopisOpen = false;
-    public GameObject shopMenuUI;
-    public GameObject buttonOpenShop;
+    private GameHandler gameHandler;
+    public bool BankisOpen = false;
+    public GameObject bankMenuUI;
+    public GameObject buttonOpenBank;
 
     public GameObject item1BuyButton;
 
-    public int item1Cost = 1000;
+    public int investmentOption1 = 1000;
     //public AudioSource KaChingSFX;
 
 	void Start (){
-		shopMenuUI.SetActive(false);
+		bankMenuUI.SetActive(false);
 		gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
 	}
 
 	void Update (){
-		if ((GameHandler.gotMoney >= item1Cost) && (GameHandler.gotitem1 == false)) {item1BuyButton.SetActive(true);}
-		else { item1BuyButton.SetActive(false);}
+		//checks money amount to show purchasable good selection
+		if ((GameHandler.gotMoney >= investmentOption1 && GameHandler.onBank == true)) {
+			item1BuyButton.SetActive(true);
+		}
+		else {
+			item1BuyButton.SetActive(false);
+		}
 	}
 
 	//Button Functions:
 	public void Button_OpenShop(){
-		shopMenuUI.SetActive(true);
-		buttonOpenShop.SetActive(false);
-		ShopisOpen = true;
+		bankMenuUI.SetActive(true);
+		buttonOpenBank.SetActive(false);
+		BankisOpen = true;
 	    Time.timeScale = 0f;
 	}
 
 	public void Button_CloseShop() {
-	    shopMenuUI.SetActive(false);
-	    buttonOpenShop.SetActive(true);
-	    ShopisOpen = false;
+	    bankMenuUI.SetActive(false);
+	    buttonOpenBank.SetActive(true);
+	    BankisOpen = false;
 	    Time.timeScale = 1f;
+		//send event to close bank (and make onBank false in gameHandler)
 	}
 
-	public void Button_BuyItem1(){
-		gameHandler.playerGetMoney((item1Cost * -1));
-		GameHandler.gotitem1 = true;
+	public void Button_InvestOption2(){
+		gameHandler.playerInvestMoney(investmentOption1);
+		//KaChingSFX.Play();
+	}
+	
+	public void Button_InvestOption1(){
+		gameHandler.playerInvestMoney(investmentOption1);
 		//KaChingSFX.Play();
 	}
 }
