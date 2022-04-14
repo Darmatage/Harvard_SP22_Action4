@@ -8,13 +8,13 @@ using UnityEngine.Audio;
 public class GameHandler : MonoBehaviour {
 
 	  public static int playerStat;
-	  
+
       public static bool GameisPaused = false;
       public GameObject pauseMenuUI;
       public AudioMixer mixer;
       public static float volumeLevel = 1.0f;
-      private Slider sliderVolumeCtrl;	  
-	  
+      private Slider sliderVolumeCtrl;
+
       private GameObject player;
       //public static int playerHealth = 100;
       //public int StartPlayerHealth = 100;
@@ -34,9 +34,9 @@ public class GameHandler : MonoBehaviour {
       private string sceneName;
 
       public static string SceneDied = "MainMenu";
-	  
+
 	  public static bool onBank;
-	  
+
 	  void Awake (){
 		  SetLevel (volumeLevel);
 				GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
@@ -58,12 +58,12 @@ public class GameHandler : MonoBehaviour {
           if ((thisLevel != "SceneLose") && (thisLevel != "SceneWin")){
                SceneDied = thisLevel;
           }
-		   
+
 		  pauseMenuUI.SetActive(false);
           GameisPaused = false;
 		  onBank = false;
       }
-	  
+
 	  void Update (){
 		  if (Input.GetKeyDown(KeyCode.Escape)){
 			  if (GameisPaused){
@@ -73,22 +73,22 @@ public class GameHandler : MonoBehaviour {
 				  Pause();
               }
           }
-		  
+
 		if (onBank == true){
 			buttonOpenBank.SetActive(true);
 		}
 		else {
 			buttonOpenBank.SetActive(false);
 		}
-		
+
 	}
-	  
+
 	  public void playerInvestMoney(double money){
 		  gotMoney -= money;
 		  gotInvestment += money;
 		  updateStatsDisplay();
       }
-	  
+
 	  public void playerGetMoney(double money){
 		  gotMoney += money;
 		  updateStatsDisplay();
@@ -128,7 +128,7 @@ public class GameHandler : MonoBehaviour {
 		mixer.SetFloat("MusicVolume", Mathf.Log10 (sliderValue) * 20);
 		volumeLevel = sliderValue;
     }
-		
+
       public void updateStatsDisplay(){
             //Text healthTextTemp = healthText.GetComponent<Text>();
             //healthTextTemp.text = "HEALTH: " + playerHealth;
@@ -152,7 +152,7 @@ public class GameHandler : MonoBehaviour {
       }
 
       public void StartGame() {
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Main Test Scene");
       }
 
       public void RestartGame() {
