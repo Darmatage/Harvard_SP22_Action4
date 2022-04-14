@@ -565,7 +565,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 130.1163, y: -4.1696}
+  m_AnchoredPosition: {x: 23, y: -2.687}
   m_SizeDelta: {x: 657.0368, y: 78.156}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4349404207389160983
@@ -823,7 +823,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -524.31, y: 226.99}
+  m_AnchoredPosition: {x: 0, y: 68.7}
   m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5133360852483066390
@@ -1948,7 +1948,7 @@ RectTransform:
   m_GameObject: {fileID: 6241604178393290887}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 2803634426565352945}
   m_Father: {fileID: 6357053129222170153}
@@ -1956,8 +1956,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 409.5, y: 316.7473}
-  m_SizeDelta: {x: 442.5266, y: 86.4953}
+  m_AnchoredPosition: {x: -470.7, y: 280.3}
+  m_SizeDelta: {x: 640.59, y: 83.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7734933102713278624
 CanvasRenderer:
@@ -2063,7 +2063,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 130.1163, y: -4.1696}
+  m_AnchoredPosition: {x: 23, y: -2.6869}
   m_SizeDelta: {x: 657.0368, y: 78.156}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6357053129009897366
@@ -2684,10 +2684,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcbff5b7ec0955b458437c80737ba919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BankisOpen: 0
   bankMenuUI: {fileID: 7347576655440377061}
-  buttonOpenBank: {fileID: 3023843057050937000}
   item1BuyButton: {fileID: 811856943599880497}
+  buttonOpenBank: {fileID: 3023843057050937000}
   investmentOption1: 1000
 --- !u!1 &8195389672126493909
 GameObject:
@@ -2795,7 +2794,7 @@ RectTransform:
   m_GameObject: {fileID: 8259709795787055133}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 6357053129009897364}
   m_Father: {fileID: 6357053129222170153}
@@ -2803,8 +2802,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -418.73666, y: 316.7473}
-  m_SizeDelta: {x: 442.5266, y: 86.4953}
+  m_AnchoredPosition: {x: -473.52, y: 333.4}
+  m_SizeDelta: {x: 640, y: 83.5299}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7584478907521994012
 CanvasRenderer:
@@ -2990,6 +2989,10 @@ PrefabInstance:
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 6164719546585366734}
+    - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
+      propertyPath: buttonOpenBank
+      value: 
+      objectReference: {fileID: 3023843057050937000}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
 --- !u!114 &413376348005775581 stripped

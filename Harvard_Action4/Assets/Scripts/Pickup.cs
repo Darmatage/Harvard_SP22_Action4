@@ -9,7 +9,7 @@ public class Pickup : MonoBehaviour
       public bool isMoneyPickUp = true;
       public bool isSpeedBoostPickUp = false;
 
-      public int moneyIncrease = 1000;
+      public double moneyIncrease = 1000;
 
       void Start(){
             gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();

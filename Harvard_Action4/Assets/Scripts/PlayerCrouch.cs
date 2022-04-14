@@ -7,7 +7,8 @@ public class PlayerCrouch : MonoBehaviour
 
     public Animator animator;
     public Rigidbody2D rb2D;
-    public GameObject torso;
+    public GameObject stand;
+	public GameObject crouch;
     public Transform feet;
     public bool isAlive = true;
     public LayerMask groundLayer;
@@ -17,19 +18,23 @@ public class PlayerCrouch : MonoBehaviour
     {
         animator = gameObject.GetComponentInChildren<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
+		stand.SetActive(true);
+		crouch.SetActive(false);
     }
 
     void Update()
     {
         if ((Input.GetButtonDown("Crouch")) && (IsGrounded()) && (isAlive == true))
         {
-            torso.SetActive(false);
+            stand.SetActive(false);
+			crouch.SetActive(true);
             //animator.SetBool("Crouch", true);
         }
 		
         if (Input.GetButtonUp("Crouch") == true)
         {
-            torso.SetActive(true);
+            stand.SetActive(true);
+			crouch.SetActive(false);
             //animator.SetBool("Crouch", false);
         }
     }

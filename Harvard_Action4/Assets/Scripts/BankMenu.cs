@@ -5,13 +5,11 @@ using UnityEngine;
 public class BankMenu : MonoBehaviour
 {
     private GameHandler gameHandler;
-    public bool BankisOpen = false;
     public GameObject bankMenuUI;
-    public GameObject buttonOpenBank;
-
     public GameObject item1BuyButton;
+	public GameObject buttonOpenBank;
 
-    public int investmentOption1 = 1000;
+    public double investmentOption1 = 1000;
     //public AudioSource KaChingSFX;
 
 	void Start (){
@@ -33,21 +31,13 @@ public class BankMenu : MonoBehaviour
 	public void Button_OpenShop(){
 		bankMenuUI.SetActive(true);
 		buttonOpenBank.SetActive(false);
-		BankisOpen = true;
 	    Time.timeScale = 0f;
 	}
 
 	public void Button_CloseShop() {
 	    bankMenuUI.SetActive(false);
 	    buttonOpenBank.SetActive(true);
-	    BankisOpen = false;
 	    Time.timeScale = 1f;
-		//send event to close bank (and make onBank false in gameHandler)
-	}
-
-	public void Button_InvestOption2(){
-		gameHandler.playerInvestMoney(investmentOption1);
-		//KaChingSFX.Play();
 	}
 	
 	public void Button_InvestOption1(){

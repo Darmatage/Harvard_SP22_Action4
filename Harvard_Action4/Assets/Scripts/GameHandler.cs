@@ -20,10 +20,11 @@ public class GameHandler : MonoBehaviour {
       //public int StartPlayerHealth = 100;
       //public GameObject healthText;
 
-      public static int gotMoney = 0;
-	  public static int gotInvestment = 0;
+      public static double gotMoney = 0;
+	  public static double gotInvestment = 0;
       public GameObject moneyText;
 	  public GameObject investText;
+	  public GameObject buttonOpenBank;
 
       public bool isDefending = false;
 
@@ -34,7 +35,7 @@ public class GameHandler : MonoBehaviour {
 
       public static string SceneDied = "MainMenu";
 	  
-	  public static bool onBank = true;
+	  public static bool onBank;
 	  
 	  void Awake (){
 		  SetLevel (volumeLevel);
@@ -60,6 +61,7 @@ public class GameHandler : MonoBehaviour {
 		   
 		  pauseMenuUI.SetActive(false);
           GameisPaused = false;
+		  onBank = false;
       }
 	  
 	  void Update (){
@@ -71,15 +73,23 @@ public class GameHandler : MonoBehaviour {
 				  Pause();
               }
           }
-      }
+		  
+		if (onBank == true){
+			buttonOpenBank.SetActive(true);
+		}
+		else {
+			buttonOpenBank.SetActive(false);
+		}
+		
+	}
 	  
-	  public void playerInvestMoney(int money){
+	  public void playerInvestMoney(double money){
 		  gotMoney -= money;
 		  gotInvestment += money;
 		  updateStatsDisplay();
       }
 	  
-	  public void playerGetMoney(int money){
+	  public void playerGetMoney(double money){
 		  gotMoney += money;
 		  updateStatsDisplay();
       }
