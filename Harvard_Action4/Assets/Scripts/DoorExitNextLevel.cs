@@ -1,11 +1,10 @@
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DoorExitSimple : MonoBehaviour
+public class DoorExitNextLevel : MonoBehaviour
 {
-
     public string NextLevel = "MainMenu";
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -15,5 +14,4 @@ public class DoorExitSimple : MonoBehaviour
             SceneManager.LoadScene(NextLevel);
         }
     }
-
 }
