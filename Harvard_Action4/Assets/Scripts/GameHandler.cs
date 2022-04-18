@@ -7,35 +7,33 @@ using UnityEngine.Audio;
 
 public class GameHandler : MonoBehaviour {
 
+	//Game Objects
+	public GameObject pauseMenuUI;
+	private GameObject player;
+	public GameObject essenceText;
+	public GameObject essenceBankedText;
+	public GameObject seedText;
+	public GameObject bankMenuUI;
+	
+      //Stat Tracker
+	  public static double heldSeed = 0;
+	  public static double heldEssence = 0;
+	  public static double bankedEssence = 0;
 	  public static int playerStat;
-
       public static bool GameisPaused = false;
-      public GameObject pauseMenuUI;
-      public AudioMixer mixer;
+	  public static bool onBank = false;
+	  
+	  //bank options
+	  public static bool OptionOne = false;
+	  
+	  //Audio
+	  public AudioMixer mixer;
       public static float volumeLevel = 1.0f;
       private Slider sliderVolumeCtrl;
 
-      private GameObject player;
-      //public static int playerHealth = 100;
-      //public int StartPlayerHealth = 100;
-      //public GameObject healthText;
-
-      public static double gotMoney = 0;
-	  public static double gotInvestment = 0;
-      public GameObject moneyText;
-	  public GameObject investText;
-	  public GameObject buttonOpenBank;
-
-      public bool isDefending = false;
-
-      public static bool stairCaseUnlocked = false;
-      //this is a flag check. Add to other scripts: GameHandler.stairCaseUnlocked = true;
-
-      private string sceneName;
-
+      //Scene Related
+	  private string sceneName;
       public static string SceneDied = "MainMenu";
-
-	  public static bool onBank;
 
 	  void Awake (){
 		  SetLevel (volumeLevel);
@@ -49,9 +47,6 @@ public class GameHandler : MonoBehaviour {
       void Start(){
 		  player = GameObject.FindWithTag("Player");
           sceneName = SceneManager.GetActiveScene().name;
-          //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
-          //      playerHealth = StartPlayerHealth;
-          //}
           updateStatsDisplay();
 
           string thisLevel = SceneManager.GetActiveScene().name;
@@ -61,7 +56,6 @@ public class GameHandler : MonoBehaviour {
 
 		  pauseMenuUI.SetActive(false);
           GameisPaused = false;
-		  onBank = false;
       }
 
 	  void Update (){
@@ -73,45 +67,33 @@ public class GameHandler : MonoBehaviour {
 				  Pause();
               }
           }
-
-		if (onBank == true){
-			buttonOpenBank.SetActive(true);
+		  
+		if (GameHandler.onBank == true) {
+			Time.timeScale = 0f;
+			bankMenuUI.SetActive(true);
 		}
 		else {
-			buttonOpenBank.SetActive(false);
+			Time.timeScale = 1f;
+			bankMenuUI.SetActive(false);
 		}
-
 	}
 
-	  public void playerInvestMoney(double money){
-		  gotMoney -= money;
-		  gotInvestment += money;
+	  public void playerGetEssence(double essence){
+		  heldEssence += essence;
+		  updateStatsDisplay();
+      }
+	  
+	  public void playerGetSeed(double seed){
+		  heldSeed += seed;
+		  updateStatsDisplay();
+      }
+	  
+	  public void playerInvestEssence(double essence){
+		  heldEssence -= essence;
+		  bankedEssence += essence;
 		  updateStatsDisplay();
       }
 
-	  public void playerGetMoney(double money){
-		  gotMoney += money;
-		  updateStatsDisplay();
-      }
-
-      //public void playerGetHit(int damage){
-      //     if (isDefending == false){
-      //            playerHealth -= damage;
-      //            if (playerHealth >=0){
-      //                  updateStatsDisplay();
-      //            }
-      //            player.GetComponent<PlayerHurt>().playerHit();
-       //     }
-
-      //     if (playerHealth >= StartPlayerHealth){
-       //           playerHealth = StartPlayerHealth;
-      //      }
-
-      //     if (playerHealth <= 0){
-      //            playerHealth = 0;
-      //            playerDies();
-      //      }
-      //}
 	void Pause(){
 		pauseMenuUI.SetActive(true);
 		Time.timeScale = 0f;
@@ -130,13 +112,12 @@ public class GameHandler : MonoBehaviour {
     }
 
       public void updateStatsDisplay(){
-            //Text healthTextTemp = healthText.GetComponent<Text>();
-            //healthTextTemp.text = "HEALTH: " + playerHealth;
-
-            Text moneyTextTemp = moneyText.GetComponent<Text>();
-            moneyTextTemp.text = "MONEY: " + gotMoney;
-			Text investTextTemp = investText.GetComponent<Text>();
-            investTextTemp.text = "Investment: " + gotInvestment;
+            Text essenceTextTemp = essenceText.GetComponent<Text>();
+            essenceTextTemp.text = "Green Essence: " + heldEssence;
+			Text bankedEssenceTextTemp = essenceBankedText.GetComponent<Text>();
+            bankedEssenceTextTemp.text = "Banked Essence: " + bankedEssence;
+			Text seedTextTemp = seedText.GetComponent<Text>();
+            seedTextTemp.text = "SEED: " + heldSeed;
       }
 
       public void playerDies(){

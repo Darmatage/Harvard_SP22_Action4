@@ -254,7 +254,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8048145376741171486}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BankMenu, Assembly-CSharp
         m_MethodName: Button_InvestOption1
         m_Mode: 1
@@ -266,6 +266,85 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1151008305020251839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2062989171189518778}
+  - component: {fileID: 5952199990152601312}
+  - component: {fileID: 5204186487306785781}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2062989171189518778
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151008305020251839}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1927353888486177416}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 5.0728, y: -2.6871}
+  m_SizeDelta: {x: 873.83, y: 78.156}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5952199990152601312
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151008305020251839}
+  m_CullTransparentMesh: 1
+--- !u!114 &5204186487306785781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151008305020251839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 300
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'SEED:'
 --- !u!1 &1472186935196229289
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,85 +531,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &2111212863053235601
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3133778961178068048}
-  - component: {fileID: 6984621545461081931}
-  - component: {fileID: 6582231769840052692}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &3133778961178068048
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111212863053235601}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4663083532759685488}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &6984621545461081931
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111212863053235601}
-  m_CullTransparentMesh: 1
---- !u!114 &6582231769840052692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111212863053235601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 4
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Bank
 --- !u!1 &2141258101048275555
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,7 +543,7 @@ GameObject:
   - component: {fileID: 4349404207389160983}
   - component: {fileID: 8942471817923908762}
   m_Layer: 5
-  m_Name: investmentText
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -609,7 +609,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Investment:'
+  m_Text: 'Banked Essence:'
 --- !u!1 &2383848026482232456
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,139 +787,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &3023843057050937000
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4663083532759685488}
-  - component: {fileID: 5133360852483066390}
-  - component: {fileID: 1164892916918684227}
-  - component: {fileID: 1098285471942666714}
-  m_Layer: 5
-  m_Name: ButtonOpenBank
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &4663083532759685488
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3023843057050937000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 3133778961178068048}
-  m_Father: {fileID: 6357053129222170153}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 68.7}
-  m_SizeDelta: {x: 200, y: 60}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &5133360852483066390
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3023843057050937000}
-  m_CullTransparentMesh: 1
---- !u!114 &1164892916918684227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3023843057050937000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!114 &1098285471942666714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3023843057050937000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 0.99789345, g: 1, b: 0.78679246, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.9993931, b: 0.30566037, a: 1}
-    m_PressedColor: {r: 0.7735849, g: 0.74250233, b: 0, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1164892916918684227}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8048145376741171486}
-        m_TargetAssemblyTypeName: BankMenu, Assembly-CSharp
-        m_MethodName: Button_OpenShop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &3445557625965551230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,7 +900,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 211.4}
+  m_AnchoredPosition: {x: 0, y: 197.4}
   m_SizeDelta: {x: 133.4, y: 43.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1344166024089499774
@@ -1057,7 +924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1080,6 +947,82 @@ MonoBehaviour:
   m_Text: 'BANK
 
 '
+--- !u!1 &3623248141297738517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1927353888486177416}
+  - component: {fileID: 1725060340426555677}
+  - component: {fileID: 527807062616482850}
+  m_Layer: 5
+  m_Name: SeedUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1927353888486177416
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3623248141297738517}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.49999997, y: 0.49999997, z: 1}
+  m_Children:
+  - {fileID: 2062989171189518778}
+  m_Father: {fileID: 6357053129222170153}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 408.5, y: 331.6}
+  m_SizeDelta: {x: 883.9755, y: 83.53}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1725060340426555677
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3623248141297738517}
+  m_CullTransparentMesh: 1
+--- !u!114 &527807062616482850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3623248141297738517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &3723078609613578375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1933,7 +1876,7 @@ GameObject:
   - component: {fileID: 7734933102713278624}
   - component: {fileID: 3242002160308809185}
   m_Layer: 5
-  m_Name: imageInvestment
+  m_Name: BankedEssenceUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2041,7 +1984,7 @@ GameObject:
   - component: {fileID: 6357053129009897366}
   - component: {fileID: 6357053129009897365}
   m_Layer: 5
-  m_Name: moneyText
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2063,8 +2006,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.38743752, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 107.797, y: -7.4}
-  m_SizeDelta: {x: 650.63, y: 78.156}
+  m_AnchoredPosition: {x: 66.256, y: -5.9}
+  m_SizeDelta: {x: 733.71204, y: 78.156}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6357053129009897366
 CanvasRenderer:
@@ -2107,7 +2050,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Money:'
+  m_Text: 'Green Essence: '
 --- !u!1 &6357053129222170157
 GameObject:
   m_ObjectHideFlags: 0
@@ -2140,7 +2083,7 @@ RectTransform:
   m_Children:
   - {fileID: 3700562555136301103}
   - {fileID: 6463568749661931918}
-  - {fileID: 4663083532759685488}
+  - {fileID: 1927353888486177416}
   - {fileID: 4318208718455388690}
   - {fileID: 900204713359118770}
   m_Father: {fileID: 6899389787228788222}
@@ -2333,9 +2276,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8048145376741171486}
-        m_TargetAssemblyTypeName: BankMenu, Assembly-CSharp
-        m_MethodName: Button_CloseShop
+      - m_Target: {fileID: 413376348005775581}
+        m_TargetAssemblyTypeName: GameHandler, Assembly-CSharp
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2602,7 +2545,7 @@ GameObject:
   - component: {fileID: 4318208718455388690}
   - component: {fileID: 151970879603079887}
   - component: {fileID: 7463059562353261675}
-  - component: {fileID: 8048145376741171486}
+  - component: {fileID: 8562237002484240370}
   m_Layer: 5
   m_Name: BankMenu
   m_TagString: Untagged
@@ -2671,7 +2614,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8048145376741171486
+--- !u!114 &8562237002484240370
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2680,13 +2623,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7347576655440377061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcbff5b7ec0955b458437c80737ba919, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f5e98cba0d5f9646ad732465bd098a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bankMenuUI: {fileID: 7347576655440377061}
-  item1BuyButton: {fileID: 811856943599880497}
-  buttonOpenBank: {fileID: 3023843057050937000}
-  investmentOption1: 1000
+  EssenceOptionOne: 1000
+  optionOneBuyButton: {fileID: 811856943599880497}
 --- !u!1 &8195389672126493909
 GameObject:
   m_ObjectHideFlags: 0
@@ -2778,7 +2719,7 @@ GameObject:
   - component: {fileID: 7584478907521994012}
   - component: {fileID: 4191407036848122548}
   m_Layer: 5
-  m_Name: imageMoney
+  m_Name: EssenceUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2902,13 +2843,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 24100000, guid: ba87a615801120b4c9fa37504ec7d3e2, type: 2}
     - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
+      propertyPath: seedText
+      value: 
+      objectReference: {fileID: 3623248141297738517}
+    - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
       propertyPath: moneyText
       value: 
       objectReference: {fileID: 6357053129009897323}
     - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
+      propertyPath: bankMenuUI
+      value: 
+      objectReference: {fileID: 7347576655440377061}
+    - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
       propertyPath: investText
       value: 
       objectReference: {fileID: 2141258101048275555}
+    - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
+      propertyPath: essenceText
+      value: 
+      objectReference: {fileID: 8259709795787055133}
     - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
       propertyPath: pauseMenuUI
       value: 
@@ -2916,7 +2869,11 @@ PrefabInstance:
     - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
       propertyPath: buttonOpenBank
       value: 
-      objectReference: {fileID: 3023843057050937000}
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
+      propertyPath: essenceBankedText
+      value: 
+      objectReference: {fileID: 6241604178393290887}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
 --- !u!114 &413376348005775581 stripped

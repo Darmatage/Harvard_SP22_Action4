@@ -6,10 +6,10 @@ public class Pickup : MonoBehaviour
 {
 	  private GameHandler gameHandler;
       //public playerVFX playerPowerupVFX;
-      public bool isMoneyPickUp = true;
-      public bool isSpeedBoostPickUp = false;
-
-      public double moneyIncrease = 1000;
+      public bool isSeedPickUp = false;
+	  public bool isEssencePickUp = true;
+      public double seedIncrease = 1;
+	  public double essenceIncrease = 1000;
 
       void Start(){
             gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
@@ -22,10 +22,15 @@ public class Pickup : MonoBehaviour
                   GetComponent<AudioSource>().Play();
                   StartCoroutine(DestroyThis());
 				  
-				  if (isMoneyPickUp == true) {
-                        gameHandler.playerGetMoney(moneyIncrease);
-                        //playerPowerupVFX.powerup();
-                  }
+				  if (isSeedPickUp == true) {
+					  gameHandler.playerGetSeed(seedIncrease);
+					  //playerPowerupVFX.powerup();
+				  }
+					  
+				  if (isEssencePickUp == true) {
+					  gameHandler.playerGetEssence(essenceIncrease);
+					  //playerPowerupVFX.powerup();
+				  }
             }
       }
 
