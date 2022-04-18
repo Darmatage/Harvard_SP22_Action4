@@ -72,6 +72,7 @@ public class GameHandler : MonoBehaviour {
 			Time.timeScale = 0f;
 			bankMenuUI.SetActive(true);
 		}
+		
 		else {
 			Time.timeScale = 1f;
 			bankMenuUI.SetActive(false);

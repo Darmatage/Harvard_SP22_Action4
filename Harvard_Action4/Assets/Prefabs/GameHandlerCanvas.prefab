@@ -2276,9 +2276,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 413376348005775581}
-        m_TargetAssemblyTypeName: GameHandler, Assembly-CSharp
-        m_MethodName: Resume
+      - m_Target: {fileID: 8562237002484240370}
+        m_TargetAssemblyTypeName: BankMenuOptions, Assembly-CSharp
+        m_MethodName: Button_CloseBank
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

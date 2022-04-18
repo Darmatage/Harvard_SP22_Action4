@@ -299,17 +299,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &812104553 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 260090682716944641, guid: f50e051d3a288b041ba02fef8ccf0bf3, type: 3}
-  m_PrefabInstance: {fileID: 7353140390021566305}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87633f047912980408fff549ed02b289, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &852188103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,18 +1136,18 @@ PrefabInstance:
     - target: {fileID: 4206578587140315854, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 812104553}
+      objectReference: {fileID: 415442905}
     - target: {fileID: 4206578587140315854, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4206578587140315854, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Button_CloseShop
+      value: Button_CloseBank
       objectReference: {fileID: 0}
     - target: {fileID: 4206578587140315854, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: BankIntercations, Assembly-CSharp
+      value: BankMenuOptions, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4206578587140315854, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
