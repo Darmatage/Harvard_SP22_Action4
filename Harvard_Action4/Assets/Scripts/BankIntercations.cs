@@ -11,6 +11,11 @@ public class BankIntercations : MonoBehaviour
 	public bool bankOpen = true;
 	public bool finalBank = false;
 	public bool Option1 = true;
+	public bool Option2 = true;
+	public bool Option3 = true;
+	public bool Seed1 = false;
+	public bool Seed2 = false;
+	public bool Seed3 = false;
 	
 	void Start (){
 		gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
@@ -22,14 +27,31 @@ public class BankIntercations : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" && bankOpen == true)
         {
-			GameHandler.onBank = true;
+			Time.timeScale = 0f;
 			bankOpen = false;
+			GameHandler.onBank = true;
 			BankOpened.SetActive(false);
 			BankClosed.SetActive(true);
-			GameHandler.OptionOne = true;
-			Time.timeScale = 0f;
 			GameHandler.heldEssence += GameHandler.bankedEssence * 0.5;
 			gameHandler.updateStatsDisplay();
+			if (Option1 == true) {
+				GameHandler.OptionOne = true;
+			}
+			if (Option2 == true) {
+				GameHandler.OptionTwo = true;
+			}
+			if (Option3 == true) {
+				GameHandler.OptionThree = true;
+			}
+			if (Seed1 == true) {
+				GameHandler.SeedOne = true;
+			}
+			if (Seed2 == true) {
+				GameHandler.SeedTwo = true;
+			}
+			if (Seed3 == true) {
+				GameHandler.SeedThree = true;
+			}
         }
     }
 }

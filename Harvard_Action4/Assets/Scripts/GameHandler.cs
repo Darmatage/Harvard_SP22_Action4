@@ -25,6 +25,11 @@ public class GameHandler : MonoBehaviour {
 	  
 	  //bank options
 	  public static bool OptionOne = false;
+	  public static bool OptionTwo = false;
+	  public static bool OptionThree = false;
+	  public static bool SeedOne = false;
+	  public static bool SeedTwo = false;
+	  public static bool SeedThree = false;
 	  
 	  //Audio
 	  public AudioMixer mixer;
@@ -78,22 +83,16 @@ public class GameHandler : MonoBehaviour {
 			bankMenuUI.SetActive(false);
 		}
 	}
-
-	  public void playerGetEssence(double essence){
-		  heldEssence += essence;
-		  updateStatsDisplay();
-      }
-	  
-	  public void playerGetSeed(double seed){
-		  heldSeed += seed;
-		  updateStatsDisplay();
-      }
-	  
-	  public void playerInvestEssence(double essence){
-		  heldEssence -= essence;
-		  bankedEssence += essence;
-		  updateStatsDisplay();
-      }
+		
+	public void playerGetSeed(double seed){
+		heldSeed += seed;
+		updateStatsDisplay();
+	}
+		
+	public void playerGetEssence(double essence){
+		heldEssence += essence;
+		updateStatsDisplay();
+	}
 
 	void Pause(){
 		pauseMenuUI.SetActive(true);
