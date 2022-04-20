@@ -10,9 +10,9 @@ public class BankIntercations : MonoBehaviour
     //public AudioSource KaChingSFX;
 	public bool bankOpen = true;
 	public bool finalBank = false;
-	public bool Option1 = true;
-	public bool Option2 = true;
-	public bool Option3 = true;
+	private bool Option1 = true;
+	private bool Option2 = true;
+	private bool Option3 = true;
 	private bool Seed1 = false;
 	private bool Seed2 = false;
 	private bool Seed3 = false;
@@ -23,6 +23,11 @@ public class BankIntercations : MonoBehaviour
 		BankClosed.SetActive(false);
 		
 		if (finalBank == true) {
+			Seed1 = true;
+			Seed2 = true;
+			Seed3 = true;
+		}
+		else {
 			Seed1 = true;
 			Seed2 = true;
 			Seed3 = true;
