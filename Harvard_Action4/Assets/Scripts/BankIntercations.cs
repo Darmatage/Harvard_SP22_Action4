@@ -26,11 +26,17 @@ public class BankIntercations : MonoBehaviour
 			Seed1 = true;
 			Seed2 = true;
 			Seed3 = true;
+			Option1 = false;
+			Option2 = false;
+			Option3 = false;
 		}
 		else {
-			Seed1 = true;
-			Seed2 = true;
-			Seed3 = true;
+			Seed1 = false;
+			Seed2 = false;
+			Seed3 = false;
+			Option1 = true;
+			Option2 = true;
+			Option3 = true;
 		}
 	}
 	

@@ -5,7 +5,7 @@ using UnityEngine;
 public class DamageSlow : MonoBehaviour
 {
 
-    public int damage = 1;
+    public double damage = 100;
     public float damageTime = 0.5f;
     private bool isDamaging = false;
     private float damageTimer = 0f;
@@ -28,7 +28,6 @@ public class DamageSlow : MonoBehaviour
             {
                 gameHandlerObj.playerLoseEssence(damage);
                 damageTimer = 0f;
-                Debug.Log("test");
             }
         }
     }
