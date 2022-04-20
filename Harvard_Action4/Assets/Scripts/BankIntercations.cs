@@ -13,14 +13,20 @@ public class BankIntercations : MonoBehaviour
 	public bool Option1 = true;
 	public bool Option2 = true;
 	public bool Option3 = true;
-	public bool Seed1 = false;
-	public bool Seed2 = false;
-	public bool Seed3 = false;
+	private bool Seed1 = false;
+	private bool Seed2 = false;
+	private bool Seed3 = false;
 	
 	void Start (){
 		gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
 		BankOpened.SetActive(true);
 		BankClosed.SetActive(false);
+		
+		if (finalBank == true) {
+			Seed1 = true;
+			Seed2 = true;
+			Seed3 = true;
+		}
 	}
 	
 	void OnTriggerEnter2D(Collider2D other)
@@ -33,7 +39,12 @@ public class BankIntercations : MonoBehaviour
 			BankOpened.SetActive(false);
 			BankClosed.SetActive(true);
 			GameHandler.heldEssence += GameHandler.bankedEssence * 0.5;
+			if (finalBank == true) {
+				GameHandler.heldEssence += GameHandler.bankedEssence;
+				GameHandler.bankedEssence = 0;
+			}
 			gameHandler.updateStatsDisplay();
+			
 			if (Option1 == true) {
 				GameHandler.OptionOne = true;
 			}
