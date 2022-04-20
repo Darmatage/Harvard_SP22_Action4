@@ -26,7 +26,7 @@ public class DamageSlow : MonoBehaviour
             damageTimer += 0.1f;
             if (damageTimer >= damageTime)
             {
-                gameHandlerObj.TakeDamage(damage);
+                gameHandlerObj.playerLoseEssence(damage);
                 damageTimer = 0f;
             }
         }
