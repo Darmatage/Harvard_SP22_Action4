@@ -93,6 +93,14 @@ public class GameHandler : MonoBehaviour {
 		heldEssence += essence;
 		updateStatsDisplay();
 	}
+	
+	public void playerLoseEssence(double essence){
+		heldEssence -= essence;
+		updateStatsDisplay();
+		if (heldEssence <= 0) {
+			//game level resets
+		}
+	}
 
 	void Pause(){
 		pauseMenuUI.SetActive(true);
