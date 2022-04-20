@@ -28,6 +28,7 @@ public class DamageSlow : MonoBehaviour
             {
                 gameHandlerObj.playerLoseEssence(damage);
                 damageTimer = 0f;
+                Debug.Log("test");
             }
         }
     }
