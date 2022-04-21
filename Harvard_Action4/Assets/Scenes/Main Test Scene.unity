@@ -1437,6 +1437,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6242677457660819624, guid: 5a1b44f5d3f2fe646945f988fc939950, type: 3}
+      propertyPath: fallMultiplier
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242677457660819624, guid: 5a1b44f5d3f2fe646945f988fc939950, type: 3}
+      propertyPath: lowJumpMultiplier
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242677457660819625, guid: 5a1b44f5d3f2fe646945f988fc939950, type: 3}
+      propertyPath: jumpForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242677457660819625, guid: 5a1b44f5d3f2fe646945f988fc939950, type: 3}
+      propertyPath: groundRange
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 6242677457660819629, guid: 5a1b44f5d3f2fe646945f988fc939950, type: 3}
       propertyPath: m_RootOrder
       value: 4
