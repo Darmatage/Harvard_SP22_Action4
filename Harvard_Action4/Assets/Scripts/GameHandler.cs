@@ -14,7 +14,7 @@ public class GameHandler : MonoBehaviour {
 	public GameObject essenceBankedText;
 	public GameObject seedText;
 	public GameObject bankMenuUI;
-	
+
       //Stat Tracker
 	  public static double heldSeed = 0;
 	  public static double heldEssence = 0;
@@ -22,7 +22,7 @@ public class GameHandler : MonoBehaviour {
 	  public static int playerStat;
       public static bool GameisPaused = false;
 	  public static bool onBank = false;
-	  
+
 	  //bank options
 	  public static bool OptionOne = false;
 	  public static bool OptionTwo = false;
@@ -30,7 +30,7 @@ public class GameHandler : MonoBehaviour {
 	  public static bool SeedOne = false;
 	  public static bool SeedTwo = false;
 	  public static bool SeedThree = false;
-	  
+
 	  //Audio
 	  public AudioMixer mixer;
       public static float volumeLevel = 1.0f;
@@ -72,28 +72,28 @@ public class GameHandler : MonoBehaviour {
 				  Pause();
               }
           }
-		  
+
 		if (GameHandler.onBank == true) {
 			Time.timeScale = 0f;
 			bankMenuUI.SetActive(true);
 		}
-		
+
 		else {
 			Time.timeScale = 1f;
 			bankMenuUI.SetActive(false);
 		}
 	}
-		
+
 	public void playerGetSeed(double seed){
 		heldSeed += seed;
 		updateStatsDisplay();
 	}
-		
+
 	public void playerGetEssence(double essence){
 		heldEssence += essence;
 		updateStatsDisplay();
 	}
-	
+
 	public void playerLoseEssence(double essence){
 		heldEssence -= essence;
 		updateStatsDisplay();
@@ -141,7 +141,7 @@ public class GameHandler : MonoBehaviour {
       }
 
       public void StartGame() {
-            SceneManager.LoadScene("Main Test Scene");
+            SceneManager.LoadScene("TutorialLevel");
       }
 
       public void RestartGame() {
