@@ -1740,7 +1740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 213580866}
-  camSpeed: 20
+  camSpeed: 100
 --- !u!1 &1609927596
 GameObject:
   m_ObjectHideFlags: 0
