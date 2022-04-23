@@ -14,6 +14,10 @@ public class PlayerMove : MonoBehaviour
     //public AudioSource WalkSFX;
     private Vector3 hMove;
 
+    private Renderer myRend;
+    private Color defaultColor;
+    private bool isSpeedChange = false;
+
     void Start()
     {
         //animator = gameObject.GetComponentInChildren<Animator>();
@@ -65,5 +69,22 @@ public class PlayerMove : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    public void playerMoveModify(float multiplier, bool isNormal)
+    {
+        if (isNormal == true)
+        {
+            runSpeed = startSpeed;
+            isSpeedChange = false;
+            myRend.material.color = defaultColor;
+        }
+        else
+        {
+            runSpeed = (startSpeed * multiplier);
+            isSpeedChange = true;
+            Debug.Log("Speed is now: " + runSpeed);
+            myRend.material.color = new Color(1.0f, 1.0f, 2.5f);
+        }
     }
 }
