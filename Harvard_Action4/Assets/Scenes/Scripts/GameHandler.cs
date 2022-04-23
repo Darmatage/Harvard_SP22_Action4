@@ -109,11 +109,15 @@ public class GameHandler : MonoBehaviour
 
 	public void playerLoseEssence(double essence)
 	{
-		heldEssence -= essence;
-		updateStatsDisplay();
+		
 		if (heldEssence <= 0)
 		{
-			//game level resets
+			playerDies(); //game level resets
+		}
+		else
+        {
+			heldEssence -= essence;
+			updateStatsDisplay();
 		}
 	}
 
