@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LadderMove : MonoBehaviour
 {
-
+    public GameObject upper;
     private Transform playerTrans;
     private Rigidbody2D playerRB;
     public float upSpeed = 10f;
@@ -34,6 +34,7 @@ public class LadderMove : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            upper.GetComponent<BoxCollider2D>().enabled = false; 
             canLadder = true;
             playerRB.gravityScale = 0;
             // if game has jumping, add bool to disable it, and set true here
@@ -44,6 +45,7 @@ public class LadderMove : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            upper.GetComponent<BoxCollider2D>().enabled = true;
             canLadder = false;
             playerRB.gravityScale = 1;
             // if game has jumping, add bool to disable it, and set false here
