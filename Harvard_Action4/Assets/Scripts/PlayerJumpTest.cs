@@ -2,12 +2,12 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
-public class PlayerJump : MonoBehaviour
+public class PlayerJumpTest : MonoBehaviour
 {
 
     //public Animator animator;
     public Rigidbody2D rb;
-    public float jumpForce = 5f;
+    public float jumpForce = 20f;
     public Transform feet;
     public LayerMask groundLayer;
     public LayerMask enemyLayer;

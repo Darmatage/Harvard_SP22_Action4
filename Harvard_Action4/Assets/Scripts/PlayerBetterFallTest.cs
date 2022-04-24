@@ -2,11 +2,11 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
-public class PlayerBetterFall : MonoBehaviour
+public class PlayerBetterFallTest : MonoBehaviour
 {
 
-    public float fallMultiplier = 15f;
-    public float lowJumpMultiplier = 75f;
+    public float fallMultiplier = 2.5f;
+    public float lowJumpMultiplier = 2f;
     Rigidbody2D rb;
 
     void Awake()
