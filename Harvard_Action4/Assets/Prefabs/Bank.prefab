@@ -72,13 +72,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87633f047912980408fff549ed02b289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bankMenuUI: {fileID: 0}
   BankOpened: {fileID: 7353140389341997003}
   BankClosed: {fileID: 7353140389469701064}
   bankOpen: 1
-  onBank: 0
   finalBank: 0
-  Option1: 1
 --- !u!1 &7353140389341997003
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,7 +148,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f19b381fe5af3684c99058998f790d52, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9c7c0513e7b056d48bdb85c9250cf463, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -234,7 +231,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 93b239b013f76984dab15be68afc8df5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 12ccacd038fd91d4fb46f77aa7742e37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
