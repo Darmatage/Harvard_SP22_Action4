@@ -16,7 +16,7 @@ public class PlayerMove : MonoBehaviour
 
     private Renderer myRend;
     private Color defaultColor;
-    private bool isSpeedChange = false;
+    //private bool isSpeedChange = false;
 
     void Start()
     {
@@ -76,13 +76,13 @@ public class PlayerMove : MonoBehaviour
         if (isNormal == true)
         {
             runSpeed = startSpeed;
-            isSpeedChange = false;
+            //isSpeedChange = false;
             myRend.material.color = defaultColor;
         }
         else
         {
             runSpeed = (startSpeed * multiplier);
-            isSpeedChange = true;
+            //isSpeedChange = true;
             Debug.Log("Speed is now: " + runSpeed);
             myRend.material.color = new Color(1.0f, 1.0f, 2.5f);
         }
