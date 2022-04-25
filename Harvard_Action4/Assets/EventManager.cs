@@ -6,20 +6,22 @@ using UnityEngine.EventSystems;
 public class EventManager : MonoBehaviour
 {
     private GameHandler gameHandler;
-	public delegate void on15seed();
-    public static event on15seed at15seed;
+	
+	//event to show invisiable walls 
+	public delegate void have15seed();
+    public static event have15seed On15seed;
 	
 	void Start()
     {
+		Debug.Log("This works");
         gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
     }
 	
-    // Start is called before the first frame update
-    void update()
+    void Update()
     {
-        if (GameHandler.heldSeed >= 15) {
-			if  (at15seed != null) {
-				//at15Seed;
+        if (GameHandler.heldSeed >= 1) {
+			if  (On15seed != null) {
+				On15seed();
 			}
 		}
     }

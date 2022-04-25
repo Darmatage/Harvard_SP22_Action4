@@ -19,17 +19,17 @@ public class PlayerSeeInvisible : MonoBehaviour
     // sub to event
     void OnEnable()
     {
-        //EventManager.on15seed += ShowObject;
+        EventManager.On15seed += ShowObject;
     }
 
     // unsub to event
     void OnDisable()
     {
-        //EventManager.on15seed -= ShowObject;
+        EventManager.On15seed -= ShowObject;
     }
 	
     // opens door to correct position when button is pressed (event)
-    void ShowObject(string tag)
+    void ShowObject()
     {
         if (tag == this.tag)
         {
