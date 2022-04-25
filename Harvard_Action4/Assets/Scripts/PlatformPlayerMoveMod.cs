@@ -1,11 +1,10 @@
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformMove : MonoBehaviour
+public class PlatformPlayerMoveMod : MonoBehaviour
 {
-
-    private PlayerMove pMove;
+	private PlayerMove pMove;
     public bool isSlippery = false;
     public float slipperyMultiplier = 3f;
     public float stickyMultiplier = 0.2f;

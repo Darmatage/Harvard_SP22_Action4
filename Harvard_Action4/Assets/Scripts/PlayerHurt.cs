@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHurt: MonoBehaviour{
 
       //public Animator animator;
-      public Rigidbody2D rb2D;
+      private Rigidbody2D rb2D;
 
       void Start(){
            //animator = gameObject.GetComponentInChildren<Animator>();

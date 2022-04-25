@@ -14,7 +14,7 @@ public class PlayerMove : MonoBehaviour
     //public AudioSource WalkSFX;
     private Vector3 hMove;
 
-    private Renderer myRend;
+    //private Renderer myRend;
     private Color defaultColor;
     //private bool isSpeedChange = false;
 
@@ -77,14 +77,14 @@ public class PlayerMove : MonoBehaviour
         {
             runSpeed = startSpeed;
             //isSpeedChange = false;
-            myRend.material.color = defaultColor;
+            //myRend.material.color = defaultColor;
         }
         else
         {
             runSpeed = (startSpeed * multiplier);
             //isSpeedChange = true;
             Debug.Log("Speed is now: " + runSpeed);
-            myRend.material.color = new Color(1.0f, 1.0f, 2.5f);
+            //myRend.material.color = new Color(1.0f, 1.0f, 2.5f);
         }
     }
 }

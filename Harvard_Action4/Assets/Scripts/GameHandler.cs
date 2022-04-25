@@ -195,6 +195,4 @@ public class GameHandler : MonoBehaviour
 	{
 		SceneManager.LoadScene(SceneDied);
 	}
-
-	
 }
