@@ -18,12 +18,18 @@ public class GameHandler : MonoBehaviour
 
 	//Stat Tracker
 	public static double heldSeed = 0;
+	public static float[] seeds;
 	public static double heldEssence = 0;
 	public static double bankedEssence = 0;
 	public static int playerStat;
 	public static bool GameisPaused = false;
 	public static bool onBank = false;
+	public static bool newGame = true;
 	public static Transform pSpawn;
+	
+	//playerSkills
+	public static bool doubleJumpActive = false;
+	public static bool seeInvisibleActive = false;
 
 	//bank options
 	public static bool OptionOne = false;
@@ -50,6 +56,12 @@ public class GameHandler : MonoBehaviour
 		{
 			sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
 			sliderVolumeCtrl.value = volumeLevel;
+		}
+		
+		// resets all seed counter
+		if (newGame == true) {
+			seeds = new float[60];
+			newGame = false;
 		}
 	}
 
@@ -96,9 +108,11 @@ public class GameHandler : MonoBehaviour
 		}
 	}
 
-	public void playerGetSeed(double seed)
+	public void playerGetSeed(int seedId)
 	{
-		heldSeed += seed;
+		double Temp = 1;
+		heldSeed += Temp;
+		seeds[seedId] = 1;
 		updateStatsDisplay();
 	}
 
@@ -162,8 +176,10 @@ public class GameHandler : MonoBehaviour
 	IEnumerator DeathPause()
 	{
 		player.GetComponent<PlayerMovement>().isAlive = false;
-		yield return new WaitForSeconds(1.0f);
-		SceneManager.LoadScene("SceneLose");
+		yield return new WaitForSeconds(0.5f);
+		heldEssence = 0;
+		bankedEssence = 0;
+		SceneManager.LoadScene("Main Test Scene");
 	}
 
 	public void StartGame()

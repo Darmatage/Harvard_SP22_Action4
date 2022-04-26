@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 	//Stat Tracker
     public bool isAlive = true;
     private bool FaceRight = false;
+	private bool canDoubleJump = false;
     public int fallDamage = 100;
     public float startSpeed = 10f;
     private float runSpeed;
@@ -74,6 +75,18 @@ public class PlayerMovement : MonoBehaviour
             // animator.SetTrigger("Jump");
             // JumpSFX.Play();
         }
+		
+		if ((Input.GetButtonDown("Jump")) && (canDoubleJump) && (!IsGrounded()) && (isAlive == true))
+        {
+            Jump();
+			canDoubleJump = false;
+            // animator.SetTrigger("Jump");
+            // JumpSFX.Play();
+        }
+		
+		if ((IsGrounded()) && (!canDoubleJump) && (GameHandler.doubleJumpActive)) {
+			canDoubleJump = true;
+		}
 		
 		//Crouch Interactions
 		if ((Input.GetButtonDown("Crouch")) && (IsGrounded()) && (isAlive == true))
@@ -138,7 +151,7 @@ public class PlayerMovement : MonoBehaviour
         {
             runSpeed = (startSpeed * multiplier);
             //isSpeedChange = true;
-            Debug.Log("Speed is now: " + runSpeed);
+            //Debug.Log("Speed is now: " + runSpeed);
             //myRend.material.color = new Color(1.0f, 1.0f, 2.5f);
         }
     }

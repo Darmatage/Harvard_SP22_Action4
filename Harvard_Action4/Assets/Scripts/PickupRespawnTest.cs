@@ -25,7 +25,7 @@ public class PickupRespawnTest : MonoBehaviour
                   StartCoroutine(DestroyThis());
 
 				  if (isSeedPickUp == true) {
-					  gameHandler.playerGetSeed(seedIncrease);
+					  //gameHandler.playerGetSeed(seedIncrease);
 					  //playerPowerupVFX.powerup();
 				  }
 

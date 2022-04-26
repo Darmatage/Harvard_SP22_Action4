@@ -4383,6 +4383,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b6bb63cd80d8db45bc27b152443a4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  essenceForDoubleJump: 5000
+  seedForSeeInvisible: 15
 --- !u!1 &8353427589279104998
 GameObject:
   m_ObjectHideFlags: 0

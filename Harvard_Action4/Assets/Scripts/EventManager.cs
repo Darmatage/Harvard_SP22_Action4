@@ -5,11 +5,16 @@ using UnityEngine.EventSystems;
 
 public class EventManager : MonoBehaviour
 {
+	//dependencies 
     private GameHandler gameHandler;
 	
+	//Temp interactions 
+	public double essenceForDoubleJump = 5000;
+	public double seedForSeeInvisible = 15;
+	
 	//event to show invisiable walls 
-	public delegate void have15seed();
-    public static event have15seed On15seed;
+	public delegate void invWallCheck();
+    public static event invWallCheck CanSeeInv;
 	
 	void Start()
     {
@@ -18,9 +23,17 @@ public class EventManager : MonoBehaviour
 	
     void Update()
     {
-        if (GameHandler.heldSeed >= 1) {
-			if  (On15seed != null) {
-				On15seed();
+		if (GameHandler.heldEssence >= essenceForDoubleJump) {
+			GameHandler.doubleJumpActive = true;
+		}
+		
+		if (GameHandler.heldSeed >= seedForSeeInvisible) {
+			GameHandler.seeInvisibleActive = true;
+		}
+		
+        if (GameHandler.seeInvisibleActive == true) {
+			if  (CanSeeInv != null) {
+				CanSeeInv();
 			}
 		}
     }

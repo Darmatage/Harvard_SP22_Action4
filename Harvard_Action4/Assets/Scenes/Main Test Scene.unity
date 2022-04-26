@@ -915,6 +915,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1921182604}
     m_Modifications:
+    - target: {fileID: 6540756128367729900, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
+      propertyPath: SeedId
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6540756128367729901, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2134,7 +2138,6 @@ GameObject:
   - component: {fileID: 1750473571}
   - component: {fileID: 1750473572}
   - component: {fileID: 1750473570}
-  - component: {fileID: 1750473573}
   m_Layer: 3
   m_Name: Floor
   m_TagString: Untagged
@@ -2234,21 +2237,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1750473573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750473569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d05316b341a4374db33596ae141ed96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isSlippery: 1
-  slipperyMultiplier: 3
-  stickyMultiplier: 0.2
 --- !u!1 &1875041221
 GameObject:
   m_ObjectHideFlags: 0
@@ -2917,6 +2905,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1921182604}
     m_Modifications:
+    - target: {fileID: 6540756128367729900, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
+      propertyPath: SeedId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6540756128367729901, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
       propertyPath: m_RootOrder
       value: 2
