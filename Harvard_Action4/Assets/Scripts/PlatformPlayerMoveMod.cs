@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlatformPlayerMoveMod : MonoBehaviour
 {
-	private PlayerMove pMove;
+	private PlayerMovement pMove;
     public bool isSlippery = false;
     public float slipperyMultiplier = 3f;
     public float stickyMultiplier = 0.2f;
 
     void Start()
     {
-        pMove = GameObject.FindWithTag("Player").GetComponent<PlayerMove>();
+        pMove = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
     }
 
     void OnCollisionEnter2D(Collision2D other)

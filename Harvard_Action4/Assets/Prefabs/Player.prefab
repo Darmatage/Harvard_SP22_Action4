@@ -92,10 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6242677457660819629}
   - component: {fileID: 6242677457660819631}
-  - component: {fileID: 6242677457660819630}
-  - component: {fileID: 6242677457660819625}
-  - component: {fileID: 6242677457660819624}
-  - component: {fileID: 2196418221485105258}
+  - component: {fileID: 3909367100033893555}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -142,7 +139,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &6242677457660819630
+--- !u!114 &3909367100033893555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,74 +148,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 6242677457660819621}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cdc678ad8a0f48de94ed9f827578829, type: 3}
+  m_Script: {fileID: 11500000, guid: 02f5363620ce04749b3290c37495aa26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb2D: {fileID: 0}
-  startSpeed: 10
-  isAlive: 1
---- !u!114 &6242677457660819625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6242677457660819621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cf577cb541074647934ba1519c75bbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 6242677457660819631}
-  jumpForce: 10
-  feet: {fileID: 6242677458229955709}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 1
-  isAlive: 1
-  myGroundCheck: 0
-  groundRange: 0.001
---- !u!114 &6242677457660819624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6242677457660819621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 132ca0d1e4b1349368f2504b44ed4eb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallMultiplier: 20
-  lowJumpMultiplier: 50
---- !u!114 &2196418221485105258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6242677457660819621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 164924bf41ce74a9f996cba076698cc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  rb2D: {fileID: 6242677457660819631}
-  stand: {fileID: 6242677459275057973}
-  crouch: {fileID: 6242677458867610166}
-  feet: {fileID: 6242677458229955709}
-  isAlive: 1
+  pStand: {fileID: 6242677459275057973}
+  pCrouch: {fileID: 6242677458867610166}
+  pGroundPoint: {fileID: 6242677458229955709}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   enemyLayer:
     serializedVersion: 2
     m_Bits: 0
+  isAlive: 1
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
+  fallDamage: 100
+  startSpeed: 5
+  jumpForce: 5
+  groundRange: 0.01
 --- !u!1 &6242677458229955708
 GameObject:
   m_ObjectHideFlags: 0

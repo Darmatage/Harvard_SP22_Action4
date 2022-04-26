@@ -23,6 +23,7 @@ public class GameHandler : MonoBehaviour
 	public static int playerStat;
 	public static bool GameisPaused = false;
 	public static bool onBank = false;
+	public static Transform pSpawn;
 
 	//bank options
 	public static bool OptionOne = false;
@@ -154,14 +155,13 @@ public class GameHandler : MonoBehaviour
 
 	public void playerDies()
 	{
-		player.GetComponent<PlayerHurt>().playerDead();
+		player.GetComponent<PlayerMovement>().playerDead();
 		StartCoroutine(DeathPause());
 	}
 
 	IEnumerator DeathPause()
 	{
-		player.GetComponent<PlayerMove>().isAlive = false;
-		player.GetComponent<PlayerJump>().isAlive = false;
+		player.GetComponent<PlayerMovement>().isAlive = false;
 		yield return new WaitForSeconds(1.0f);
 		SceneManager.LoadScene("SceneLose");
 	}

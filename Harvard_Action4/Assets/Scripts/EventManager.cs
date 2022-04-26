@@ -13,7 +13,6 @@ public class EventManager : MonoBehaviour
 	
 	void Start()
     {
-		Debug.Log("This works");
         gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
     }
 	
