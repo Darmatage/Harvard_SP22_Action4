@@ -254,7 +254,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c17fd75d6b4cb47b09e9b7f6cd0aa8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb2D: {fileID: 0}
 --- !u!1 &247575600
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,6 +379,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &323817089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2050623535505760567, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
+  m_PrefabInstance: {fileID: 2022512486}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &323817090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323817089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a0383e93bd6e4c0dbc41afa0edcfe0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSeedPickUp: 0
+  isEssencePickUp: 1
+  seedIncrease: 1
+  essenceIncrease: 1000
 --- !u!1 &378606438
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,6 +412,7 @@ GameObject:
   - component: {fileID: 378606441}
   - component: {fileID: 378606440}
   - component: {fileID: 378606439}
+  - component: {fileID: 378606443}
   m_Layer: 0
   m_Name: Enemy_MoveHit
   m_TagString: Untagged
@@ -411,6 +432,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9188de77b0047b5874960a273679e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  speed: 0
+  damage: 0
+  EnemyLives: 3
+  attackRange: 10
+  isAttacking: 0
 --- !u!61 &378606440
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -473,6 +500,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &378606443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378606438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e650ee70884b749d68a42f3f55de8bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  healthLoot: {fileID: 2050623535505760567, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
+  maxHealth: 100
+  currentHealth: 5
 --- !u!1 &415442901 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7347576655440377061, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
@@ -528,6 +571,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &566842451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2050623535505760567, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
+  m_PrefabInstance: {fileID: 1638605175}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &566842452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566842451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a0383e93bd6e4c0dbc41afa0edcfe0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSeedPickUp: 0
+  isEssencePickUp: 1
+  seedIncrease: 1
+  essenceIncrease: 1000
 --- !u!1001 &590909835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -934,6 +998,27 @@ Transform:
   m_Father: {fileID: 438780119}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &950877383 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2050623535505760567, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
+  m_PrefabInstance: {fileID: 1089204274}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &950877384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950877383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a0383e93bd6e4c0dbc41afa0edcfe0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSeedPickUp: 0
+  isEssencePickUp: 1
+  seedIncrease: 1
+  essenceIncrease: 1000
 --- !u!1001 &956746184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1101,6 +1186,27 @@ Transform:
   m_Father: {fileID: 438780119}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1067612312 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2050623535505760567, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
+  m_PrefabInstance: {fileID: 2079099006}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1067612313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067612312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a0383e93bd6e4c0dbc41afa0edcfe0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSeedPickUp: 0
+  isEssencePickUp: 1
+  seedIncrease: 1
+  essenceIncrease: 1000
 --- !u!1 &1082095474
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,12 +1304,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2050623535505760565, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2050623535505760567, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
       propertyPath: m_Name
       value: GreenEssence (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
+--- !u!1 &1116914620 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2050623535505760567, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
+  m_PrefabInstance: {fileID: 1615744023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1116914625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116914620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a0383e93bd6e4c0dbc41afa0edcfe0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSeedPickUp: 0
+  isEssencePickUp: 1
+  seedIncrease: 1
+  essenceIncrease: 1000
 --- !u!1 &1156853383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,6 +1494,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2050623535505760564, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2050623535505760565, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2050623535505760567, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
@@ -2090,6 +2225,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2050623535505760565, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2050623535505760567, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
       propertyPath: m_Name
       value: GreenEssence
@@ -2145,6 +2284,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2050623535505760564, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2050623535505760565, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2050623535505760567, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
@@ -2469,6 +2612,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1930010175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2050623535505760567, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
+  m_PrefabInstance: {fileID: 1170539905}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1930010176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930010175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a0383e93bd6e4c0dbc41afa0edcfe0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSeedPickUp: 0
+  isEssencePickUp: 1
+  seedIncrease: 1
+  essenceIncrease: 1000
 --- !u!1001 &2022512486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2518,6 +2682,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2050623535505760564, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2050623535505760565, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2050623535505760567, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
@@ -2580,6 +2748,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2050623535505760564, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2050623535505760565, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2050623535505760567, guid: db21558f13e64e4498f574ce138eceb5, type: 3}
@@ -2725,7 +2897,7 @@ Transform:
   m_GameObject: {fileID: 2100393060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6103, y: 0.6103, z: 0.6103}
+  m_LocalScale: {x: 0.21504755, y: 0.21504755, z: 0.21504755}
   m_Children: []
   m_Father: {fileID: 378606442}
   m_RootOrder: 0
