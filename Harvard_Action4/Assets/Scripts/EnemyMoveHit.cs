@@ -3,61 +3,77 @@ using System.Collections;
 using UnityEngine;
 
 public class EnemyMoveHit : MonoBehaviour {
+	private GameHandler gameHandler;
+	private Transform target;
+	public GameObject enemyHead;
+	public Animator anim;
 
-       public Animator anim;
-       public float speed = 4f;
-       private Transform target;
-       public double damage = 10;
+	//metrics 
+	public float speed = 4f;
+	public double damage = 100;
+	public float attackRange = 10;
+	public float damageTime = 0.5f;
 
-       public int EnemyLives = 3;
-       private GameHandler gameHandler;
+	//stats
+	public bool isAttacking = false;
+	private float scaleX;
+	private float damageTimer = 0f;
 
-       public float attackRange = 10;
-       public bool isAttacking = false;
-       private float scaleX;
+	void Start () {
+		anim = GetComponentInChildren<Animator> ();
+		scaleX = gameObject.transform.localScale.x;
 
-       void Start () {
-              anim = GetComponentInChildren<Animator> ();
-              scaleX = gameObject.transform.localScale.x;
+		if (GameObject.FindGameObjectWithTag ("Player") != null) {
+			target = GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform> ();
+		}
 
-              if (GameObject.FindGameObjectWithTag ("Player") != null) {
-                     target = GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform> ();
-              }
+		if (GameObject.FindWithTag ("GameHandler") != null) {
+			gameHandler = GameObject.FindWithTag ("GameHandler").GetComponent<GameHandler> ();
+		}
+	}
 
-              if (GameObject.FindWithTag ("GameHandler") != null) {
-                  gameHandler = GameObject.FindWithTag ("GameHandler").GetComponent<GameHandler> ();
-              }
-       }
+	void Update () {
+		float DistToPlayer = Vector3.Distance(transform.position, target.position);
+				
 
-       void Update () {
-              float DistToPlayer = Vector3.Distance(transform.position, target.position);
+		//enemy Basic AI movement
+		if ((target != null) && (DistToPlayer <= attackRange)){
+			transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
+			if (isAttacking == false) {
+				//anim.SetBool("Walk", true);
+				//flip enemy to face player direction. Wrong direction? Swap the * -1.
+				if (target.position.x > gameObject.transform.position.x){
+					gameObject.transform.localScale = new Vector2(scaleX, gameObject.transform.localScale.y);
+				} else {
+					gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
+				}
+			}
+			//else  { anim.SetBool("Walk", false);}
+		}
+		//else { anim.SetBool("Walk", false);}
+	}
+	   
+	void FixedUpdate(){
+		if (isAttacking == true) {
+			//deals continuous damage while in contact
+			damageTimer += 0.1f;
+			if (damageTimer >= damageTime) {
+				gameHandler.playerLoseEssence(damage);
+				damageTimer = 0f;
+			}
+		}
+	}
+	   
 
-              if ((target != null) && (DistToPlayer <= attackRange)){
-                     transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
-                     if (isAttacking == false) {
-                            //anim.SetBool("Walk", true);
-                            //flip enemy to face player direction. Wrong direction? Swap the * -1.
-                            if (target.position.x > gameObject.transform.position.x){
-                                   gameObject.transform.localScale = new Vector2(scaleX, gameObject.transform.localScale.y);
-                            } else {
-                                    gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
-                            }
-                     }
-                     //else  { anim.SetBool("Walk", false);}
-              }
-               //else { anim.SetBool("Walk", false);}
-       }
-
-       public void OnCollisionEnter2D(Collision2D collision){
-              if (collision.gameObject.tag == "Player") {
+       public void OnCollisionEnter2D(Collision2D collider){
+              if (collider.gameObject.tag == "Player") {
                      isAttacking = true;
                      //anim.SetBool("Attack", true);
-                     gameHandler.playerLoseEssence(damage);
               }
        }
 
-       public void OnCollisionExit2D(Collision2D collision){
-              if (collision.gameObject.tag == "Player") {
+       public void OnCollisionExit2D(Collision2D collider){
+              if (collider.gameObject.tag == "Player") {
                      isAttacking = false;
                      //anim.SetBool("Attack", false);
               }
