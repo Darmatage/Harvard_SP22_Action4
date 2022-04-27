@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BankMenuOptions : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class BankMenuOptions : MonoBehaviour
 	private bool Seed1Have = true;
 	private bool Seed2Have = true;
 	private bool Seed3Have = true;
+	
+    public string NextLevel = "MainMenu";
 	
 	void Start (){
 		gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
@@ -113,12 +116,16 @@ public class BankMenuOptions : MonoBehaviour
 	}
 	
 	public void Button_CloseBank() {
-		GameHandler.onBank = false;
+	GameHandler.onBank = false;
 		GameHandler.OptionOne = false;
 		GameHandler.OptionTwo = false;
 		GameHandler.OptionThree = false;
 		GameHandler.SeedOne = false;
 		GameHandler.SeedTwo = false;
 		GameHandler.SeedThree = false;
+		
+		if (GameHandler.finalBank == true) {
+            SceneManager.LoadScene(NextLevel);
+		}
 	}
 }

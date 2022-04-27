@@ -7,6 +7,8 @@ public class BankIntercations : MonoBehaviour
    private GameHandler gameHandler;
 	public GameObject BankOpened;
 	public GameObject BankClosed;
+	public GameObject FinalBankOpened;
+	public GameObject FinalBankClosed;
     //public AudioSource KaChingSFX;
 	public bool bankOpen = true;
 	public bool finalBank = false;
@@ -19,8 +21,6 @@ public class BankIntercations : MonoBehaviour
 	
 	void Start (){
 		gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
-		BankOpened.SetActive(true);
-		BankClosed.SetActive(false);
 		
 		if (finalBank == true) {
 			Seed1 = true;
@@ -29,6 +29,10 @@ public class BankIntercations : MonoBehaviour
 			Option1 = false;
 			Option2 = false;
 			Option3 = false;
+			BankOpened.SetActive(false);
+			BankClosed.SetActive(false);
+			FinalBankOpened.SetActive(true);
+			FinalBankClosed.SetActive(false);
 		}
 		else {
 			Seed1 = false;
@@ -37,23 +41,38 @@ public class BankIntercations : MonoBehaviour
 			Option1 = true;
 			Option2 = true;
 			Option3 = true;
+			BankOpened.SetActive(true);
+			BankClosed.SetActive(false);
+			FinalBankOpened.SetActive(false);
+			FinalBankClosed.SetActive(false);
 		}
 	}
 	
 	void OnTriggerEnter2D(Collider2D other)
-    {
+    {	
         if (other.gameObject.tag == "Player" && bankOpen == true)
         {
 			Time.timeScale = 0f;
 			bankOpen = false;
 			GameHandler.onBank = true;
-			BankOpened.SetActive(false);
-			BankClosed.SetActive(true);
+			
 			GameHandler.heldEssence += GameHandler.bankedEssence * 0.5;
+			
 			if (finalBank == true) {
+				BankOpened.SetActive(false);
+				BankClosed.SetActive(false);
+				FinalBankOpened.SetActive(false);
+				FinalBankClosed.SetActive(true);
 				GameHandler.heldEssence += GameHandler.bankedEssence;
 				GameHandler.bankedEssence = 0;
+				GameHandler.finalBank = true;
+			} else {
+				BankOpened.SetActive(false);
+				BankClosed.SetActive(true);
+				FinalBankOpened.SetActive(false);
+				FinalBankClosed.SetActive(false);
 			}
+			
 			gameHandler.updateStatsDisplay();
 			
 			if (Option1 == true) {

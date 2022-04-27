@@ -24,6 +24,7 @@ public class GameHandler : MonoBehaviour
 	public static int playerStat;
 	public static bool GameisPaused = false;
 	public static bool onBank = false;
+	public static bool finalBank = false;
 	public static bool newGame = true;
 	public static Transform pSpawn;
 	

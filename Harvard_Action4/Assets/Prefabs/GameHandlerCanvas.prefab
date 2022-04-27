@@ -4384,7 +4384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   essenceForDoubleJump: 5000
-  seedForSeeInvisible: 15
+  seedForSeeInvisible: 10
 --- !u!1 &8353427589279104998
 GameObject:
   m_ObjectHideFlags: 0
@@ -4901,6 +4901,10 @@ PrefabInstance:
       propertyPath: seedText
       value: 
       objectReference: {fileID: 3623248141297738517}
+    - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
       propertyPath: moneyText
       value: 
