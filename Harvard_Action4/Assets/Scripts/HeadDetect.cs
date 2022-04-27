@@ -22,12 +22,14 @@ public class HeadDetect : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other)
     {
 		if (other.gameObject.tag == "Player" && attacking == false) {
+			//disable damage
+			Enemy.GetComponent<EnemyMoveHit>().isAlive = false;
+			Enemy.GetComponent<Collider2D>().enabled = false;
+			//play death animation 
 			GetComponent<Collider2D>().enabled = false;
             Enemy.GetComponent<SpriteRenderer>().flipY = true;
-			Enemy.GetComponent<Collider2D>().enabled = false;
 			rb2d.velocity = Vector2.up * 5f;
 			
-			Instantiate (healthLoot, transform.position, Quaternion.identity);
             //Debug.Log("You killed a baddie. You deserve loot!");
             StartCoroutine(DestroyThis());
 			// Enemy.GetComponent<Collider2D>().enabled = false;
@@ -39,7 +41,9 @@ public class HeadDetect : MonoBehaviour
 
 	IEnumerator DestroyThis(){
 		//anim.SetBool ("isDead", true);
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(0.5f);
+		Instantiate (healthLoot, transform.position, Quaternion.identity);
+		yield return new WaitForSeconds(0.5f);
 		Destroy(Enemy);
 	}
 }

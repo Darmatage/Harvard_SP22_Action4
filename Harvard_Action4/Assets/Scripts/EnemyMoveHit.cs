@@ -16,6 +16,7 @@ public class EnemyMoveHit : MonoBehaviour {
 
 	//stats
 	public bool isAttacking = false;
+	public bool isAlive = true;
 	private float scaleX;
 	private float damageTimer = 0f;
 
@@ -54,7 +55,7 @@ public class EnemyMoveHit : MonoBehaviour {
 	}
 	   
 	void FixedUpdate(){
-		if (isAttacking == true) {
+		if (isAttacking == true && isAlive) {
 			//deals continuous damage while in contact
 			damageTimer += 0.1f;
 			if (damageTimer >= damageTime) {
@@ -63,10 +64,9 @@ public class EnemyMoveHit : MonoBehaviour {
 			}
 		}
 	}
-	   
 
        public void OnCollisionEnter2D(Collision2D collider){
-              if (collider.gameObject.tag == "Player") {
+              if (collider.gameObject.tag == "Player" && isAlive) {
                      isAttacking = true;
                      //anim.SetBool("Attack", true);
               }
