@@ -4007,7 +4007,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 62
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -26778,6 +26778,14 @@ PrefabInstance:
     - target: {fileID: 3710601609952360658, guid: 5a1b44f5d3f2fe646945f988fc939950, type: 3}
       propertyPath: m_Offset.y
       value: -0.09227378
+      objectReference: {fileID: 0}
+    - target: {fileID: 3909367100033893555, guid: 5a1b44f5d3f2fe646945f988fc939950, type: 3}
+      propertyPath: jumpForce
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3909367100033893555, guid: 5a1b44f5d3f2fe646945f988fc939950, type: 3}
+      propertyPath: startSpeed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6242677457660819621, guid: 5a1b44f5d3f2fe646945f988fc939950, type: 3}
       propertyPath: m_Name
