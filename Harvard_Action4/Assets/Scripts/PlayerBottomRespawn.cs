@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerBottomRespawn : MonoBehaviour
 {
     private GameHandler gameHandler;
-    public Transform playerPos;
+    private Transform playerPos;
     public Transform pSpawn;
-    public int damage = 10;
+    public int damage = 100;
 
 
     void Start()

@@ -58,6 +58,7 @@ public class BankIntercations : MonoBehaviour
 			GameHandler.heldEssence += GameHandler.bankedEssence * 0.5;
 			
 			if (finalBank == true) {
+				finalBank = false;
 				BankOpened.SetActive(false);
 				BankClosed.SetActive(false);
 				FinalBankOpened.SetActive(false);

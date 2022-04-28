@@ -25,6 +25,7 @@ public class GameHandler : MonoBehaviour
 	public static bool GameisPaused = false;
 	public static bool onBank = false;
 	public static bool finalBank = false;
+	public static bool sceneChange = false;
 	public static bool newGame = true;
 	public static Transform pSpawn;
 	
@@ -48,6 +49,7 @@ public class GameHandler : MonoBehaviour
 	//Scene Related
 	private string sceneName;
 	public static string SceneDied = "MainMenu";
+    public string NextLevel = "MainMenu";
 
 	void Awake()
 	{
@@ -96,7 +98,7 @@ public class GameHandler : MonoBehaviour
 			}
 		}
 
-		if (GameHandler.onBank == true)
+		if (onBank == true)
 		{
 			bankMenuUI.SetActive(true);
 		}
@@ -104,6 +106,17 @@ public class GameHandler : MonoBehaviour
 		else
 		{
 			bankMenuUI.SetActive(false);
+		}
+		
+		if (sceneChange == true)
+		{
+			sceneChange = false;
+			finalBank = false;
+			onBank = false;
+			bankedEssence = 0;
+			heldEssence = 0;
+			Time.timeScale = 1f;
+            SceneManager.LoadScene(NextLevel);
 		}
 	}
 
@@ -209,5 +222,9 @@ public class GameHandler : MonoBehaviour
 	public void ReplayGame()
 	{
 		SceneManager.LoadScene(SceneDied);
+	}
+	
+	public void NewGame() {
+		GameHandler.sceneChange = true;
 	}
 }

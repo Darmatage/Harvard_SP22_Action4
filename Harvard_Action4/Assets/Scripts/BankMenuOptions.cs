@@ -18,6 +18,7 @@ public class BankMenuOptions : MonoBehaviour
 	public GameObject Seed1;
 	public GameObject Seed2;
 	public GameObject Seed3;
+	public GameObject closeOption;
 	private bool Seed1Have = true;
 	private bool Seed2Have = true;
 	private bool Seed3Have = true;
@@ -72,6 +73,12 @@ public class BankMenuOptions : MonoBehaviour
 			else {
 				Seed3.SetActive(false);
 			}
+			if (GameHandler.finalBank == true) {
+				closeOption.SetActive(true);
+			}
+			else {
+				closeOption.SetActive(false);
+			}
 		}
 		//reset seed selection on new level
 	}
@@ -117,7 +124,7 @@ public class BankMenuOptions : MonoBehaviour
 	
 	public void Button_CloseBank() {
 		if (GameHandler.finalBank == true) {
-            SceneManager.LoadScene(NextLevel);
+            GameHandler.sceneChange = true;
 		}
 	}
 }

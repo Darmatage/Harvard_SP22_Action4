@@ -130,13 +130,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 413376348005775581, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
+      propertyPath: NextLevel
+      value: Level4
+      objectReference: {fileID: 0}
     - target: {fileID: 6348622772079410263, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
       propertyPath: m_Name
       value: GameHandlerCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 6899389787228788222, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6899389787228788222, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -953,7 +957,7 @@ Transform:
   - {fileID: 1335979934}
   - {fileID: 517978048}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1247037629
 PrefabInstance:
