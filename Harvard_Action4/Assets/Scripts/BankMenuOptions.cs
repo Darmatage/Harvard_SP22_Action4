@@ -116,14 +116,6 @@ public class BankMenuOptions : MonoBehaviour
 	}
 	
 	public void Button_CloseBank() {
-	GameHandler.onBank = false;
-		GameHandler.OptionOne = false;
-		GameHandler.OptionTwo = false;
-		GameHandler.OptionThree = false;
-		GameHandler.SeedOne = false;
-		GameHandler.SeedTwo = false;
-		GameHandler.SeedThree = false;
-		
 		if (GameHandler.finalBank == true) {
             SceneManager.LoadScene(NextLevel);
 		}

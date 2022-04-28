@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
+        gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
         pRb2D = GetComponent<Rigidbody2D>();
         pAnimator = GetComponent<Animator>();
 		runSpeed = startSpeed;
@@ -89,14 +90,14 @@ public class PlayerMovement : MonoBehaviour
 		}
 		
 		//Crouch Interactions
-		if ((Input.GetButtonDown("Crouch")) && (IsGrounded()) && (isAlive == true))
+		if ((Input.GetButtonDown("Crouch")) && (IsGrounded()) && (isAlive == true) && (GameHandler.finalBank == false))
         {
             pStand.SetActive(false);
 			pCrouch.SetActive(true);
             //animator.SetBool("Crouch", true);
         }
 		
-        if (Input.GetButtonUp("Crouch") == true)
+        if ((Input.GetButtonUp("Crouch") == true) && (GameHandler.finalBank == false))
         {
             pStand.SetActive(true);
 			pCrouch.SetActive(false);

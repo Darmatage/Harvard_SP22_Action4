@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2050623535505760567}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.08, y: -0.37, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -47,9 +47,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.0032571554}
+  m_Offset: {x: 0, y: -0.12203413}
   serializedVersion: 2
-  m_Radius: 0.24919641
+  m_Radius: 0.32228988
 --- !u!212 &2050623535505760571
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSeedPickUp: 0
+  SeedId: 0
   isEssencePickUp: 1
   seedIncrease: 1
   essenceIncrease: 1000

@@ -10,7 +10,7 @@ public class BankIntercations : MonoBehaviour
 	public GameObject FinalBankOpened;
 	public GameObject FinalBankClosed;
     //public AudioSource KaChingSFX;
-	public bool bankOpen = true;
+	private bool bankOpen = true;
 	public bool finalBank = false;
 	private bool Option1 = true;
 	private bool Option2 = true;
@@ -50,12 +50,11 @@ public class BankIntercations : MonoBehaviour
 	
 	void OnTriggerEnter2D(Collider2D other)
     {	
+		GameHandler.onBank = true;
+		
         if (other.gameObject.tag == "Player" && bankOpen == true)
         {
-			Time.timeScale = 0f;
 			bankOpen = false;
-			GameHandler.onBank = true;
-			
 			GameHandler.heldEssence += GameHandler.bankedEssence * 0.5;
 			
 			if (finalBank == true) {
@@ -63,9 +62,10 @@ public class BankIntercations : MonoBehaviour
 				BankClosed.SetActive(false);
 				FinalBankOpened.SetActive(false);
 				FinalBankClosed.SetActive(true);
+				GameHandler.finalBank = true;
 				GameHandler.heldEssence += GameHandler.bankedEssence;
 				GameHandler.bankedEssence = 0;
-				GameHandler.finalBank = true;
+				Time.timeScale = 0f;
 			} else {
 				BankOpened.SetActive(false);
 				BankClosed.SetActive(true);
@@ -74,7 +74,10 @@ public class BankIntercations : MonoBehaviour
 			}
 			
 			gameHandler.updateStatsDisplay();
+		}
 			
+		
+		if (other.gameObject.tag == "Player") {
 			if (Option1 == true) {
 				GameHandler.OptionOne = true;
 			}
@@ -92,7 +95,19 @@ public class BankIntercations : MonoBehaviour
 			}
 			if (Seed3 == true) {
 				GameHandler.SeedThree = true;
-			}
-        }
+			}		
+		}
     }
+	
+	void OnTriggerExit2D(Collider2D other) {
+		GameHandler.onBank = false;
+		GameHandler.OptionOne = false;
+		GameHandler.OptionTwo = false;
+		GameHandler.OptionThree = false;
+		GameHandler.SeedOne = false;
+		GameHandler.SeedTwo = false;
+		GameHandler.SeedThree = false;
+		Time.timeScale = 1f;
+		bankOpen = false;
+	}
 }
