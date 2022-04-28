@@ -4022,6 +4022,7 @@ MonoBehaviour:
   Seed1: {fileID: 3244635635778203949}
   Seed2: {fileID: 1169823864068126303}
   Seed3: {fileID: 5302884393521814524}
+  NextLevel: MainMenu
 --- !u!1 &7756520633584999822
 GameObject:
   m_ObjectHideFlags: 0
@@ -4900,7 +4901,7 @@ PrefabInstance:
     - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
       propertyPath: seedText
       value: 
-      objectReference: {fileID: 3623248141297738517}
+      objectReference: {fileID: 1151008305020251839}
     - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -4920,7 +4921,7 @@ PrefabInstance:
     - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
       propertyPath: essenceText
       value: 
-      objectReference: {fileID: 8259709795787055133}
+      objectReference: {fileID: 6357053129009897323}
     - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
       propertyPath: pauseMenuUI
       value: 
@@ -4932,7 +4933,7 @@ PrefabInstance:
     - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
       propertyPath: essenceBankedText
       value: 
-      objectReference: {fileID: 6241604178393290887}
+      objectReference: {fileID: 2141258101048275555}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
 --- !u!114 &413376348005775581 stripped

@@ -61,7 +61,7 @@ public class GameHandler : MonoBehaviour
 		
 		// resets all seed counter
 		if (newGame == true) {
-			seeds = new float[60];
+			seeds = new float[600];
 			newGame = false;
 		}
 	}
