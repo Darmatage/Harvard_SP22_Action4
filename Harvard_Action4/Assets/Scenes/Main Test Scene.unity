@@ -692,11 +692,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7353140388915412761, guid: f50e051d3a288b041ba02fef8ccf0bf3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5
+      value: 70.12
       objectReference: {fileID: 0}
     - target: {fileID: 7353140388915412761, guid: f50e051d3a288b041ba02fef8ccf0bf3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: -1.15
       objectReference: {fileID: 0}
     - target: {fileID: 7353140388915412761, guid: f50e051d3a288b041ba02fef8ccf0bf3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1122,7 +1122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa25bf86da3d465f8d516a60075687e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPos: {fileID: 0}
   pSpawn: {fileID: 180438744}
   damage: 100
 --- !u!1001 &1089204274
@@ -2011,7 +2010,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae1c26ba586ca45bea9ecdafd4bdbd92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   camSpeed: 20
 --- !u!1001 &1615744023
 PrefabInstance:
