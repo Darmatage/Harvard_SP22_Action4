@@ -191,7 +191,7 @@ public class GameHandler : MonoBehaviour
 		yield return new WaitForSeconds(0.5f);
 		heldEssence = 0;
 		bankedEssence = 0;
-		SceneManager.LoadScene("Main Test Scene");
+		SceneManager.LoadScene("MainMenu");
 	}
 
 	public void StartGame()
