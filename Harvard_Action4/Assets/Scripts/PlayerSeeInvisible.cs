@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.EventSystems; 
+using UnityEngine.Tilemaps;
 
 public class PlayerSeeInvisible : MonoBehaviour
 {
-	private SpriteRenderer spRen;
-	private BoxCollider2D BoxCo2d;
+	private TilemapRenderer tR;
+	private TilemapCollider2D tC2d;
 	
     void Start()
     {
-        spRen = GetComponent<SpriteRenderer>();
-		BoxCo2d = GetComponent<BoxCollider2D>();
-		spRen.enabled = false;
-		BoxCo2d.enabled = false;
+        tR = GetComponent<TilemapRenderer>();
+		tC2d = GetComponent<TilemapCollider2D>();
+		tR.enabled = false;
+		tC2d.enabled = false;
     }
 
     // sub to event
@@ -33,8 +34,8 @@ public class PlayerSeeInvisible : MonoBehaviour
     {
         if (tag == this.tag)
         {
-			spRen.enabled = true;
-			BoxCo2d.enabled = true;
+			tR.enabled = true;
+			tC2d.enabled = true;
         }
     }
 }
