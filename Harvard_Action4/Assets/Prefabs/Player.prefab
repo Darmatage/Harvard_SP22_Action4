@@ -154,6 +154,7 @@ MonoBehaviour:
   pStand: {fileID: 6242677459275057973}
   pCrouch: {fileID: 6242677458867610166}
   pGroundPoint: {fileID: 6242677458229955709}
+  bottomOfLevel: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8

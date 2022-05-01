@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject pStand;
 	public GameObject pCrouch;
     public Transform pGroundPoint;
+    public Transform checkpoint;
+    public Transform bottomOfLevel;
 	
 	//Layer info
     public LayerMask groundLayer;
@@ -103,6 +105,15 @@ public class PlayerMovement : MonoBehaviour
 			pCrouch.SetActive(false);
             //animator.SetBool("Crouch", false);
         }
+		
+		//fall respawn mechanic
+        if (bottomOfLevel.position.y >= transform.position.y)
+		{
+			//instantiate a particle effect
+			gameHandler.playerLoseEssence(fallDamage);
+			Vector3 pSpn2 = new Vector3(checkpoint.position.x, checkpoint.position.y, transform.position.z);
+			transform.position = pSpn2;
+		}
     }
 
     void FixedUpdate()

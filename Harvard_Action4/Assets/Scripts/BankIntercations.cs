@@ -101,14 +101,16 @@ public class BankIntercations : MonoBehaviour
     }
 	
 	void OnTriggerExit2D(Collider2D other) {
-		GameHandler.onBank = false;
-		GameHandler.OptionOne = false;
-		GameHandler.OptionTwo = false;
-		GameHandler.OptionThree = false;
-		GameHandler.SeedOne = false;
-		GameHandler.SeedTwo = false;
-		GameHandler.SeedThree = false;
-		Time.timeScale = 1f;
-		bankOpen = false;
+		if (other.gameObject.tag == "Player") {
+			GameHandler.onBank = false;
+			GameHandler.OptionOne = false;
+			GameHandler.OptionTwo = false;
+			GameHandler.OptionThree = false;
+			GameHandler.SeedOne = false;
+			GameHandler.SeedTwo = false;
+			GameHandler.SeedThree = false;
+			Time.timeScale = 1f;
+			bankOpen = false;
+		}
 	}
 }
