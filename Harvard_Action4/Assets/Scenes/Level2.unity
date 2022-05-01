@@ -233,7 +233,7 @@ TilemapRenderer:
   m_SortOrder: 0
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
 --- !u!1839735485 &262110610
 Tilemap:
   m_ObjectHideFlags: 0
@@ -1184,6 +1184,14 @@ PrefabInstance:
     - target: {fileID: 6348622772079410263, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
       propertyPath: m_Name
       value: GameHandlerCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806657148917998713, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
+      propertyPath: seedForSeeInvisible
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806657148917998713, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
+      propertyPath: essenceForDoubleJump
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6899389787228788222, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
       propertyPath: m_RootOrder
