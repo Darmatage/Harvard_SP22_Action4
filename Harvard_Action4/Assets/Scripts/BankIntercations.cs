@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BankIntercations : MonoBehaviour
 {
-   private GameHandler gameHandler;
+    private GameHandler gameHandler;
+    private PlayerMovement player;
 	public GameObject BankOpened;
 	public GameObject BankClosed;
 	public GameObject FinalBankOpened;
@@ -21,6 +22,7 @@ public class BankIntercations : MonoBehaviour
 	
 	void Start (){
 		gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
+        player = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
 		
 		if (finalBank == true) {
 			Seed1 = true;
@@ -51,11 +53,13 @@ public class BankIntercations : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D other)
     {	
 		GameHandler.onBank = true;
+		player.checkpoint.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);;
 		
         if (other.gameObject.tag == "Player" && bankOpen == true)
         {
 			bankOpen = false;
 			GameHandler.heldEssence += GameHandler.bankedEssence * 0.5;
+			
 			
 			if (finalBank == true) {
 				finalBank = false;
