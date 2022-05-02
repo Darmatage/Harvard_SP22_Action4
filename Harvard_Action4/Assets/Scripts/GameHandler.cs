@@ -15,9 +15,10 @@ public class GameHandler : MonoBehaviour
 	public GameObject essenceBankedText;
 	public GameObject seedText;
 	public GameObject bankMenuUI;
+	public GameObject treeMenuUI;
 
 	//Stat Tracker
-	public static double heldSeed = 0;
+	public static double heldSeed = 5;
 	public static float[] seeds;
 	public static double heldEssence = 0;
 	public static double bankedEssence = 0;
@@ -27,11 +28,22 @@ public class GameHandler : MonoBehaviour
 	public static bool finalBank = false;
 	public static bool sceneChange = false;
 	public static bool newGame = true;
+	public static bool onTree = false;
 	public static Transform pSpawn;
+	
+	//tree stage
+	public static bool tree0 = true;
+	public static bool tree1 = false;
+	public static bool tree2 = false;
+	public static bool tree3 = false;
+	public static bool tree4 = false;
+	public static bool tree5 = false;
 	
 	//playerSkills
 	public static bool doubleJumpActive = false;
 	public static bool seeInvisibleActive = false;
+	public static bool crouchStopWind = false;
+	public static bool zoomOut = false;
 
 	//bank options
 	public static bool OptionOne = false;
@@ -40,6 +52,14 @@ public class GameHandler : MonoBehaviour
 	public static bool SeedOne = false;
 	public static bool SeedTwo = false;
 	public static bool SeedThree = false;
+	
+	//tree options
+	public static bool SeedOptionOne = true;
+	public static bool SeedOptionTwo = true;
+	public static bool SeedOptionThree = true;
+	public static bool SeedOptionFour = true;
+	public static bool SeedOptionFive = true;
+	public static bool SeedOptionSix = true;
 
 	//Audio
 	public AudioMixer mixer;
@@ -101,11 +121,17 @@ public class GameHandler : MonoBehaviour
 		if (onBank == true)
 		{
 			bankMenuUI.SetActive(true);
-		}
-
-		else
+		} else
 		{
 			bankMenuUI.SetActive(false);
+		}
+		
+		if (onTree == true)
+		{
+			treeMenuUI.SetActive(true);
+		} else
+		{
+			treeMenuUI.SetActive(false);
 		}
 		
 		if (sceneChange == true)
