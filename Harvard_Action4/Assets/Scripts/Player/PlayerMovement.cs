@@ -32,11 +32,14 @@ public class PlayerMovement : MonoBehaviour
     public float fallGravityMultiplier = 10f;
     public float jumpGravityMultiplier = 8f;
 	public float groundRange = 0.01f;
+	public float windSpeed = 5f;
 	
 	//others
     //public AudioSource WalkSFX;
     //public AudioSource JumpSFX;
     private Vector3 hMove;
+    private Vector3 hLMove;
+    private Vector3 hRMove;
 
     void Awake()
     {
@@ -184,8 +187,21 @@ public class PlayerMovement : MonoBehaviour
 			//animator.SetTrigger ("Dead");
 			isAlive = false;
 		}
-		
     }
+	
+	public void WindMoveLeft() {
+		if (isAlive == true) {
+			hLMove = new Vector3(-1f, 0.0f, 0.0f);
+			transform.position = transform.position + hMove * windSpeed * Time.deltaTime;
+		}
+	}
+	
+	public void WindMoveRight() {
+		if (isAlive == true) {
+			hRMove = new Vector3(1f, 0.0f, 0.0f);
+			transform.position = transform.position + hMove * windSpeed * Time.deltaTime;
+		}
+	}
 
     public bool IsGrounded()
     {

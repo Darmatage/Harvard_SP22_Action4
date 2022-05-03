@@ -10366,6 +10366,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameHandlerCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6806657148917998713, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
+      propertyPath: Testing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806657148917998713, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
+      propertyPath: TEST_SeeInvisible
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6899389787228788222, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
       propertyPath: m_RootOrder
       value: 1

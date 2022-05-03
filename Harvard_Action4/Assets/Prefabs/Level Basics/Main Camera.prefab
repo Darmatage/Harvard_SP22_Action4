@@ -96,5 +96,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae1c26ba586ca45bea9ecdafd4bdbd92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   camSpeed: 20
+  vertical: 0.8

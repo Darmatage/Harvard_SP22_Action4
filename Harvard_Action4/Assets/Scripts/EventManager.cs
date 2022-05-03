@@ -8,9 +8,12 @@ public class EventManager : MonoBehaviour
 	//dependencies 
     private GameHandler gameHandler;
 	
-	//Temp interactions 
-	public double essenceForDoubleJump = 5000;
-	public double seedForSeeInvisible = 15;
+	//Testing
+	public bool Testing = false;
+	public bool TEST_DoubleJump = true;
+	public bool TEST_SeeInvisible = true;
+	public bool TEST_crouchStopWind = false;
+	public bool TEST_zoomOut = false;
 	
 	//event to show invisiable walls 
 	public delegate void invWallCheck();
@@ -23,12 +26,22 @@ public class EventManager : MonoBehaviour
 	
     void Update()
     {
-		if (GameHandler.heldEssence >= essenceForDoubleJump) {
-			GameHandler.doubleJumpActive = true;
-		}
-		
-		if (GameHandler.heldSeed >= seedForSeeInvisible) {
-			GameHandler.seeInvisibleActive = true;
+		if (Testing == true) {
+			if (TEST_DoubleJump == true) {
+				GameHandler.doubleJumpActive = true;
+			}
+			
+			if (TEST_SeeInvisible == true) {
+				GameHandler.seeInvisibleActive = true;
+			}
+			
+			if (TEST_crouchStopWind == true) {
+				GameHandler.crouchStopWind = true;
+			}
+			
+			if (TEST_zoomOut == true) {
+				GameHandler.zoomOut = true;
+			}
 		}
 		
         if (GameHandler.seeInvisibleActive == true) {

@@ -70,7 +70,7 @@ public class BankIntercations : MonoBehaviour
 				GameHandler.finalBank = true;
 				GameHandler.heldEssence += GameHandler.bankedEssence;
 				GameHandler.bankedEssence = 0;
-				Time.timeScale = 0f;
+				//Time.timeScale = 0f;
 			} else {
 				BankOpened.SetActive(false);
 				BankClosed.SetActive(true);
