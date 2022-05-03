@@ -192,14 +192,14 @@ public class PlayerMovement : MonoBehaviour
 	public void WindMoveLeft() {
 		if (isAlive == true) {
 			hLMove = new Vector3(-1f, 0.0f, 0.0f);
-			transform.position = transform.position + hMove * windSpeed * Time.deltaTime;
+			transform.position = transform.position + hLMove * windSpeed * Time.deltaTime;
 		}
 	}
 	
 	public void WindMoveRight() {
 		if (isAlive == true) {
 			hRMove = new Vector3(1f, 0.0f, 0.0f);
-			transform.position = transform.position + hMove * windSpeed * Time.deltaTime;
+			transform.position = transform.position + hRMove * windSpeed * Time.deltaTime;
 		}
 	}
 
