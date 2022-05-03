@@ -7,7 +7,8 @@ public class WindSpawner : MonoBehaviour
 	//Object variables
 	public GameObject windCurve;
 	public GameObject windCircle;
-	public Transform[] spawnPoints;
+	public Transform[] spawnPointsL;
+	public Transform[] spawnPointsR;
 	private int rangeEnd;
 	private Transform spawnPoint;
 	private PlayerMovement player;
@@ -15,63 +16,91 @@ public class WindSpawner : MonoBehaviour
 	//Timing variables
 	public bool singleDirection = false;
 	public bool multiDirection = false;
+	public float windMod = 0.75f;
 	private float gameTimer = 20f;
 
 	void Start(){
 		//assign the length of the array to the end of the random range
-		rangeEnd = spawnPoints.Length - 1 ;
+		rangeEnd = spawnPointsL.Length - 1 ;
 		player = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
 	}
 
 	void FixedUpdate(){
-		Debug.Log(gameTimer);
 		//timer
 		gameTimer += Time.deltaTime;
 		
-		if (gameTimer <= 20f || gameTimer >= 15f){
-			if (singleDirection == true || multiDirection == true) {
-				player.WindMoveLeft();
+		if (player.isCrouching == false) {
+			if (gameTimer <= 20f && gameTimer >= 15f){
+				if (singleDirection == true || multiDirection == true) {
+					player.windMove = new Vector3(-windMod, 0.0f, 0.0f);
+				}
+			}
+			
+			if (gameTimer <= 15f && gameTimer >= 10f){
+				player.windMove = new Vector3(0f, 0.0f, 0.0f);
+			}
+			
+			if (gameTimer <= 10f && gameTimer >= 5f){
+				if (singleDirection == true) {
+					player.windMove = new Vector3(-windMod, 0.0f, 0.0f);
+				}
+				if (multiDirection == true) {
+					player.windMove = new Vector3(windMod, 0.0f, 0.0f);
+				}
+			}
+			
+			if (gameTimer <= 5f && gameTimer >= 0f){
+				player.windMove = new Vector3(0f, 0.0f, 0.0f);
 			}
 		}
 		
-		if (gameTimer <= 10f || gameTimer >= 5f){
-			if (singleDirection == true) {
-				player.WindMoveLeft();
-			}
-			if (multiDirection == true) {
-				player.WindMoveRight();
-			}
+		if (player.isCrouching == true) {
+			player.windMove = new Vector3(0f, 0.0f, 0.0f);
 		}
 		
 		if (gameTimer >= 20f){
 			gameTimer = 0f;
 			StartCoroutine(SpawnWind());
 		}
-      }
+	}
 
       void spawnWindCurve(){
             int SPnum = Random.Range(0, rangeEnd);
-            spawnPoint = spawnPoints[SPnum];
-            Instantiate(windCurve, spawnPoint.position, Quaternion.identity);
+            spawnPoint = spawnPointsL[SPnum];
+            var windTemp = Instantiate(windCurve, spawnPoint.position, Quaternion.identity);
+			windTemp.transform.parent = gameObject.transform;
       }
 	  
       void spawnWindCircle(){
             int SPnum = Random.Range(0, rangeEnd);
-            spawnPoint = spawnPoints[SPnum];
-            Instantiate(windCircle, spawnPoint.position, Quaternion.identity);
+            spawnPoint = spawnPointsL[SPnum];
+            var windTemp = Instantiate(windCircle, spawnPoint.position, Quaternion.identity);
+			windTemp.transform.parent = gameObject.transform;
+      }
+	  
+      void spawnWindCurveR(){
+            int SPnum = Random.Range(0, rangeEnd);
+            spawnPoint = spawnPointsR[SPnum];
+            var windTemp = Instantiate(windCurve, spawnPoint.position, Quaternion.Euler(new Vector3(0, 180, 0)));
+			windTemp.transform.parent = gameObject.transform;
+      }
+	  
+      void spawnWindCircleR(){
+            int SPnum = Random.Range(0, rangeEnd);
+            spawnPoint = spawnPointsR[SPnum];
+            var windTemp = Instantiate(windCircle, spawnPoint.position, Quaternion.Euler(new Vector3(0, 180, 0)));
+			windTemp.transform.parent = gameObject.transform;
       }
 	  
 	  void spawnLeft(){
 			spawnWindCurve();
 			spawnWindCircle();
 			spawnWindCurve();
-			spawnWindCircle();
 	  }
 	  void spawnRight(){
-			spawnWindCurve();
-			spawnWindCircle();
-			spawnWindCurve();
-			spawnWindCircle();
+			spawnWindCurveR();
+			spawnWindCircleR();
+			spawnWindCurveR();
 	  }
 	  
 	IEnumerator SpawnWind(){
@@ -79,40 +108,26 @@ public class WindSpawner : MonoBehaviour
 			spawnLeft();
 			yield return new WaitForSeconds(1f);
 			spawnLeft();
-			yield return new WaitForSeconds(1f);
+			yield return new WaitForSeconds(0.5f);
+			spawnLeft();
+			yield return new WaitForSeconds(8.5f);
 			spawnLeft();
 			yield return new WaitForSeconds(1f);
 			spawnLeft();
-			yield return new WaitForSeconds(1f);
-			yield return new WaitForSeconds(6f);
+			yield return new WaitForSeconds(0.5f);
 			spawnLeft();
-			yield return new WaitForSeconds(1f);
-			spawnLeft();
-			yield return new WaitForSeconds(1f);
-			spawnLeft();
-			yield return new WaitForSeconds(1f);
-			spawnLeft();
-			yield return new WaitForSeconds(1f);
 		}
 		if (multiDirection == true) {
 			spawnLeft();
 			yield return new WaitForSeconds(1f);
 			spawnLeft();
-			yield return new WaitForSeconds(1f);
+			yield return new WaitForSeconds(0.5f);
 			spawnLeft();
-			yield return new WaitForSeconds(1f);
-			spawnLeft();
-			yield return new WaitForSeconds(1f);
-			spawnLeft();
-			yield return new WaitForSeconds(6f);
+			yield return new WaitForSeconds(8.5f);
 			spawnRight();
 			yield return new WaitForSeconds(1f);
 			spawnRight();
-			yield return new WaitForSeconds(1f);
-			spawnRight();
-			yield return new WaitForSeconds(1f);
-			spawnRight();
-			yield return new WaitForSeconds(1f);
+			yield return new WaitForSeconds(0.5f);
 			spawnRight();
 		}
 	}

@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
 	
 	//Stat Tracker
     public bool isAlive = true;
+    public bool isCrouching = false;
     private bool FaceRight = false;
 	private bool canDoubleJump = false;
     public int fallDamage = 100;
@@ -38,8 +39,7 @@ public class PlayerMovement : MonoBehaviour
     //public AudioSource WalkSFX;
     //public AudioSource JumpSFX;
     private Vector3 hMove;
-    private Vector3 hLMove;
-    private Vector3 hRMove;
+    public Vector3 windMove;
 
     void Awake()
     {
@@ -75,14 +75,14 @@ public class PlayerMovement : MonoBehaviour
         }
 		
 		//Jump
-		if ((Input.GetButtonDown("Jump")) && (IsGrounded()) && (isAlive == true))
+		if ((Input.GetButtonDown("Jump")) && (IsGrounded()) && (isAlive == true) && (isCrouching == false))
         {
             Jump();
             // animator.SetTrigger("Jump");
             // JumpSFX.Play();
         }
 		
-		if ((Input.GetButtonDown("Jump")) && (canDoubleJump) && (!IsGrounded()) && (isAlive == true))
+		if ((Input.GetButtonDown("Jump")) && (canDoubleJump) && (!IsGrounded()) && (isAlive == true) && (isCrouching == false))
         {
             Jump();
 			canDoubleJump = false;
@@ -95,8 +95,9 @@ public class PlayerMovement : MonoBehaviour
 		}
 		
 		//Crouch Interactions
-		if ((Input.GetButtonDown("Crouch")) && (IsGrounded()) && (isAlive == true) && (GameHandler.finalBank == false))
+		if ((Input.GetButtonDown("Crouch")) && (IsGrounded()) && (isAlive == true) && (GameHandler.finalBank == false) && (GameHandler.crouchStopWind == true))
         {
+			isCrouching = true;
             pStand.SetActive(false);
 			pCrouch.SetActive(true);
             //animator.SetBool("Crouch", true);
@@ -104,6 +105,7 @@ public class PlayerMovement : MonoBehaviour
 		
         if ((Input.GetButtonUp("Crouch") == true) && (GameHandler.finalBank == false))
         {
+			isCrouching = false;
             pStand.SetActive(true);
 			pCrouch.SetActive(false);
             //animator.SetBool("Crouch", false);
@@ -117,6 +119,12 @@ public class PlayerMovement : MonoBehaviour
 			Vector3 pSpn2 = new Vector3(checkpoint.position.x, checkpoint.position.y, transform.position.z);
 			transform.position = pSpn2;
 		}
+		
+		if (isCrouching == true) {
+			runSpeed = 7.5f;
+		} else {
+			runSpeed = 10f;
+		}
     }
 
     void FixedUpdate()
@@ -125,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
         hMove = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
         if (isAlive == true)
         {
-            transform.position = transform.position + hMove * runSpeed * Time.deltaTime;
+            transform.position = transform.position + (hMove + windMove) * runSpeed * Time.deltaTime;
         }
 		
         //slow down on hills / stops sliding from velocity
@@ -188,20 +196,6 @@ public class PlayerMovement : MonoBehaviour
 			isAlive = false;
 		}
     }
-	
-	public void WindMoveLeft() {
-		if (isAlive == true) {
-			hLMove = new Vector3(-1f, 0.0f, 0.0f);
-			transform.position = transform.position + hLMove * windSpeed * Time.deltaTime;
-		}
-	}
-	
-	public void WindMoveRight() {
-		if (isAlive == true) {
-			hRMove = new Vector3(1f, 0.0f, 0.0f);
-			transform.position = transform.position + hRMove * windSpeed * Time.deltaTime;
-		}
-	}
 
     public bool IsGrounded()
     {
