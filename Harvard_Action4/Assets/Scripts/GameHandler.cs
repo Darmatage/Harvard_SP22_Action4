@@ -18,7 +18,7 @@ public class GameHandler : MonoBehaviour
 	public GameObject treeMenuUI;
 
 	//Stat Tracker
-	public static double heldSeed = 5;
+	public static double heldSeed = 0;
 	public static float[] seeds;
 	public static double heldEssence = 0;
 	public static double bankedEssence = 0;

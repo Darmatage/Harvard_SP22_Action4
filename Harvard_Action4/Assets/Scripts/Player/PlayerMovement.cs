@@ -95,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
 		}
 		
 		//Crouch Interactions
-		if ((Input.GetButtonDown("Crouch")) && (IsGrounded()) && (isAlive == true) && (GameHandler.finalBank == false) && (GameHandler.crouchStopWind == true))
+		if ((Input.GetButtonDown("Crouch")) && (isAlive == true) && (GameHandler.finalBank == false) && (GameHandler.crouchStopWind == true))
         {
 			isCrouching = true;
             pStand.SetActive(false);
