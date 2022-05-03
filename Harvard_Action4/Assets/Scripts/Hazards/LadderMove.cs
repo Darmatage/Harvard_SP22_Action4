@@ -9,7 +9,6 @@ public class LadderMove : MonoBehaviour
     private Rigidbody2D playerRB;
     public float upSpeed = 10f;
     private Vector3 vMove;
-    public GameObject marker;
 
     public bool canLadder = false;
 
