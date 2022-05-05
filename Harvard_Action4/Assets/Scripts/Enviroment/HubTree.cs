@@ -11,6 +11,9 @@ public class HubTree : MonoBehaviour
 	public GameObject tree3;
 	public GameObject tree4;
 	public GameObject tree5;
+	public GameObject level2Floor;
+	public GameObject level3Floor;
+	public GameObject level4Floor;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,9 @@ public class HubTree : MonoBehaviour
 		tree3.SetActive(false);
 		tree4.SetActive(false);
 		tree5.SetActive(false);
+		level2Floor.SetActive(false);
+		level3Floor.SetActive(false);
+		level4Floor.SetActive(false);
     }    
 	
 	void Update()
@@ -35,14 +41,17 @@ public class HubTree : MonoBehaviour
         if (GameHandler.tree2 == true) {
 			tree1.SetActive(false);
 			tree2.SetActive(true);
+			level2Floor.SetActive(true);
 		}
         if (GameHandler.tree3 == true) {
 			tree2.SetActive(false);
 			tree3.SetActive(true);
+			level3Floor.SetActive(true);
 		}
         if (GameHandler.tree4 == true) {
 			tree3.SetActive(false);
 			tree4.SetActive(true);
+			level4Floor.SetActive(true);
 		}
         if (GameHandler.tree5 == true) {
 			tree4.SetActive(false);
