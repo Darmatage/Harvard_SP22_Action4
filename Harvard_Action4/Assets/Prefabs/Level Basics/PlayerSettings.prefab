@@ -196,6 +196,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2115153589872158148}
     - target: {fileID: 3909367100033893555, guid: 5a1b44f5d3f2fe646945f988fc939950, type: 3}
+      propertyPath: groundRange
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3909367100033893555, guid: 5a1b44f5d3f2fe646945f988fc939950, type: 3}
       propertyPath: bottomOfLevel
       value: 
       objectReference: {fileID: 7425730753257615654}

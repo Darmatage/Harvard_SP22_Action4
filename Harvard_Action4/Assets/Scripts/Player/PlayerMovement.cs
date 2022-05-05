@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
 	public float deathJumpForce = 10f;
     public float fallGravityMultiplier = 10f;
     public float jumpGravityMultiplier = 8f;
-	public float groundRange = 0.01f;
+	public float groundRange = 0.1f;
 	public float windSpeed = 5f;
 	
 	//others
@@ -199,8 +199,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool IsGrounded()
     {
-        Collider2D groundCheck = Physics2D.OverlapCircle(pGroundPoint.position, 2f, groundLayer);
-        Collider2D enemyCheck = Physics2D.OverlapCircle(pGroundPoint.position, 2f, enemyLayer);
+        Collider2D groundCheck = Physics2D.OverlapCircle(pGroundPoint.position, groundRange, groundLayer);
+        Collider2D enemyCheck = Physics2D.OverlapCircle(pGroundPoint.position, groundRange, enemyLayer);
         if ((groundCheck != null) || (enemyCheck != null))
         {
             return true;

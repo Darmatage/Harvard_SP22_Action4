@@ -154,6 +154,7 @@ MonoBehaviour:
   pStand: {fileID: 6242677459275057973}
   pCrouch: {fileID: 6242677458867610166}
   pGroundPoint: {fileID: 6242677458229955709}
+  checkpoint: {fileID: 0}
   bottomOfLevel: {fileID: 0}
   groundLayer:
     serializedVersion: 2
@@ -162,13 +163,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   isAlive: 1
+  isCrouching: 0
   fallDamage: 100
   startSpeed: 10
   jumpForce: 25
   deathJumpForce: 10
   fallGravityMultiplier: 10
   jumpGravityMultiplier: 8
-  groundRange: 0.01
+  groundRange: 0.1
+  windSpeed: 5
+  windMove: {x: 0, y: 0, z: 0}
 --- !u!1 &6242677458229955708
 GameObject:
   m_ObjectHideFlags: 0
