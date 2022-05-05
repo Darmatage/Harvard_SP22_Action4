@@ -217,7 +217,7 @@ public class GameHandler : MonoBehaviour
 		yield return new WaitForSeconds(0.5f);
 		heldEssence = 0;
 		bankedEssence = 0;
-		SceneManager.LoadScene("MainMenu");
+		SceneManager.LoadScene("SceneLose");
 	}
 
 	public void StartGame()
@@ -228,6 +228,12 @@ public class GameHandler : MonoBehaviour
 	public void RestartGame()
 	{
 		SceneManager.LoadScene("MainMenu");
+		//playerHealth = StartPlayerHealth;
+	}
+	
+	public void RestartLevel()
+	{
+		SceneManager.LoadScene("Main Hub");
 		//playerHealth = StartPlayerHealth;
 	}
 
@@ -251,6 +257,8 @@ public class GameHandler : MonoBehaviour
 	}
 	
 	public void NewGame() {
+		newGame = true;
+		heldSeed = 0;
 		GameHandler.sceneChange = true;
 	}
 }

@@ -9,7 +9,7 @@ public class EventManager : MonoBehaviour
     private GameHandler gameHandler;
 	
 	//Testing
-	public bool Testing = false;
+	public bool testing = false;
 	public bool TEST_DoubleJump = true;
 	public bool TEST_SeeInvisible = true;
 	public bool TEST_crouchStopWind = false;
@@ -26,7 +26,7 @@ public class EventManager : MonoBehaviour
 	
     void Update()
     {
-		if (Testing == true) {
+		if (testing == true) {
 			if (TEST_DoubleJump == true) {
 				GameHandler.doubleJumpActive = true;
 			}
