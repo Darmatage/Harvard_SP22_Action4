@@ -30,17 +30,22 @@ public class WindSpawner : MonoBehaviour
 		gameTimer += Time.deltaTime;
 		
 		if (player.isCrouching == false) {
-			if (gameTimer <= 20f && gameTimer >= 15f){
+			
+			if (gameTimer <= 20f && gameTimer >= 19f){
+				player.windMove = new Vector3(0f, 0.0f, 0.0f);
+			}
+			
+			if (gameTimer <= 19f && gameTimer >= 16f){
 				if (singleDirection == true || multiDirection == true) {
 					player.windMove = new Vector3(-windMod, 0.0f, 0.0f);
 				}
 			}
 			
-			if (gameTimer <= 15f && gameTimer >= 10f){
+			if (gameTimer <= 16f && gameTimer >= 9f){
 				player.windMove = new Vector3(0f, 0.0f, 0.0f);
 			}
 			
-			if (gameTimer <= 10f && gameTimer >= 5f){
+			if (gameTimer <= 9f && gameTimer >= 6f){
 				if (singleDirection == true) {
 					player.windMove = new Vector3(-windMod, 0.0f, 0.0f);
 				}
@@ -49,7 +54,7 @@ public class WindSpawner : MonoBehaviour
 				}
 			}
 			
-			if (gameTimer <= 5f && gameTimer >= 0f){
+			if (gameTimer <= 6f && gameTimer >= 0f){
 				player.windMove = new Vector3(0f, 0.0f, 0.0f);
 			}
 		}

@@ -5,11 +5,13 @@ using UnityEngine;
 public class PlatformPlayerMoveMod : MonoBehaviour
 {
 	private PlayerMovement pMove;
+	public WindSpawner wind;
     public bool isSlippery = false;
+    public bool isWater = false;
     public float slipperyMultiplier = 3f;
+    public float waterMultiplier = 0.8f;
     public float stickyMultiplier = 0.2f;
-    public float slipperyMultiplierTrigger = 1.5f;
-    public float stickyMultiplierTrigger = 0.8f;
+    public float gravityMultiplier = 1.2f;
 
     void Start()
     {
@@ -41,7 +43,11 @@ public class PlatformPlayerMoveMod : MonoBehaviour
             {
                 //Debug.Log("I am a slippery platform");
                 pMove.playerMoveModify(slipperyMultiplier, false);
-            }
+            } if (isWater == true) {
+				wind.windMod = 0.3f;
+                pMove.playerMoveModify(waterMultiplier, false);
+				pMove.playerGravityModify(gravityMultiplier, false);
+			}
             else
             {
                 //Debug.Log("I am a sticky platform");
@@ -63,7 +69,9 @@ public class PlatformPlayerMoveMod : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
+			wind.windMod = 0.75f;
             pMove.playerMoveModify(0f, true);
+			pMove.playerGravityModify(0f, true);
             //Debug.Log("I am moving normally!");
         }
     }

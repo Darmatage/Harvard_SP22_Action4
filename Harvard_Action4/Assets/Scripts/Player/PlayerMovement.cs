@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
 	public float deathJumpForce = 10f;
     public float fallGravityMultiplier = 10f;
     public float jumpGravityMultiplier = 8f;
+    private float gravMod;
 	public float groundRange = 0.1f;
 	public float windSpeed = 5f;
 	
@@ -123,7 +124,7 @@ public class PlayerMovement : MonoBehaviour
 		if (isCrouching == true) {
 			runSpeed = 7.5f;
 		} else {
-			runSpeed = 10f;
+			runSpeed = startSpeed;
 		}
     }
 
@@ -144,10 +145,10 @@ public class PlayerMovement : MonoBehaviour
 		
 		// better fall
         if (pRb2D.velocity.y < 0) {
-            pRb2D.velocity += Vector2.up * Physics2D.gravity.y * (fallGravityMultiplier - 1) * Time.deltaTime;
+            pRb2D.velocity += Vector2.up * Physics2D.gravity.y * (fallGravityMultiplier - 1) * gravMod * Time.deltaTime;
         } 
 		else if (pRb2D.velocity.y > 0) {
-            pRb2D.velocity += Vector2.up * Physics2D.gravity.y * (jumpGravityMultiplier - 1) * Time.deltaTime;
+            pRb2D.velocity += Vector2.up * Physics2D.gravity.y * (jumpGravityMultiplier - 1) * gravMod *  Time.deltaTime;
         }
     }
 
@@ -173,6 +174,22 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             runSpeed = (startSpeed * multiplier);
+            //isSpeedChange = true;
+            //myRend.material.color = new Color(1.0f, 1.0f, 2.5f);
+        }
+    }
+	
+	public void playerGravityModify(float multiplier, bool isNormal)
+    {
+        if (isNormal == true)
+        {
+            gravMod = 1f;
+            //isSpeedChange = false;
+            //myRend.material.color = defaultColor;
+        }
+        else
+        {
+            gravMod = multiplier;
             //isSpeedChange = true;
             //Debug.Log("Speed is now: " + runSpeed);
             //myRend.material.color = new Color(1.0f, 1.0f, 2.5f);
