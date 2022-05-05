@@ -307,6 +307,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4630584047438272390, guid: 8d98dcf5f2189cc438f802eae6c9faa8, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.4433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 4630584047438272390, guid: 8d98dcf5f2189cc438f802eae6c9faa8, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.33179513
+      objectReference: {fileID: 0}
+    - target: {fileID: 4630584047438272390, guid: 8d98dcf5f2189cc438f802eae6c9faa8, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.0936988
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d98dcf5f2189cc438f802eae6c9faa8, type: 3}
 --- !u!1001 &101080192
@@ -2051,11 +2063,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d05316b341a4374db33596ae141ed96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wind: {fileID: 0}
   isSlippery: 0
+  isWater: 0
   slipperyMultiplier: 3
+  waterMultiplier: 0.8
   stickyMultiplier: 0.2
-  slipperyMultiplierTrigger: 1.5
-  stickyMultiplierTrigger: 0.8
+  gravityMultiplier: 1.2
 --- !u!66 &1019498178
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -146653,11 +146667,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d05316b341a4374db33596ae141ed96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wind: {fileID: 0}
   isSlippery: 1
+  isWater: 0
   slipperyMultiplier: 3
+  waterMultiplier: 0.8
   stickyMultiplier: 0.2
-  slipperyMultiplierTrigger: 1.5
-  stickyMultiplierTrigger: 0.8
+  gravityMultiplier: 1.2
 --- !u!66 &1845575003
 CompositeCollider2D:
   m_ObjectHideFlags: 0
