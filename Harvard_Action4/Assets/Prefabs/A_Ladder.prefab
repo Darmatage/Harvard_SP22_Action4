@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 1585570898708563217}
   - component: {fileID: 1585570898708563222}
   - component: {fileID: 1585570898708563223}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: A_LadderUpper
   m_TagString: Untagged
   m_Icon: {fileID: 0}

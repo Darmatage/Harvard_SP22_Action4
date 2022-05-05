@@ -1522,6 +1522,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1585570898708563221, guid: 0eebd6e35d7aa4b49a4d91118ad21cc0, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0eebd6e35d7aa4b49a4d91118ad21cc0, type: 3}
 --- !u!1001 &564152490
@@ -2069,7 +2073,6 @@ MonoBehaviour:
   slipperyMultiplier: 3
   waterMultiplier: 0.8
   stickyMultiplier: 0.2
-  gravityMultiplier: 1.2
 --- !u!66 &1019498178
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -5841,7 +5844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6806657148917998713, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
       propertyPath: testing
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6899389787228788222, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
       propertyPath: m_RootOrder
@@ -146673,7 +146676,6 @@ MonoBehaviour:
   slipperyMultiplier: 3
   waterMultiplier: 0.8
   stickyMultiplier: 0.2
-  gravityMultiplier: 1.2
 --- !u!66 &1845575003
 CompositeCollider2D:
   m_ObjectHideFlags: 0
