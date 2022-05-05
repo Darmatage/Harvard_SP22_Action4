@@ -13,12 +13,12 @@ public class BankIntercations : MonoBehaviour
     //public AudioSource KaChingSFX;
 	private bool bankOpen = true;
 	public bool finalBank = false;
-	private bool Option1 = false;
-	private bool Option2 = false;
-	private bool Option3 = false;
-	private bool Seed1 = false;
-	private bool Seed2 = false;
-	private bool Seed3 = false;
+	public bool Option1;
+	public bool Option2;
+	public bool Option3;
+	public bool Seed1;
+	public bool Seed2;
+	public bool Seed3;
 	
 	void Start (){
 		gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
@@ -28,15 +28,20 @@ public class BankIntercations : MonoBehaviour
 			Seed1 = true;
 			Seed2 = true;
 			Seed3 = true;
+			Option1 = false;
+			Option2 = false;
+			Option3 = false;
 			BankOpened.SetActive(false);
 			BankClosed.SetActive(false);
 			FinalBankOpened.SetActive(true);
 			FinalBankClosed.SetActive(false);
-		}
-		else {
+		} else {
 			Option1 = true;
 			Option2 = true;
 			Option3 = true;
+			Seed1 = false;
+			Seed2 = false;
+			Seed3 = false;
 			BankOpened.SetActive(true);
 			BankClosed.SetActive(false);
 			FinalBankOpened.SetActive(false);
@@ -78,6 +83,7 @@ public class BankIntercations : MonoBehaviour
 		if (other.gameObject.tag == "Player") {
 			if (Option1 == true) {
 				GameHandler.OptionOne = true;
+				Debug.Log("Option1");
 			}
 			if (Option2 == true) {
 				GameHandler.OptionTwo = true;

@@ -915,15 +915,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4630584047438272390, guid: 8d98dcf5f2189cc438f802eae6c9faa8, type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0.38495907
+      value: 0.53207546
       objectReference: {fileID: 0}
     - target: {fileID: 4630584047438272390, guid: 8d98dcf5f2189cc438f802eae6c9faa8, type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0.67039055
+      value: 0.8745151
       objectReference: {fileID: 0}
     - target: {fileID: 4630584047438272390, guid: 8d98dcf5f2189cc438f802eae6c9faa8, type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0.764151
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d98dcf5f2189cc438f802eae6c9faa8, type: 3}
@@ -20278,6 +20278,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4396820061502183796, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5476243483234954869, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164719546585366734, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6348622772079410263, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
       propertyPath: m_Name
       value: GameHandlerCanvas
@@ -20333,6 +20345,14 @@ PrefabInstance:
     - target: {fileID: 6899389787228788222, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7347576655440377061, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787171716565084847, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
