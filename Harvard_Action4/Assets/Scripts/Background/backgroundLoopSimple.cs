@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 
 public class backgroundLoopSimple : MonoBehaviour {
-      private Transform centerBG;
+      public Transform centerBG;
       public float offset = 33f;       //this value is the width of the image
 
       void Update(){
