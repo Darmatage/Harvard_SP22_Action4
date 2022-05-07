@@ -4290,15 +4290,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4630584047438272390, guid: 8d98dcf5f2189cc438f802eae6c9faa8, type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0.44086865
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4630584047438272390, guid: 8d98dcf5f2189cc438f802eae6c9faa8, type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0.6037736
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4630584047438272390, guid: 8d98dcf5f2189cc438f802eae6c9faa8, type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0.59170586
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d98dcf5f2189cc438f802eae6c9faa8, type: 3}
@@ -4906,6 +4906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 929978997}
   - component: {fileID: 929978996}
+  - component: {fileID: 929978998}
   m_Layer: 0
   m_Name: BG_Center
   m_TagString: Untagged
@@ -4981,6 +4982,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &929978998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929978995}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd9c370fdd827b459b9c9d8dcbea69f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 33
 --- !u!1001 &1038625530
 PrefabInstance:
   m_ObjectHideFlags: 0
