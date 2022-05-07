@@ -8,17 +8,18 @@ public class ImpactParticles : MonoBehaviour
     public GameObject hitParticles;
     public Vector3 spwnPoint;
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         //if the impact has enough force
-        if (other.relativeVelocity.magnitude > 5)
+        if (other.tag == "Lava")
         {
             //get impact location
-            spwnPoint = other.contacts[0].point;
+            spwnPoint = transform.position;
             //make particles
             GameObject particleSys = Instantiate(hitParticles, spwnPoint, other.transform.rotation);
             StartCoroutine(destroyParticles(particleSys));
         }
+       
     }
 
     IEnumerator destroyParticles(GameObject pSys)

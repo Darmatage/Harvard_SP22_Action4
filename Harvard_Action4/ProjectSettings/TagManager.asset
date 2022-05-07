@@ -8,6 +8,7 @@ TagManager:
   - PauseMenuSlider
   - CheckPoint
   - PlayerSpawn
+  - Lava
   layers:
   - Default
   - TransparentFX
