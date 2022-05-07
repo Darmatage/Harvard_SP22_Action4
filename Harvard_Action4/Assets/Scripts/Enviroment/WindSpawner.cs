@@ -110,17 +110,17 @@ public class WindSpawner : MonoBehaviour
 	  
 	IEnumerator SpawnWind(){
 		if (singleDirection == true) {
-			spawnLeft();
+			spawnRight();
 			yield return new WaitForSeconds(1f);
-			spawnLeft();
+			spawnRight();
 			yield return new WaitForSeconds(0.5f);
-			spawnLeft();
+			spawnRight();
 			yield return new WaitForSeconds(8.5f);
-			spawnLeft();
+			spawnRight();
 			yield return new WaitForSeconds(1f);
-			spawnLeft();
+			spawnRight();
 			yield return new WaitForSeconds(0.5f);
-			spawnLeft();
+			spawnRight();
 		}
 		if (multiDirection == true) {
 			spawnLeft();

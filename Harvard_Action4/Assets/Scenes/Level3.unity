@@ -176,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7026518911807581325, guid: d8b6086345b578f42aa4004cbc55dc49, type: 3}
       propertyPath: isCrouching
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7168245548238102773, guid: d8b6086345b578f42aa4004cbc55dc49, type: 3}
       propertyPath: m_Name
