@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BankIntercations : MonoBehaviour
 {
     private GameHandler gameHandler;
-    private PlayerMovement player;
+    private PlayerMovement playerMov;
 	public GameObject BankOpened;
 	public GameObject BankClosed;
 	public GameObject FinalBankOpened;
@@ -20,9 +21,12 @@ public class BankIntercations : MonoBehaviour
 	private bool Seed2 = false;
 	private bool Seed3 = false;
 	
+	//temp
+    public string NextLevel = "Main Hub";
+	
 	void Start (){
 		gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
-        player = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
+        playerMov = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
 		
 		if (finalBank == true) {
 			Seed1 = true;
@@ -49,57 +53,75 @@ public class BankIntercations : MonoBehaviour
 		}
 	}
 	
-	void OnTriggerEnter2D(Collider2D other)
-    {	
-		GameHandler.onBank = true;
-		player.checkpoint.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);;
-		
-        if (other.gameObject.tag == "Player" && bankOpen == true)
-        {
-			bankOpen = false;
-			GameHandler.heldEssence += GameHandler.bankedEssence * 0.5;
-			
-			if (finalBank == true) {
-				BankOpened.SetActive(false);
-				BankClosed.SetActive(false);
-				FinalBankOpened.SetActive(false);
-				FinalBankClosed.SetActive(true);
-				GameHandler.finalBank = true;
-				GameHandler.heldEssence += GameHandler.bankedEssence;
-				GameHandler.bankedEssence = 0;
-				//Time.timeScale = 0f;
-			} else {
-				BankOpened.SetActive(false);
-				BankClosed.SetActive(true);
-				FinalBankOpened.SetActive(false);
-				FinalBankClosed.SetActive(false);
-			}
-			
-			gameHandler.updateStatsDisplay();
+	void OnTriggerEnter2D(Collider2D other) {
+		if (gameHandler != null) {
+			GameHandler.onBank = true;
+		} else {
+			Debug.Log("onBank is null");
 		}
-			
 		
-		if (other.gameObject.tag == "Player") {
-			if (Option1 == true) {
-				GameHandler.OptionOne = true;
+		if (other != null) {
+			
+			if (other.gameObject.tag == "Player"){
+				// Debug.Log("not Player null");
+				
+				// if (playerMov.checkpoint != null) {
+					// playerMov.checkpoint.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+					// Debug.Log("position is" + playerMov.checkpoint.position);
+					
+				// } else {
+					// Debug.Log("position is null");
+				// }
+					
+				if (bankOpen == true) {
+					// Debug.Log("Bank closed");
+					bankOpen = false;
+					GameHandler.heldEssence += GameHandler.bankedEssence * 0.5;
+					
+					if (finalBank == true) {
+						// Debug.Log("Swap image Final");
+						BankOpened.SetActive(false);
+						BankClosed.SetActive(false);
+						FinalBankOpened.SetActive(false);
+						FinalBankClosed.SetActive(true);
+						GameHandler.finalBank = true;
+						GameHandler.heldEssence += GameHandler.bankedEssence;
+						GameHandler.bankedEssence = 0;
+						//Time.timeScale = 0f;
+					} else {
+						// Debug.Log("Swap image");
+						BankOpened.SetActive(false);
+						BankClosed.SetActive(true);
+						FinalBankOpened.SetActive(false);
+						FinalBankClosed.SetActive(false);
+					}
+					
+					gameHandler.updateStatsDisplay();
+				}
+					
+				if (Option1 == true) {
+					GameHandler.OptionOne = true;
+				}
+				if (Option2 == true) {
+					GameHandler.OptionTwo = true;
+				}
+				if (Option3 == true) {
+					GameHandler.OptionThree = true;
+				}
+				if (Seed1 == true) {
+					GameHandler.SeedOne = true;
+				}
+				if (Seed2 == true) {
+					GameHandler.SeedTwo = true;
+				}
+				if (Seed3 == true) {
+					GameHandler.SeedThree = true;
+				}
 			}
-			if (Option2 == true) {
-				GameHandler.OptionTwo = true;
-			}
-			if (Option3 == true) {
-				GameHandler.OptionThree = true;
-			}
-			if (Seed1 == true) {
-				GameHandler.SeedOne = true;
-			}
-			if (Seed2 == true) {
-				GameHandler.SeedTwo = true;
-			}
-			if (Seed3 == true) {
-				GameHandler.SeedThree = true;
-			}		
+		} else {
+			Debug.Log("other is null");
 		}
-    }
+	}
 	
 	void OnTriggerExit2D(Collider2D other) {
 		if (other.gameObject.tag == "Player") {

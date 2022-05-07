@@ -10,10 +10,10 @@ public class PlayerMovement : MonoBehaviour
 	//player GameObject info
     private Rigidbody2D pRb2D;
     private Animator pAnimator;
+    public Transform checkpoint;
     public GameObject pStand;
 	public GameObject pCrouch;
     public Transform pGroundPoint;
-    public Transform checkpoint;
     public Transform bottomOfLevel;
 	
 	//Layer info
@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
+		checkpoint = GameObject.FindWithTag("PlayerSpawn").GetComponent<Transform>();
         pRb2D = GetComponent<Rigidbody2D>();
         pAnimator = GetComponent<Animator>();
 		runSpeed = startSpeed;

@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 7353140388915412761}
   - component: {fileID: 7353140388915412759}
   - component: {fileID: 260090682716944641}
+  - component: {fileID: 1731237594619237286}
   m_Layer: 0
   m_Name: Bank
   m_TagString: Untagged
@@ -161,8 +162,20 @@ MonoBehaviour:
   BankClosed: {fileID: 7353140389469701064}
   FinalBankOpened: {fileID: 8345990896109312459}
   FinalBankClosed: {fileID: 3026373816885522468}
-  bankOpen: 1
   finalBank: 0
+  NextLevel: Main Hub
+--- !u!114 &1731237594619237286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7353140388915412756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aa2d469ea9b0bd44a3eb154286cc90d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7353140389341997003
 GameObject:
   m_ObjectHideFlags: 0
