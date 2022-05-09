@@ -16,6 +16,11 @@ public class PlayerMovement : MonoBehaviour
     public Transform pGroundPoint;
     public Transform bottomOfLevel;
 	
+	//particles
+    public GameObject hitParticles;
+    public GameObject essenceParticles;
+    public GameObject seedParticles;
+	
 	//Layer info
     public LayerMask groundLayer;
     public LayerMask enemyLayer;
@@ -185,7 +190,24 @@ public class PlayerMovement : MonoBehaviour
     }
 	
 	public void playerHit(){
-        //animator.SetTrigger ("GetHurt");
+		GameObject particleSys = Instantiate(hitParticles, pGroundPoint.position, Quaternion.identity);
+        StartCoroutine(destroyParticles(particleSys));
+    }
+	
+	public void playerGetEssence(){
+		GameObject particleSys = Instantiate(essenceParticles, pGroundPoint.position, Quaternion.identity);
+        StartCoroutine(destroyParticles(particleSys));
+    }
+	
+	public void playerGetSeed(){
+		GameObject particleSys = Instantiate(seedParticles, pGroundPoint.position, Quaternion.identity);
+        StartCoroutine(destroyParticles(particleSys));
+    }
+	
+    IEnumerator destroyParticles(GameObject pSys)
+    {
+        yield return new WaitForSeconds(0.5f);
+        Destroy(pSys);
     }
 
     public void playerDead(){

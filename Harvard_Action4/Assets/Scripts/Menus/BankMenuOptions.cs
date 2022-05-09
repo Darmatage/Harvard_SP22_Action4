@@ -125,7 +125,6 @@ public class BankMenuOptions : MonoBehaviour
 	public void Button_CloseBank() {
 		if (GameHandler.finalBank == true) {
             GameHandler.sceneChange = true;
-			GameHandler.finalBank = false;
 		}
 	}
 }

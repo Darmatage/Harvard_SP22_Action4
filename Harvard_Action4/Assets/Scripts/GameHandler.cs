@@ -7,10 +7,12 @@ using UnityEngine.Audio;
 
 public class GameHandler : MonoBehaviour
 {
+	public bool isMenu = false;
 
 	//Game Objects
 	public GameObject pauseMenuUI;
 	private GameObject player;
+	private PlayerMovement playerMov;
 	public GameObject essenceText;
 	public GameObject essenceBankedText;
 	public GameObject seedText;
@@ -90,7 +92,11 @@ public class GameHandler : MonoBehaviour
 
 	void Start()
 	{
-		player = GameObject.FindWithTag("Player");
+		if (isMenu == false) {
+			player = GameObject.FindWithTag("Player");
+			playerMov = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
+		}
+		
 		sceneName = SceneManager.GetActiveScene().name;
 		updateStatsDisplay();
 
@@ -138,6 +144,9 @@ public class GameHandler : MonoBehaviour
 		{
 			sceneChange = false;
 			finalBank = false;
+			SeedOne = false;
+			SeedTwo = false;
+			SeedThree = false;
 			onBank = false;
 			bankedEssence = 0;
 			heldEssence = 0;
@@ -148,6 +157,7 @@ public class GameHandler : MonoBehaviour
 
 	public void playerGetSeed(int seedId)
 	{
+		playerMov.playerGetSeed();
 		double Temp = 1;
 		heldSeed += Temp;
 		seeds[seedId] = 1;
@@ -156,12 +166,14 @@ public class GameHandler : MonoBehaviour
 
 	public void playerGetEssence(double essence)
 	{
+		playerMov.playerGetEssence();
 		heldEssence += essence;
 		updateStatsDisplay();
 	}
 
 	public void playerLoseEssence(double essence)
 	{
+		playerMov.playerHit();
 		
 		if (heldEssence <= 0)
 		{
@@ -198,11 +210,11 @@ public class GameHandler : MonoBehaviour
 	public void updateStatsDisplay()
 	{
 		Text essenceTextTemp = essenceText.GetComponent<Text>();
-		essenceTextTemp.text = "Green Essence: " + heldEssence;
+		essenceTextTemp.text = heldEssence.ToString();
 		Text bankedEssenceTextTemp = essenceBankedText.GetComponent<Text>();
-		bankedEssenceTextTemp.text = "Banked Essence: " + bankedEssence;
+		bankedEssenceTextTemp.text = bankedEssence.ToString();
 		Text seedTextTemp = seedText.GetComponent<Text>();
-		seedTextTemp.text = "SEED: " + heldSeed;
+		seedTextTemp.text = heldSeed + "/50";
 	}
 
 	public void playerDies()
