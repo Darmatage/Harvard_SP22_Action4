@@ -30,9 +30,10 @@ public class PlayerMovement : MonoBehaviour
     public bool isCrouching = false;
     private bool FaceRight = false;
 	private bool canDoubleJump = false;
+	private bool isMoveMod = false;
     public int fallDamage = 100;
     public float startSpeed = 10f;
-    private float runSpeed;
+    public float runSpeed;
     public float jumpForce = 25f;
 	public float deathJumpForce = 10f;
     public float fallGravityMultiplier = 10f;
@@ -128,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
 		
 		if (isCrouching == true) {
 			runSpeed = 7.5f;
-		} else {
+		} else if (isMoveMod == false) {
 			runSpeed = startSpeed;
 		}
     }
@@ -172,12 +173,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isNormal == true)
         {
+			isMoveMod = false;
             runSpeed = startSpeed;
             //isSpeedChange = false;
             //myRend.material.color = defaultColor;
         }
         else
         {
+			isMoveMod = true;
             runSpeed = (startSpeed * multiplier);
             //isSpeedChange = true;
             //myRend.material.color = new Color(1.0f, 1.0f, 2.5f);
