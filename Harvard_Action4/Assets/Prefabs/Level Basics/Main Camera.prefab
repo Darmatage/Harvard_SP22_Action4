@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerBG: {fileID: 0}
-  yMod: 1
-  xMod: 1
+  yMod: 2
+  xMod: 2
 --- !u!114 &4014260634300941702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,8 +60,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerBG: {fileID: 0}
-  yMod: 1
-  xMod: 1
+  yMod: 1.1
+  xMod: 1.1
 --- !u!1 &4630584047438272384
 GameObject:
   m_ObjectHideFlags: 0
