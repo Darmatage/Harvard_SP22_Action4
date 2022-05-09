@@ -16,6 +16,7 @@ public class GameHandler : MonoBehaviour
 	public GameObject essenceText;
 	public GameObject essenceBankedText;
 	public GameObject seedText;
+	public GameObject GUI;
 	public GameObject bankMenuUI;
 	public GameObject treeMenuUI;
 
@@ -93,8 +94,11 @@ public class GameHandler : MonoBehaviour
 	void Start()
 	{
 		if (isMenu == false) {
+			GUI.SetActive(true);
 			player = GameObject.FindWithTag("Player");
 			playerMov = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
+		} else {
+			GUI.SetActive(false);
 		}
 		
 		sceneName = SceneManager.GetActiveScene().name;

@@ -7730,6 +7730,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
+      propertyPath: GUI
+      value: 
+      objectReference: {fileID: 4594913518598886531}
+    - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
       propertyPath: mixer
       value: 
       objectReference: {fileID: 24100000, guid: ba87a615801120b4c9fa37504ec7d3e2, type: 2}
