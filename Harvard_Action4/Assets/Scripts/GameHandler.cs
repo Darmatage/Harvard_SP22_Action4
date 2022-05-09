@@ -144,6 +144,9 @@ public class GameHandler : MonoBehaviour
 		{
 			sceneChange = false;
 			finalBank = false;
+			SeedOne = false;
+			SeedTwo = false;
+			SeedThree = false;
 			onBank = false;
 			bankedEssence = 0;
 			heldEssence = 0;
@@ -207,11 +210,11 @@ public class GameHandler : MonoBehaviour
 	public void updateStatsDisplay()
 	{
 		Text essenceTextTemp = essenceText.GetComponent<Text>();
-		essenceTextTemp.text = "Green Essence: " + heldEssence;
+		essenceTextTemp.text = heldEssence.ToString();
 		Text bankedEssenceTextTemp = essenceBankedText.GetComponent<Text>();
-		bankedEssenceTextTemp.text = "Banked Essence: " + bankedEssence;
+		bankedEssenceTextTemp.text = bankedEssence.ToString();
 		Text seedTextTemp = seedText.GetComponent<Text>();
-		seedTextTemp.text = "SEED: " + heldSeed;
+		seedTextTemp.text = heldSeed + "/50";
 	}
 
 	public void playerDies()
