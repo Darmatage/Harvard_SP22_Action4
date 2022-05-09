@@ -7,6 +7,7 @@ using UnityEngine.Audio;
 
 public class GameHandler : MonoBehaviour
 {
+	public bool isMenu = false;
 
 	//Game Objects
 	public GameObject pauseMenuUI;
@@ -91,8 +92,11 @@ public class GameHandler : MonoBehaviour
 
 	void Start()
 	{
-		player = GameObject.FindWithTag("Player");
-		playerMov = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
+		if (isMenu == false) {
+			player = GameObject.FindWithTag("Player");
+			playerMov = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
+		}
+		
 		sceneName = SceneManager.GetActiveScene().name;
 		updateStatsDisplay();
 
