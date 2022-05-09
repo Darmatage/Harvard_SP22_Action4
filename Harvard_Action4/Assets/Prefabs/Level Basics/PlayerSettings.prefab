@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &4181541993735671709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99531092573442203}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd9c370fdd827b459b9c9d8dcbea69f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerBG: {fileID: 0}
+  offset: 33
 --- !u!1 &1982132564450950877
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,20 +106,6 @@ Transform:
   m_Father: {fileID: 8130098921633233752}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4181541993735671709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 99531092573442203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fd9c370fdd827b459b9c9d8dcbea69f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerBG: {fileID: 0}
-  offset: 33
 --- !u!1 &7168245548238102773
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,9 +218,21 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3909367100033893555, guid: 5a1b44f5d3f2fe646945f988fc939950, type: 3}
+      propertyPath: hitParticles
+      value: 
+      objectReference: {fileID: 1052753121068282242, guid: ca78c68a1fe201342b93caa804ddad83, type: 3}
+    - target: {fileID: 3909367100033893555, guid: 5a1b44f5d3f2fe646945f988fc939950, type: 3}
       propertyPath: bottomOfLevel
       value: 
       objectReference: {fileID: 7425730753257615654}
+    - target: {fileID: 3909367100033893555, guid: 5a1b44f5d3f2fe646945f988fc939950, type: 3}
+      propertyPath: seedParticles
+      value: 
+      objectReference: {fileID: 1052753121068282242, guid: bf9215dce6054214ab41b443707c8708, type: 3}
+    - target: {fileID: 3909367100033893555, guid: 5a1b44f5d3f2fe646945f988fc939950, type: 3}
+      propertyPath: essenceParticles
+      value: 
+      objectReference: {fileID: 1052753121068282242, guid: 35f340dbcaf097744a3bb98d83112b31, type: 3}
     - target: {fileID: 6242677457660819621, guid: 5a1b44f5d3f2fe646945f988fc939950, type: 3}
       propertyPath: m_Icon
       value: 

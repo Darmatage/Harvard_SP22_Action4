@@ -11,6 +11,7 @@ public class GameHandler : MonoBehaviour
 	//Game Objects
 	public GameObject pauseMenuUI;
 	private GameObject player;
+	private PlayerMovement playerMov;
 	public GameObject essenceText;
 	public GameObject essenceBankedText;
 	public GameObject seedText;
@@ -91,6 +92,7 @@ public class GameHandler : MonoBehaviour
 	void Start()
 	{
 		player = GameObject.FindWithTag("Player");
+		playerMov = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
 		sceneName = SceneManager.GetActiveScene().name;
 		updateStatsDisplay();
 
@@ -148,6 +150,7 @@ public class GameHandler : MonoBehaviour
 
 	public void playerGetSeed(int seedId)
 	{
+		playerMov.playerGetSeed();
 		double Temp = 1;
 		heldSeed += Temp;
 		seeds[seedId] = 1;
@@ -156,12 +159,14 @@ public class GameHandler : MonoBehaviour
 
 	public void playerGetEssence(double essence)
 	{
+		playerMov.playerGetEssence();
 		heldEssence += essence;
 		updateStatsDisplay();
 	}
 
 	public void playerLoseEssence(double essence)
 	{
+		playerMov.playerHit();
 		
 		if (heldEssence <= 0)
 		{

@@ -24,7 +24,7 @@ public class ImpactParticles : MonoBehaviour
 
     IEnumerator destroyParticles(GameObject pSys)
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(0.5f);
         Destroy(pSys);
     }
 }

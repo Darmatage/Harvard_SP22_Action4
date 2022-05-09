@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8446243040568054542}
   - component: {fileID: 1805912157421110721}
   m_Layer: 0
-  m_Name: LavaParticle
+  m_Name: EssenceParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052753121068282242}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.9392512, y: 0.36777115, z: 648.7038}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 648.7038}
+  m_LocalScale: {x: 1.6, y: 1.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1389,18 +1389,18 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.8867924, g: 0.096144214, b: 0.079476655, a: 1}
-        key1: {r: 1, g: 0.55812895, b: 0, a: 1}
-        key2: {r: 1, g: 0.5695112, b: 0, a: 0}
-        key3: {r: 1, g: 0.8370818, b: 0, a: 0}
+        key0: {r: 0, g: 1, b: 0.16139174, a: 1}
+        key1: {r: 0.032680616, g: 0.6415094, b: 0.055666376, a: 1}
+        key2: {r: 0.3517356, g: 1, b: 0, a: 0}
+        key3: {r: 0.862262, g: 1, b: 0.38113207, a: 0}
         key4: {r: 1, g: 0.8370818, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 27178
-        ctime2: 42791
-        ctime3: 63608
+        ctime1: 20046
+        ctime2: 45875
+        ctime3: 65535
         ctime4: 64764
         ctime5: 0
         ctime6: 0
@@ -1414,7 +1414,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_NumColorKeys: 5
+        m_NumColorKeys: 4
         m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
