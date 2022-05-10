@@ -162,7 +162,7 @@ MonoBehaviour:
   FinalBankOpened: {fileID: 8345990896109312459}
   FinalBankClosed: {fileID: 3026373816885522468}
   finalBank: 0
-  NextLevel: Main Hub
+  NextLevel: MainHub
 --- !u!1 &7353140389341997003
 GameObject:
   m_ObjectHideFlags: 0
