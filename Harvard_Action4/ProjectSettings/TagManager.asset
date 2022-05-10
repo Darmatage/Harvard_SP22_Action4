@@ -9,6 +9,7 @@ TagManager:
   - CheckPoint
   - PlayerSpawn
   - Lava
+  - Bank
   layers:
   - Default
   - TransparentFX

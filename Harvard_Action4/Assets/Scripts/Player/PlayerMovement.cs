@@ -232,4 +232,12 @@ public class PlayerMovement : MonoBehaviour
         }
         return false;
     }
+	
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.gameObject.tag == "Bank") {
+			checkpoint.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+			Debug.Log("position is" + checkpoint.position);
+		}
+	}	
+	
 }
