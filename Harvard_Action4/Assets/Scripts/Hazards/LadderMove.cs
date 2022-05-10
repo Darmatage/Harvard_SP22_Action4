@@ -45,7 +45,6 @@ public class LadderMove : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-			Debug.Log("exit ladder");
             upper.GetComponent<Collider2D>().enabled = true;
             playerRB.gravityScale = 1;
             canLadder = false;

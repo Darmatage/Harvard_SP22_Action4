@@ -22,7 +22,7 @@ public class BankIntercations : MonoBehaviour
 	private bool Seed3 = false;
 	
 	//temp
-    public string NextLevel = "Main Hub";
+    public string NextLevel = "MainHub";
 	
 	void Start (){
 		gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();

@@ -13185,7 +13185,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 413376348005775581, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
       propertyPath: NextLevel
-      value: Main Hub
+      value: MainHub
       objectReference: {fileID: 0}
     - target: {fileID: 6348622772079410263, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
       propertyPath: m_Name
@@ -21669,7 +21669,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 7038258ed2b47df4b9fd2c7f727d085c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -21909,7 +21909,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 7038258ed2b47df4b9fd2c7f727d085c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

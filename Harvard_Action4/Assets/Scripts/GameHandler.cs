@@ -249,7 +249,7 @@ public class GameHandler : MonoBehaviour
 	
 	public void RestartLevel()
 	{
-		SceneManager.LoadScene("Main Hub");
+		SceneManager.LoadScene("MainHub");
 		//playerHealth = StartPlayerHealth;
 	}
 
