@@ -23,7 +23,7 @@ public class DamageSlow : MonoBehaviour
     {
         if (isDamaging == true)
         {
-            damageTimer += 0.1f;
+            damageTimer += 2f;
             if (damageTimer >= damageTime)
             {
                 gameHandlerObj.playerLoseEssence(damage);
