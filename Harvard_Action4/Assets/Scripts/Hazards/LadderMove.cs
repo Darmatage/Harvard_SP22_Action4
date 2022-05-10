@@ -24,7 +24,7 @@ public class LadderMove : MonoBehaviour
     void Update()
     {
         vMove = new Vector3(0.0f, Input.GetAxis("Vertical"), 0.0f);
-        if (canLadder == true)
+        if (canLadder == true && playerRB.gravityScale == 0)
         {
             playerTrans.position = playerTrans.position + vMove * upSpeed * Time.deltaTime;
         }
@@ -35,8 +35,8 @@ public class LadderMove : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             upper.GetComponent<Collider2D>().enabled = false; 
+            playerRB.gravityScale = 0.0f;
             canLadder = true;
-            playerRB.gravityScale = 0;
             // if game has jumping, add bool to disable it, and set true here
         }
     }
@@ -45,9 +45,10 @@ public class LadderMove : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+			Debug.Log("exit ladder");
             upper.GetComponent<Collider2D>().enabled = true;
-            canLadder = false;
             playerRB.gravityScale = 1;
+            canLadder = false;
             // if game has jumping, add bool to disable it, and set false here
         }
     }
