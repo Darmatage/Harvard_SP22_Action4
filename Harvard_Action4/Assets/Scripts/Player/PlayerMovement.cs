@@ -193,18 +193,26 @@ public class PlayerMovement : MonoBehaviour
     }
 	
 	public void playerHit(){
-		GameObject particleSys = Instantiate(hitParticles, pGroundPoint.position, Quaternion.identity);
-        StartCoroutine(destroyParticles(particleSys));
+		if (hitParticles != null) {
+			GameObject particleSys = Instantiate(hitParticles, pGroundPoint.position, Quaternion.identity);
+			StartCoroutine(destroyParticles(particleSys));
+		}
     }
 	
 	public void playerGetEssence(){
-		GameObject particleSys = Instantiate(essenceParticles, pGroundPoint.position, Quaternion.identity);
-        StartCoroutine(destroyParticles(particleSys));
+		Debug.Log("got essence");
+		if (essenceParticles != null) {
+			GameObject particleSys = Instantiate(essenceParticles, pGroundPoint.position, Quaternion.identity);
+			StartCoroutine(destroyParticles(particleSys));
+		}
+		Debug.Log("played particle");
     }
 	
 	public void playerGetSeed(){
-		GameObject particleSys = Instantiate(seedParticles, pGroundPoint.position, Quaternion.identity);
-        StartCoroutine(destroyParticles(particleSys));
+		if (seedParticles != null) {
+			GameObject particleSys = Instantiate(seedParticles, pGroundPoint.position, Quaternion.identity);
+			StartCoroutine(destroyParticles(particleSys));
+		}
     }
 	
     IEnumerator destroyParticles(GameObject pSys)

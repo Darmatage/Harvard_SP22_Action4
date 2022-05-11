@@ -63,20 +63,12 @@ public class BankIntercations : MonoBehaviour
 		if (other != null) {
 			
 			if (other.gameObject.tag == "Player"){
-				// Debug.Log("not Player null");
-				
-				// if (playerMov.checkpoint != null) {
-					// playerMov.checkpoint.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-					// Debug.Log("position is" + playerMov.checkpoint.position);
-					
-				// } else {
-					// Debug.Log("position is null");
-				// }
 					
 				if (bankOpen == true) {
 					// Debug.Log("Bank closed");
 					bankOpen = false;
 					GameHandler.heldEssence += GameHandler.bankedEssence * 0.5;
+					playerMov.playerGetEssence();
 					
 					if (finalBank == true) {
 						// Debug.Log("Swap image Final");
