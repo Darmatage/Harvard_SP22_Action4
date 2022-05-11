@@ -952,6 +952,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7026518911807581325, guid: d8b6086345b578f42aa4004cbc55dc49, type: 3}
+      propertyPath: wind
+      value: 
+      objectReference: {fileID: 2134354502}
+    - target: {fileID: 7026518911807581325, guid: d8b6086345b578f42aa4004cbc55dc49, type: 3}
       propertyPath: isCrouching
       value: 0
       objectReference: {fileID: 0}
@@ -15903,10 +15907,9 @@ GameObject:
   - component: {fileID: 944665019}
   - component: {fileID: 944665018}
   - component: {fileID: 944665017}
-  - component: {fileID: 944665016}
   m_Layer: 3
   m_Name: StickySurface
-  m_TagString: Untagged
+  m_TagString: Sticky
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15925,24 +15928,6 @@ Transform:
   m_Father: {fileID: 528340870}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &944665016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 944665014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d05316b341a4374db33596ae141ed96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wind: {fileID: 0}
-  isSlippery: 0
-  isWater: 0
-  slipperyMultiplier: 3
-  waterMultiplier: 0.8
-  stickyMultiplier: 0.2
 --- !u!66 &944665017
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -25707,10 +25692,9 @@ GameObject:
   - component: {fileID: 1172061509}
   - component: {fileID: 1172061508}
   - component: {fileID: 1172061507}
-  - component: {fileID: 1172061506}
   m_Layer: 3
   m_Name: SlipperySurface
-  m_TagString: Untagged
+  m_TagString: Slippery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25729,24 +25713,6 @@ Transform:
   m_Father: {fileID: 528340870}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1172061506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172061504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d05316b341a4374db33596ae141ed96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wind: {fileID: 0}
-  isSlippery: 1
-  isWater: 0
-  slipperyMultiplier: 3
-  waterMultiplier: 0.8
-  stickyMultiplier: 0.2
 --- !u!66 &1172061507
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -35669,3 +35635,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d98dcf5f2189cc438f802eae6c9faa8, type: 3}
+--- !u!114 &2134354502 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6756678593755121636, guid: 8d98dcf5f2189cc438f802eae6c9faa8, type: 3}
+  m_PrefabInstance: {fileID: 2134354501}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569cf3c6ef3c1f54fbee8a812bdaa48f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

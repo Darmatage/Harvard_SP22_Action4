@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 	//Depencencies 
     private GameHandler gameHandler;
+	public WindSpawner wind;
 	
 	//player GameObject info
     private Rigidbody2D pRb2D;
@@ -35,6 +36,9 @@ public class PlayerMovement : MonoBehaviour
     public float jumpGravityMultiplier = 8f;
 	public float groundRange = 0.1f;
 	public float windSpeed = 5f;
+    public float slipperyMultiplier = 3f;
+    public float waterMultiplier = 0.8f;
+    public float stickyMultiplier = 0.2f;
 	
 	//others
     //public AudioSource WalkSFX;
@@ -212,6 +216,47 @@ public class PlayerMovement : MonoBehaviour
 			checkpoint.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 			// Debug.Log("position is" + checkpoint.position);
 		}
+		
+        if (other.gameObject.tag == "Slippery") {
+			playerMoveModify(slipperyMultiplier, false);
+        } else if (other.gameObject.tag == "Sticky") {
+            playerMoveModify(stickyMultiplier, false);
+        } else if (other.gameObject.tag == "Water") {
+			wind.windMod = 0.3f;
+            playerMoveModify(waterMultiplier, false);
+        }
 	}	
 	
+	void OnCollisionEnter2D(Collision2D collider)
+    {
+        if (collider.gameObject.tag == "Slippery") {
+			playerMoveModify(slipperyMultiplier, false);
+        } else if (collider.gameObject.tag == "Sticky") {
+            playerMoveModify(stickyMultiplier, false);
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collider)
+    {
+        if (collider.gameObject.tag == "Slippery") {
+			playerMoveModify(0f, true);
+        } else if (collider.gameObject.tag == "Sticky") {
+            playerMoveModify(0f, true);
+        } else if (collider.gameObject.tag == "Water") {
+			wind.windMod = 0.75f;
+            playerMoveModify(0f, true);
+        }
+    }
+	
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Slippery") {
+			playerMoveModify(0f, true);
+        } else if (other.gameObject.tag == "Sticky") {
+            playerMoveModify(0f, true);
+        } else if (other.gameObject.tag == "Water") {
+			wind.windMod = 0.75f;
+            playerMoveModify(0f, true);
+        }
+    }
 }

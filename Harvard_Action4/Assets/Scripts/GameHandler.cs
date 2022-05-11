@@ -210,7 +210,6 @@ public class GameHandler : MonoBehaviour
 			GameObject particleSys = Instantiate(essenceParticles, playerPos.position, Quaternion.identity);
 			StartCoroutine(destroyParticles(particleSys));
 		}
-		Debug.Log(playerPos.position);
     }
 	
 	public void playerGetSeed(){
