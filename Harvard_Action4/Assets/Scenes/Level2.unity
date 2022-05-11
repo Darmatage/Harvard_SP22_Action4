@@ -14646,7 +14646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
-  damageTime: 40
+  damageTime: 0.5
 --- !u!66 &1335979936
 CompositeCollider2D:
   m_ObjectHideFlags: 0
