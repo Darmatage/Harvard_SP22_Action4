@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ImpactParticles : MonoBehaviour
+public class ImpactParticles:MonoBehaviour
 {
 
     public GameObject hitParticles;
