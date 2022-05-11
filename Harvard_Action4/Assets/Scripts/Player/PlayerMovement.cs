@@ -31,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
     public float startSpeed = 10f;
     public float runSpeed;
     public float jumpForce = 25f;
-	public float deathJumpForce = 10f;
     public float fallGravityMultiplier = 10f;
     public float jumpGravityMultiplier = 8f;
 	public float groundRange = 0.1f;
@@ -39,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     public float slipperyMultiplier = 3f;
     public float waterMultiplier = 0.8f;
     public float stickyMultiplier = 0.2f;
+	public float deathJumpForce = 10f;
 	
 	//others
     //public AudioSource WalkSFX;
@@ -188,17 +188,23 @@ public class PlayerMovement : MonoBehaviour
 	
 	public void Jump()
     {
-        pRb2D.velocity = Vector2.up * jumpForce;
+		// if (gameHandler.isAlive == false) {
+			// pRb2D.velocity = Vector2.up * deathJumpForce;
+			// pRb2D.isKinematic = true;
+			// isAlive = false;
+		// } else {
+			pRb2D.velocity = Vector2.up * jumpForce;
+		// }
     }
 
-    public void playerDead(){
-		if (isAlive == true) {
-			pRb2D.velocity = Vector2.up * deathJumpForce;
-			pRb2D.isKinematic = true;
-			//animator.SetTrigger ("Dead");
-			isAlive = false;
-		}
-    }
+    // public void playerDead(){
+		// if (isAlive == true) {
+			// pRb2D.velocity = Vector2.up * deathJumpForce;
+			// pRb2D.isKinematic = true;
+			// animator.SetTrigger ("Dead");
+			// isAlive = false;
+		// }
+    // }
 
     public bool IsGrounded()
     {

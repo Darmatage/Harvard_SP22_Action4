@@ -34,6 +34,7 @@ public class GameHandler : MonoBehaviour
 	public static bool newGame = true;
 	public static bool onTree = false;
 	public static Transform pSpawn;
+	public bool isAlive = true;
 	
 	//tree stage
 	public static bool tree0 = true;
@@ -79,7 +80,7 @@ public class GameHandler : MonoBehaviour
     public GameObject hitParticles;
     public GameObject essenceParticles;
     public GameObject seedParticles;
-
+	
 	void Awake()
 	{
 		SetLevel(volumeLevel);
@@ -188,7 +189,10 @@ public class GameHandler : MonoBehaviour
 	{
 		if (heldEssence <= 0)
 		{
-			playerDies(); //game level resets
+			// isAlive = false;
+			//playerMov.Jump();
+			playerHit();
+			StartCoroutine(DeathPause());
 		}
 		else
         {
@@ -255,18 +259,13 @@ public class GameHandler : MonoBehaviour
 		seedTextTemp.text = heldSeed + "/50";
 	}
 
-	public void playerDies()
-	{
-		player.GetComponent<PlayerMovement>().playerDead();
-		StartCoroutine(DeathPause());
-	}
-
 	IEnumerator DeathPause()
 	{
-		player.GetComponent<PlayerMovement>().isAlive = false;
 		yield return new WaitForSeconds(0.5f);
+		playerHit();
 		heldEssence = 0;
 		bankedEssence = 0;
+		isAlive = true;
 		SceneManager.LoadScene("SceneLose");
 	}
 
