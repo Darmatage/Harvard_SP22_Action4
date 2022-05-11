@@ -20,6 +20,7 @@ public class BankIntercations : MonoBehaviour
 	private bool Seed1 = false;
 	private bool Seed2 = false;
 	private bool Seed3 = false;
+	private double temp;
 	
 	//temp
     public string NextLevel = "MainHub";
@@ -67,8 +68,7 @@ public class BankIntercations : MonoBehaviour
 				if (bankOpen == true) {
 					// Debug.Log("Bank closed");
 					bankOpen = false;
-					GameHandler.heldEssence += GameHandler.bankedEssence * 0.5;
-					playerMov.playerGetEssence();
+					gameHandler.playerGetEssence(GameHandler.bankedEssence * 0.5);
 					
 					if (finalBank == true) {
 						// Debug.Log("Swap image Final");
@@ -77,7 +77,7 @@ public class BankIntercations : MonoBehaviour
 						FinalBankOpened.SetActive(false);
 						FinalBankClosed.SetActive(true);
 						GameHandler.finalBank = true;
-						GameHandler.heldEssence += GameHandler.bankedEssence;
+						gameHandler.playerGetEssence(GameHandler.bankedEssence);
 						GameHandler.bankedEssence = 0;
 						//Time.timeScale = 0f;
 					} else {

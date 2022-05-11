@@ -10,6 +10,8 @@ TagManager:
   - PlayerSpawn
   - Lava
   - Bank
+  - Seed
+  - Essence
   layers:
   - Default
   - TransparentFX

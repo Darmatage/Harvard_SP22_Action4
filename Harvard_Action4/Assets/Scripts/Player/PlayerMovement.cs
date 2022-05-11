@@ -16,11 +16,6 @@ public class PlayerMovement : MonoBehaviour
     public Transform pGroundPoint;
     public Transform bottomOfLevel;
 	
-	//particles
-    public GameObject hitParticles;
-    public GameObject essenceParticles;
-    public GameObject seedParticles;
-	
 	//Layer info
     public LayerMask groundLayer;
     public LayerMask enemyLayer;
@@ -190,35 +185,6 @@ public class PlayerMovement : MonoBehaviour
 	public void Jump()
     {
         pRb2D.velocity = Vector2.up * jumpForce;
-    }
-	
-	public void playerHit(){
-		if (hitParticles != null) {
-			GameObject particleSys = Instantiate(hitParticles, pGroundPoint.position, Quaternion.identity);
-			StartCoroutine(destroyParticles(particleSys));
-		}
-    }
-	
-	public void playerGetEssence(){
-		Debug.Log("got essence");
-		if (essenceParticles != null) {
-			GameObject particleSys = Instantiate(essenceParticles, pGroundPoint.position, Quaternion.identity);
-			StartCoroutine(destroyParticles(particleSys));
-		}
-		Debug.Log("played particle");
-    }
-	
-	public void playerGetSeed(){
-		if (seedParticles != null) {
-			GameObject particleSys = Instantiate(seedParticles, pGroundPoint.position, Quaternion.identity);
-			StartCoroutine(destroyParticles(particleSys));
-		}
-    }
-	
-    IEnumerator destroyParticles(GameObject pSys)
-    {
-        yield return new WaitForSeconds(0.5f);
-        Destroy(pSys);
     }
 
     public void playerDead(){

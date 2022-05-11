@@ -13,6 +13,7 @@ public class GameHandler : MonoBehaviour
 	public GameObject pauseMenuUI;
 	private GameObject player;
 	private PlayerMovement playerMov;
+	private Transform playerPos;
 	public GameObject essenceText;
 	public GameObject essenceBankedText;
 	public GameObject seedText;
@@ -73,6 +74,11 @@ public class GameHandler : MonoBehaviour
 	private string sceneName;
 	public static string SceneDied = "MainMenu";
     public string NextLevel = "MainMenu";
+	
+	//particles
+    public GameObject hitParticles;
+    public GameObject essenceParticles;
+    public GameObject seedParticles;
 
 	void Awake()
 	{
@@ -97,6 +103,7 @@ public class GameHandler : MonoBehaviour
 			GUI.SetActive(true);
 			player = GameObject.FindWithTag("Player");
 			playerMov = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
+			playerPos = GameObject.FindWithTag("PlayerBottom").GetComponent<Transform>();
 		} else {
 			GUI.SetActive(false);
 		}
@@ -161,24 +168,24 @@ public class GameHandler : MonoBehaviour
 
 	public void playerGetSeed(int seedId)
 	{
-		playerMov.playerGetSeed();
 		double Temp = 1;
 		heldSeed += Temp;
 		seeds[seedId] = 1;
 		updateStatsDisplay();
+		playerGetSeed();
 	}
 
 	public void playerGetEssence(double essence)
 	{
-		playerMov.playerGetEssence();
 		heldEssence += essence;
 		updateStatsDisplay();
+		if (essence > 0) {
+			playerGetEssence();
+		}
 	}
 
 	public void playerLoseEssence(double essence)
 	{
-		playerMov.playerHit();
-		
 		if (heldEssence <= 0)
 		{
 			playerDies(); //game level resets
@@ -188,8 +195,36 @@ public class GameHandler : MonoBehaviour
 			heldEssence -= essence;
 			updateStatsDisplay();
 		}
+		playerHit();
 	}
 
+	public void playerHit(){
+		if (hitParticles != null) {
+			GameObject particleSys = Instantiate(hitParticles, playerPos.position, Quaternion.identity);
+			StartCoroutine(destroyParticles(particleSys));
+		}
+    }
+	
+	public void playerGetEssence(){
+		if (essenceParticles != null) {
+			GameObject particleSys = Instantiate(essenceParticles, playerPos.position, Quaternion.identity);
+			StartCoroutine(destroyParticles(particleSys));
+		}
+		Debug.Log(playerPos.position);
+    }
+	
+	public void playerGetSeed(){
+		if (seedParticles != null) {
+			GameObject particleSys = Instantiate(seedParticles, playerPos.position, Quaternion.identity);
+			StartCoroutine(destroyParticles(particleSys));
+		}
+    }
+
+    IEnumerator destroyParticles(GameObject pSys)
+    {
+        yield return new WaitForSeconds(0.5f);
+        Destroy(pSys);
+    }
 
 	void Pause()
 	{

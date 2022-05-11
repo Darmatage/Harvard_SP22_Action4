@@ -7774,9 +7774,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6164719546585366734}
     - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
+      propertyPath: hitParticles
+      value: 
+      objectReference: {fileID: 1052753121068282242, guid: ca78c68a1fe201342b93caa804ddad83, type: 3}
+    - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
+      propertyPath: seedParticles
+      value: 
+      objectReference: {fileID: 1052753121068282242, guid: bf9215dce6054214ab41b443707c8708, type: 3}
+    - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
       propertyPath: buttonOpenBank
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
+      propertyPath: essenceParticles
+      value: 
+      objectReference: {fileID: 1052753121068282242, guid: 35f340dbcaf097744a3bb98d83112b31, type: 3}
     - target: {fileID: 9123222538747371881, guid: a5cb735dde05e436c997d6d4212aca0c, type: 3}
       propertyPath: essenceBankedText
       value: 
