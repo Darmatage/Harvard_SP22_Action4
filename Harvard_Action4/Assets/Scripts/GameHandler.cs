@@ -269,22 +269,23 @@ public class GameHandler : MonoBehaviour
 		isAlive = true;
 		SceneManager.LoadScene("SceneLose");
 	}
-
-	public void StartGame()
-	{
-		SceneManager.LoadScene("TutorialLevel");
+	
+	public void NewGame() {
+		newGame = true;
+		heldSeed = 0;
+		GameHandler.sceneChange = true;
+		FindObjectOfType<AudioManager>().Play("Level0");
 	}
 
 	public void RestartGame()
 	{
 		SceneManager.LoadScene("MainMenu");
-		//playerHealth = StartPlayerHealth;
+		FindObjectOfType<AudioManager>().Play("MainTheme");
 	}
 	
 	public void RestartLevel()
 	{
 		SceneManager.LoadScene(thisLevel);
-		//playerHealth = StartPlayerHealth;
 	}
 	
 	public void BackToHub()
@@ -310,11 +311,5 @@ public class GameHandler : MonoBehaviour
 	public void ReplayGame()
 	{
 		SceneManager.LoadScene(SceneDied);
-	}
-	
-	public void NewGame() {
-		newGame = true;
-		heldSeed = 0;
-		GameHandler.sceneChange = true;
 	}
 }
