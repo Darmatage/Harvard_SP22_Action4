@@ -11,8 +11,7 @@ public class DoorExitNextLevel : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-			
-		FindObjectOfType<AudioManager>().Play(NextLevel);
+			// FindObjectOfType<AudioManager>().Play(NextLevel);
             SceneManager.LoadScene(NextLevel);
         }
     }
