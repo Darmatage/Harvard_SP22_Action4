@@ -844,7 +844,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6540756128367729900, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
       propertyPath: SeedId
-      value: 400
+      value: 307
       objectReference: {fileID: 0}
     - target: {fileID: 6540756128367729901, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
       propertyPath: m_RootOrder
@@ -1091,6 +1091,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8562237002484240370, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
+      propertyPath: bankNo
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b716ff819aaafd54e9636602ea5fabcc, type: 3}
 --- !u!1001 &598379359
@@ -1278,7 +1282,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6540756128367729900, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
       propertyPath: SeedId
-      value: 400
+      value: 306
       objectReference: {fileID: 0}
     - target: {fileID: 6540756128367729901, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
       propertyPath: m_RootOrder
@@ -23544,7 +23548,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6540756128367729900, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
       propertyPath: SeedId
-      value: 400
+      value: 304
       objectReference: {fileID: 0}
     - target: {fileID: 6540756128367729901, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
       propertyPath: m_RootOrder
@@ -29553,7 +29557,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6540756128367729900, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
       propertyPath: SeedId
-      value: 400
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 6540756128367729901, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
       propertyPath: m_RootOrder
@@ -34779,7 +34783,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6540756128367729900, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
       propertyPath: SeedId
-      value: 400
+      value: 302
       objectReference: {fileID: 0}
     - target: {fileID: 6540756128367729901, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
       propertyPath: m_RootOrder
@@ -34969,7 +34973,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6540756128367729900, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
       propertyPath: SeedId
-      value: 400
+      value: 301
       objectReference: {fileID: 0}
     - target: {fileID: 6540756128367729901, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
       propertyPath: m_RootOrder
@@ -35102,7 +35106,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6540756128367729900, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
       propertyPath: SeedId
-      value: 400
+      value: 303
       objectReference: {fileID: 0}
     - target: {fileID: 6540756128367729901, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
       propertyPath: m_RootOrder
@@ -35173,7 +35177,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6540756128367729900, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
       propertyPath: SeedId
-      value: 400
+      value: 305
       objectReference: {fileID: 0}
     - target: {fileID: 6540756128367729901, guid: 1d4ddfdb61d6052448db27af71cecee4, type: 3}
       propertyPath: m_RootOrder

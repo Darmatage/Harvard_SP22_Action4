@@ -200,7 +200,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 32
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Need 50 Seeds
+  m_Text: Collect 50 seeds
 --- !u!1 &450398067375459085
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,7 +290,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Invest: 10000'
+  m_Text: Invest
 --- !u!1 &660388190997398433
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +491,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 35
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 3
@@ -502,7 +502,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Need 5 Seeds
+  m_Text: Collect 5 seeds
 --- !u!1 &1101399296339156284
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +581,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Select
+  m_Text: 'Cost: 1000'
 --- !u!1 &1151008305020251839
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,7 +691,7 @@ Transform:
   - {fileID: 7275975924110400194}
   - {fileID: 8778360869791742084}
   m_Father: {fileID: 4318208718455388690}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1247992057208317709
 GameObject:
@@ -961,7 +961,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 32
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 3
@@ -972,7 +972,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Need 15 Seeds
+  m_Text: Collect 15 seeds
 --- !u!1 &1682840097804112971
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,9 +1147,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
-    m_HighlightedColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
-    m_PressedColor: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 1}
+    m_NormalColor: {r: 0.8867924, g: 0.7551542, b: 0.12046986, a: 1}
+    m_HighlightedColor: {r: 0.7264151, g: 0.62134326, b: 0.10553575, a: 1}
+    m_PressedColor: {r: 0.5660378, g: 0.4833627, b: 0.08223566, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1749,8 +1749,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -9.4}
-  m_SizeDelta: {x: 250, y: 60}
+  m_AnchoredPosition: {x: 0, y: -0.000044346}
+  m_SizeDelta: {x: 250, y: 70.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8432051634997594120
 CanvasRenderer:
@@ -1782,10 +1782,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -1793,7 +1793,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Full Bloom
+  m_Text: Complete Seed Collection
 --- !u!1 &2378546695629770622
 GameObject:
   m_ObjectHideFlags: 0
@@ -2171,7 +2171,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 32
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 3
@@ -2182,7 +2182,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Need 45 Seeds
+  m_Text: Collect 45 seeds
 --- !u!1 &2627900030931494906
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,7 +2394,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Select
+  m_Text: 'Cost: 5000'
 --- !u!1 &2936963819604442493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,8 +2429,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.15, y: -10.1}
-  m_SizeDelta: {x: 260.61, y: 60}
+  m_AnchoredPosition: {x: 0.0012264, y: 0.0000026226}
+  m_SizeDelta: {x: 250, y: 70.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6395961877788676736
 CanvasRenderer:
@@ -2462,7 +2462,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 35
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 3
@@ -2473,7 +2473,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hold On Tight
+  m_Text: Hold against    the wind
 --- !u!1 &3227179394037833171
 GameObject:
   m_ObjectHideFlags: 0
@@ -2536,7 +2536,7 @@ Transform:
   - {fileID: 56046534504475110}
   - {fileID: 4857326860748898768}
   m_Father: {fileID: 4318208718455388690}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3458747622090101288
 GameObject:
@@ -2616,7 +2616,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Select
+  m_Text: 10000
 --- !u!1 &3469287205043661179
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,12 +2629,12 @@ GameObject:
   - component: {fileID: 1344166024089499774}
   - component: {fileID: 2199225485353928409}
   m_Layer: 5
-  m_Name: TextTitle
+  m_Name: BankTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &50093079906720583
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2651,8 +2651,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 228.4}
-  m_SizeDelta: {x: 209.1361, y: 55.3489}
+  m_AnchoredPosition: {x: 0, y: 214}
+  m_SizeDelta: {x: 396.6591, y: 53.3749}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1344166024089499774
 CanvasRenderer:
@@ -2689,13 +2689,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 4
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'BANK
+  m_Text: 'ESSENCE BANK
 
 '
 --- !u!1 &3522991968232158937
@@ -3312,7 +3312,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 32
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 3
@@ -3323,7 +3323,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Need 35 Seeds
+  m_Text: Collect 35 seeds
 --- !u!1 &4032559392632659013
 GameObject:
   m_ObjectHideFlags: 0
@@ -3358,8 +3358,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -9.4}
-  m_SizeDelta: {x: 250, y: 60}
+  m_AnchoredPosition: {x: 0, y: -0.000044346}
+  m_SizeDelta: {x: 250, y: 70.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6354993626273610943
 CanvasRenderer:
@@ -3391,12 +3391,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 45
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 4
-    m_MaxSize: 40
-    m_Alignment: 1
+    m_MaxSize: 45
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -3437,8 +3437,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -8.0078}
-  m_SizeDelta: {x: 250, y: 62.7846}
+  m_AnchoredPosition: {x: 0, y: 0.0000078678}
+  m_SizeDelta: {x: 250, y: 70.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5822044606943467789
 CanvasRenderer:
@@ -3470,10 +3470,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -3481,7 +3481,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: See Secrets
+  m_Text: See invisible platforms
 --- !u!1 &4109315946546587232
 GameObject:
   m_ObjectHideFlags: 0
@@ -3748,7 +3748,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Select
+  m_Text: 'Cost: 10000'
 --- !u!1 &4550353132839839991
 GameObject:
   m_ObjectHideFlags: 0
@@ -3960,7 +3960,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Invest: 5000'
+  m_Text: Invest
 --- !u!1 &4594913518598886531
 GameObject:
   m_ObjectHideFlags: 0
@@ -4120,7 +4120,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Invest: 1000'
+  m_Text: Invest
 --- !u!1 &4725813724973522985
 GameObject:
   m_ObjectHideFlags: 0
@@ -4274,7 +4274,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Select
+  m_Text: 5000
 --- !u!1 &4923476773509123365
 GameObject:
   m_ObjectHideFlags: 0
@@ -4619,7 +4619,7 @@ Transform:
   - {fileID: 6911050123708588209}
   - {fileID: 2137318103531104680}
   m_Father: {fileID: 4318208718455388690}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5365377460344011022
 GameObject:
@@ -4939,7 +4939,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5000
+  m_Text: BUY SEED
 --- !u!1 &6164719546585366734
 GameObject:
   m_ObjectHideFlags: 0
@@ -5195,9 +5195,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
-    m_HighlightedColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
-    m_PressedColor: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 1}
+    m_NormalColor: {r: 0.8867924, g: 0.7551542, b: 0.12046986, a: 1}
+    m_HighlightedColor: {r: 0.7264151, g: 0.62134326, b: 0.10553575, a: 1}
+    m_PressedColor: {r: 0.5660378, g: 0.4833627, b: 0.08223566, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -5478,7 +5478,7 @@ RectTransform:
   m_Children:
   - {fileID: 3505034884436319064}
   m_Father: {fileID: 4318208718455388690}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5645,6 +5645,87 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
+--- !u!1 &6553377771399842701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8506974389326281347}
+  - component: {fileID: 6137016359588364310}
+  - component: {fileID: 2218449687251784196}
+  m_Layer: 5
+  m_Name: FinalBank
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8506974389326281347
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6553377771399842701}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4318208718455388690}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 214}
+  m_SizeDelta: {x: 396.6591, y: 53.3749}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6137016359588364310
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6553377771399842701}
+  m_CullTransparentMesh: 1
+--- !u!114 &2218449687251784196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6553377771399842701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'SEED BANK
+
+'
 --- !u!1 &6557928698724996241
 GameObject:
   m_ObjectHideFlags: 0
@@ -5835,7 +5916,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1000
+  m_Text: BUY SEED
 --- !u!1 &6788340230562058058
 GameObject:
   m_ObjectHideFlags: 0
@@ -6022,7 +6103,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Select
+  m_Text: 1000
 --- !u!1 &6863079799826577372
 GameObject:
   m_ObjectHideFlags: 0
@@ -6057,8 +6138,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -9.4}
-  m_SizeDelta: {x: 250, y: 60}
+  m_AnchoredPosition: {x: 0, y: 0.0000078678}
+  m_SizeDelta: {x: 250, y: 70.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2674258032684052587
 CanvasRenderer:
@@ -6090,12 +6171,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 35
+    m_FontSize: 36
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -6299,6 +6380,7 @@ RectTransform:
   m_Children:
   - {fileID: 6614189783855032449}
   - {fileID: 50093079906720583}
+  - {fileID: 8506974389326281347}
   - {fileID: 4605355749935545273}
   - {fileID: 6393386475105736409}
   - {fileID: 4557993671604701420}
@@ -6376,7 +6458,10 @@ MonoBehaviour:
   Seed1: {fileID: 3244635635778203949}
   Seed2: {fileID: 1169823864068126303}
   Seed3: {fileID: 5302884393521814524}
+  bankTitle: {fileID: 3469287205043661179}
+  finalBankTitle: {fileID: 6553377771399842701}
   closeOption: {fileID: 6468644277238218180}
+  bankNo: 0
   NextLevel: MainMenu
 --- !u!1 &7756520633584999822
 GameObject:
@@ -6488,8 +6573,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -9.4}
-  m_SizeDelta: {x: 250, y: 60}
+  m_AnchoredPosition: {x: 0, y: -0.000044346}
+  m_SizeDelta: {x: 250, y: 70.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1958161430952788301
 CanvasRenderer:
@@ -6521,12 +6606,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 45
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 4
-    m_MaxSize: 40
-    m_Alignment: 1
+    m_MaxSize: 45
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -6600,7 +6685,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 32
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 3
@@ -6611,7 +6696,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Need 25 Seeds
+  m_Text: Collect 25 seeds
 --- !u!1 &8051012232200361321
 GameObject:
   m_ObjectHideFlags: 0
@@ -6627,7 +6712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6393386475105736409
 Transform:
   m_ObjectHideFlags: 0
@@ -6642,7 +6727,7 @@ Transform:
   - {fileID: 2070692755371874631}
   - {fileID: 3580033216673401283}
   m_Father: {fileID: 4318208718455388690}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8097228588546215740
 GameObject:
@@ -6742,9 +6827,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
-    m_HighlightedColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
-    m_PressedColor: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 1}
+    m_NormalColor: {r: 0.8867924, g: 0.7551542, b: 0.12046986, a: 1}
+    m_HighlightedColor: {r: 0.7264151, g: 0.62134326, b: 0.10553575, a: 1}
+    m_PressedColor: {r: 0.5660378, g: 0.4833627, b: 0.08223566, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -6792,7 +6877,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4557993671604701420
 Transform:
   m_ObjectHideFlags: 0
@@ -6807,7 +6892,7 @@ Transform:
   - {fileID: 1039074909752577385}
   - {fileID: 8098844986410561398}
   m_Father: {fileID: 4318208718455388690}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8259709795787055133
 GameObject:
@@ -7182,7 +7267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7646370165182050409
 Transform:
   m_ObjectHideFlags: 0
@@ -7197,7 +7282,7 @@ Transform:
   - {fileID: 3572040376631841007}
   - {fileID: 5180250603789887632}
   m_Father: {fileID: 4318208718455388690}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8767467030427644302
 GameObject:
@@ -7293,7 +7378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8637676893256171343
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7461,7 +7546,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10000
+  m_Text: BUY SEED
 --- !u!1 &8977966161343490197
 GameObject:
   m_ObjectHideFlags: 0
