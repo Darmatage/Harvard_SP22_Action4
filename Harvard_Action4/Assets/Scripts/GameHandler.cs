@@ -73,6 +73,7 @@ public class GameHandler : MonoBehaviour
 
 	//Scene Related
 	private string sceneName;
+	private string thisLevel;
 	public static string SceneDied = "MainMenu";
     public string NextLevel = "MainMenu";
 	
@@ -281,6 +282,12 @@ public class GameHandler : MonoBehaviour
 	}
 	
 	public void RestartLevel()
+	{
+		SceneManager.LoadScene(thisLevel);
+		//playerHealth = StartPlayerHealth;
+	}
+	
+	public void BackToHub()
 	{
 		SceneManager.LoadScene("MainHub");
 		//playerHealth = StartPlayerHealth;
