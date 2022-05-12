@@ -97,8 +97,6 @@ public class GameHandler : MonoBehaviour
 			seeds = new float[600];
 			newGame = false;
 		}
-		
-		FindObjectOfType<AudioManager>().Play("MainTheme");
 	}
 
 	void Start()
@@ -280,11 +278,13 @@ public class GameHandler : MonoBehaviour
 		heldSeed = 0;
 		GameHandler.sceneChange = true;
 		FindObjectOfType<AudioManager>().Play("Level0");
+		FindObjectOfType<AudioManager>().Stop("MainTheme");
 	}
 
 	public void RestartGame()
 	{
 		SceneManager.LoadScene("MainMenu");
+		FindObjectOfType<AudioManager>().StopAll();
 		FindObjectOfType<AudioManager>().Play("MainTheme");
 	}
 	
@@ -296,6 +296,7 @@ public class GameHandler : MonoBehaviour
 	public void BackToHub()
 	{
 		SceneManager.LoadScene("MainHub");
+		FindObjectOfType<AudioManager>().StopAll();
 		FindObjectOfType<AudioManager>().Play("MainTheme");
 		//playerHealth = StartPlayerHealth;
 	}

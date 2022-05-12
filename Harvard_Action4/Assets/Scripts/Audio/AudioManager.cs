@@ -31,18 +31,30 @@ public class AudioManager : MonoBehaviour
 	}
 	
 	public void Play(string name) {
-		foreach (Sound s in sounds) {
-			if (s.source == null){
-			} else if (s.source.isPlaying) {
-				s.source.Stop();
-			}
-		}
-		
 		Sound ns = Array.Find(sounds, sound => sound.name == name);
 		if (ns.source == null){
 			return;
 		}
 		ns.source.Play();
+	}
+	
+	public void StopAll() {
+		foreach (Sound s in sounds) {
+			if (s.source == null){
+				Debug.Log(s.name + " is null");
+			} else if (s.source.isPlaying) {
+				Debug.Log(s.name + " stopped");
+				s.source.Stop();
+			}
+		}
+	}
+	
+	public void Stop(string name) {
+		Sound os = Array.Find(sounds, sound => sound.name == name);
+		if (os.source == null){
+			return;
+		}
+		os.source.Stop();
 	}
 	
 	public void PlaySFX(string name) {

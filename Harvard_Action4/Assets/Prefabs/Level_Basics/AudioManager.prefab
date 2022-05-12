@@ -44,13 +44,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: MainTheme
-    clip: {fileID: 8300000, guid: 7be6201ddbba5ea4c89084262fb99e8b, type: 3}
+  - name: Level0
+    clip: {fileID: 8300000, guid: 61e5b7b8055897a43b585c3cac1cb3ad, type: 3}
     volume: 0.6
     loop: 1
     source: {fileID: 0}
-  - name: Level0
-    clip: {fileID: 8300000, guid: 61e5b7b8055897a43b585c3cac1cb3ad, type: 3}
+  - name: MainTheme
+    clip: {fileID: 8300000, guid: 7be6201ddbba5ea4c89084262fb99e8b, type: 3}
     volume: 0.6
     loop: 1
     source: {fileID: 0}
@@ -65,12 +65,12 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: Level3
-    clip: {fileID: 8300000, guid: 34f5a32d6cdc33d4ba2a1a671fdbe96f, type: 3}
+    clip: {fileID: 8300000, guid: 338f58abf6cba9141abbe9a0e30f9bb6, type: 3}
     volume: 0.6
     loop: 1
     source: {fileID: 0}
   - name: Level4
-    clip: {fileID: 8300000, guid: 338f58abf6cba9141abbe9a0e30f9bb6, type: 3}
+    clip: {fileID: 8300000, guid: 34f5a32d6cdc33d4ba2a1a671fdbe96f, type: 3}
     volume: 0.6
     loop: 1
     source: {fileID: 0}
