@@ -5,6 +5,7 @@ using System;
 public class AudioManager : MonoBehaviour
 {
 	public Sound[] sounds;
+	public AudioMixerGroup mixer;
 	
 	public static AudioManager instance;
 	
@@ -24,6 +25,7 @@ public class AudioManager : MonoBehaviour
 			
 			s.source.volume = s.volume;
 			s.source.loop = s.loop;
+			s.source.outputAudioMixerGroup = mixer;
 		}
 	}
 	

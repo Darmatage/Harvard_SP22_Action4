@@ -3561,80 +3561,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Quit
---- !u!1 &4153918032309085321
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7292970301120492686}
-  - component: {fileID: 3614772217819860169}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7292970301120492686
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4153918032309085321}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6899389787228788222}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3614772217819860169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4153918032309085321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b93b5a44b9d2624fb3aca5b0e12e436, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Level0
-    clip: {fileID: 8300000, guid: 61e5b7b8055897a43b585c3cac1cb3ad, type: 3}
-    volume: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: MainTheme
-    clip: {fileID: 8300000, guid: 7be6201ddbba5ea4c89084262fb99e8b, type: 3}
-    volume: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Level1
-    clip: {fileID: 8300000, guid: 73aaf6eac1c9bcd489aec7d582df2e5d, type: 3}
-    volume: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Level2
-    clip: {fileID: 8300000, guid: 73aaf6eac1c9bcd489aec7d582df2e5d, type: 3}
-    volume: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Level3
-    clip: {fileID: 8300000, guid: a450081c8b60fbc4ebbe58149d3eacd4, type: 3}
-    volume: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Level4
-    clip: {fileID: 8300000, guid: a450081c8b60fbc4ebbe58149d3eacd4, type: 3}
-    volume: 1
-    loop: 1
-    source: {fileID: 0}
 --- !u!1 &4383370367188539205
 GameObject:
   m_ObjectHideFlags: 0
@@ -5516,7 +5442,6 @@ Transform:
   m_Children:
   - {fileID: 1497620104515997642}
   - {fileID: 1021334712741002404}
-  - {fileID: 7292970301120492686}
   - {fileID: 6357053129222170153}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -5635,7 +5560,7 @@ RectTransform:
   - {fileID: 8637676893256171343}
   - {fileID: 900204713359118770}
   m_Father: {fileID: 6899389787228788222}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
