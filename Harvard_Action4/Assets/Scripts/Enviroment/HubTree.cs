@@ -46,16 +46,22 @@ public class HubTree : MonoBehaviour
         if (GameHandler.tree3 == true) {
 			tree2.SetActive(false);
 			tree3.SetActive(true);
+			level2Floor.SetActive(true);
 			level3Floor.SetActive(true);
 		}
         if (GameHandler.tree4 == true) {
 			tree3.SetActive(false);
 			tree4.SetActive(true);
+			level2Floor.SetActive(true);
+			level3Floor.SetActive(true);
 			level4Floor.SetActive(true);
 		}
         if (GameHandler.tree5 == true) {
 			tree4.SetActive(false);
 			tree5.SetActive(true);
+			level2Floor.SetActive(true);
+			level3Floor.SetActive(true);
+			level4Floor.SetActive(true);
 		}
     }
 	
