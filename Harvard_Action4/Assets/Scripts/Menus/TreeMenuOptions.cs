@@ -77,6 +77,7 @@ public class TreeMenuOptions : MonoBehaviour
 			GameHandler.tree0 = false;
 			GameHandler.tree1 = true;
 			GameHandler.doubleJumpActive = true;
+			FindObjectOfType<AudioManager>().Play("Level1");
 			//show tutorial
 			//sfx grow tree
 			//particle effect grow tree
@@ -89,6 +90,7 @@ public class TreeMenuOptions : MonoBehaviour
 			GameHandler.tree1 = false;
 			GameHandler.tree2 = true;
 			GameHandler.seeInvisibleActive = true;
+			FindObjectOfType<AudioManager>().Play("Level2");
 			//show tutorial
 			//sfx grow tree
 			//particle effect grow tree
@@ -101,6 +103,7 @@ public class TreeMenuOptions : MonoBehaviour
 			GameHandler.tree2 = false;
 			GameHandler.tree3 = true;
 			GameHandler.crouchStopWind = true;
+			FindObjectOfType<AudioManager>().Play("Level3");
 			//show tutorial
 			//sfx grow tree
 			//particle effect grow tree
@@ -113,6 +116,7 @@ public class TreeMenuOptions : MonoBehaviour
 			GameHandler.tree3 = false;
 			GameHandler.tree4 = true;
 			GameHandler.zoomOut = true;
+			FindObjectOfType<AudioManager>().Play("Level4");
 			//show tutorial
 			//sfx grow tree
 			//particle effect grow tree
@@ -124,6 +128,7 @@ public class TreeMenuOptions : MonoBehaviour
 			GameHandler.SeedOptionFive = false;
 			GameHandler.tree4 = false;
 			GameHandler.tree5 = true;
+			FindObjectOfType<AudioManager>().Play("MainTheme");
 			//show how to finish the game 
 			//sfx grow tree
 			//particle effect grow tree
@@ -134,6 +139,7 @@ public class TreeMenuOptions : MonoBehaviour
 		if (GameHandler.heldSeed >= sd6){
 			GameHandler.SeedOptionSix = false;
 			GameHandler.tree5 = false;
+			FindObjectOfType<AudioManager>().Play("MainTheme");
 			//background change? 
 			//show congrats to finial 
 			//particle effect grow tree
