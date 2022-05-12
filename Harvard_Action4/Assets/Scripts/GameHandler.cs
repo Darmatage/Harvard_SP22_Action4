@@ -97,6 +97,8 @@ public class GameHandler : MonoBehaviour
 			seeds = new float[600];
 			newGame = false;
 		}
+		
+		FindObjectOfType<AudioManager>().Play("MainTheme");
 	}
 
 	void Start()
@@ -291,6 +293,7 @@ public class GameHandler : MonoBehaviour
 	public void BackToHub()
 	{
 		SceneManager.LoadScene("MainHub");
+		FindObjectOfType<AudioManager>().Play("MainTheme");
 		//playerHealth = StartPlayerHealth;
 	}
 

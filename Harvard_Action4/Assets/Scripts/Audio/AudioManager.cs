@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
 	
 	public static AudioManager instance;
 	
-	void awake() {
+	void Awake() {
 		if (instance == null) {
 			instance = this;
 		} else {
@@ -27,10 +27,6 @@ public class AudioManager : MonoBehaviour
 		}
 	}
 	
-	void start() {
-		Play("MainTheme");
-	}
-	
 	public void Play(string name) {
 		StopBgm();
 		
@@ -43,14 +39,13 @@ public class AudioManager : MonoBehaviour
 	}
 	
 	public void StopBgm() {
-		// foreach (Sound s in sounds) {
-			// if (s == null){
-				// Debug.Log(s + "not found");
-			// } else {
-				// Debug.Log(s);
-				// s.source.Stop();
-			// }
-		// }
+		foreach (Sound s in sounds) {
+			if (s == null){
+				Debug.Log(s + "not found");
+			} else {
+				s.source.Stop();
+			}
+		}
 	}
 	
 }

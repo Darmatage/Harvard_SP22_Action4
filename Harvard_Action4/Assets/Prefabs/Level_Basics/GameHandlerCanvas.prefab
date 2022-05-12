@@ -3608,26 +3608,32 @@ MonoBehaviour:
   - name: Level0
     clip: {fileID: 8300000, guid: 61e5b7b8055897a43b585c3cac1cb3ad, type: 3}
     volume: 1
+    loop: 1
     source: {fileID: 0}
   - name: MainTheme
     clip: {fileID: 8300000, guid: 7be6201ddbba5ea4c89084262fb99e8b, type: 3}
     volume: 1
+    loop: 1
     source: {fileID: 0}
   - name: Level1
     clip: {fileID: 8300000, guid: 73aaf6eac1c9bcd489aec7d582df2e5d, type: 3}
     volume: 1
+    loop: 1
     source: {fileID: 0}
   - name: Level2
     clip: {fileID: 8300000, guid: 73aaf6eac1c9bcd489aec7d582df2e5d, type: 3}
     volume: 1
+    loop: 1
     source: {fileID: 0}
   - name: Level3
     clip: {fileID: 8300000, guid: a450081c8b60fbc4ebbe58149d3eacd4, type: 3}
     volume: 1
+    loop: 1
     source: {fileID: 0}
   - name: Level4
     clip: {fileID: 8300000, guid: a450081c8b60fbc4ebbe58149d3eacd4, type: 3}
     volume: 1
+    loop: 1
     source: {fileID: 0}
 --- !u!1 &4383370367188539205
 GameObject:
