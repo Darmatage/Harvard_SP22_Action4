@@ -25,29 +25,26 @@ public class AudioManager : MonoBehaviour
 			
 			s.source.volume = s.volume;
 			s.source.loop = s.loop;
+			s.source.playOnAwake = false;
 			s.source.outputAudioMixerGroup = mixer;
 		}
 	}
 	
 	public void Play(string name) {
-		StopBgm();
-		
-		Sound s = Array.Find(sounds, sound => sound.name == name);
-		if (s == null){
-			Debug.Log(s + "not found");
-			return;
-		}
-		s.source.Play();
-	}
-	
-	public void StopBgm() {
 		foreach (Sound s in sounds) {
-			if (s == null){
-				Debug.Log(s + "not found");
-			} else {
+			if (s.source == null){
+				Debug.Log(s.name + " not found");
+			} else if (s.source.isPlaying) {
 				s.source.Stop();
 			}
 		}
+		
+		Sound ns = Array.Find(sounds, sound => sound.name == name);
+		if (ns.source == null){
+			Debug.Log(ns.name + " not found");
+			return;
+		}
+		Debug.Log(ns.name + " Playing");
+		ns.source.Play();
 	}
-	
 }

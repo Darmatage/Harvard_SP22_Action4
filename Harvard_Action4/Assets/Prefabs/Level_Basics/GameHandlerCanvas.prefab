@@ -1915,9 +1915,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2464011099778860237}
-        m_TargetAssemblyTypeName: TreeMenuOptions, Assembly-CSharp
-        m_MethodName: button_Seed_Option6
+      - m_Target: {fileID: 413376348005775581}
+        m_TargetAssemblyTypeName: GameHandler, Assembly-CSharp
+        m_MethodName: WinGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

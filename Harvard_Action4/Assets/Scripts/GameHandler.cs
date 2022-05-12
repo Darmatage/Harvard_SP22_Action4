@@ -310,6 +310,11 @@ public class GameHandler : MonoBehaviour
 	{
 		SceneManager.LoadScene("Credits");
 	}
+	
+	public void WinGame()
+	{
+		SceneManager.LoadScene("SceneWin");
+	}
 
 	public void ReplayGame()
 	{
