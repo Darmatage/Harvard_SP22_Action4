@@ -33,7 +33,6 @@ public class AudioManager : MonoBehaviour
 	public void Play(string name) {
 		foreach (Sound s in sounds) {
 			if (s.source == null){
-				Debug.Log(s.name + " not found");
 			} else if (s.source.isPlaying) {
 				s.source.Stop();
 			}
@@ -41,10 +40,17 @@ public class AudioManager : MonoBehaviour
 		
 		Sound ns = Array.Find(sounds, sound => sound.name == name);
 		if (ns.source == null){
-			Debug.Log(ns.name + " not found");
 			return;
 		}
-		Debug.Log(ns.name + " Playing");
 		ns.source.Play();
+	}
+	
+	public void PlaySFX(string name) {
+		
+		Sound s = Array.Find(sounds, sound => sound.name == name);
+		if (s.source == null){
+			return;
+		}
+		s.source.Play();
 	}
 }

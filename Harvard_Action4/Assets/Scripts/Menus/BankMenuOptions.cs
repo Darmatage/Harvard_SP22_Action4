@@ -152,28 +152,34 @@ public class BankMenuOptions : MonoBehaviour
 	
 	public void button_Option1(){
 		playerInvestEssence(e1);
+		FindObjectOfType<AudioManager>().PlaySFX("Collect");
 	}
 	
 	public void button_Option2(){
 		playerInvestEssence(e2);
+		FindObjectOfType<AudioManager>().PlaySFX("Collect");
 	}
 	
 	public void button_Option3(){
 		playerInvestEssence(e3);
+		FindObjectOfType<AudioManager>().PlaySFX("Collect");
 	}
 	
 	public void button_Seed1(){
 		playerBuySeed(s1);
+		FindObjectOfType<AudioManager>().PlaySFX("Collect");
 		Seed1Have = false;
 	}
 	
 	public void button_Seed2(){
 		playerBuySeed(s2);
+		FindObjectOfType<AudioManager>().PlaySFX("Collect");
 		Seed2Have = false;
 	}
 	
 	public void button_Seed3(){
 		playerBuySeed(s3);
+		FindObjectOfType<AudioManager>().PlaySFX("Collect");
 		Seed3Have = false;
 	}
 	

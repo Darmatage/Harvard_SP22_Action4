@@ -74,4 +74,14 @@ MonoBehaviour:
     volume: 0.6
     loop: 1
     source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: 3890707b10456b64b80e894f23bde632, type: 3}
+    volume: 0.05
+    loop: 0
+    source: {fileID: 0}
+  - name: Collect
+    clip: {fileID: 8300000, guid: 06c9554433118af42a9aa66d0cbf4e5f, type: 3}
+    volume: 0.15
+    loop: 0
+    source: {fileID: 0}
   mixer: {fileID: 24300002, guid: ba87a615801120b4c9fa37504ec7d3e2, type: 2}

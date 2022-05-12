@@ -193,6 +193,7 @@ public class PlayerMovement : MonoBehaviour
 			// pRb2D.isKinematic = true;
 			// isAlive = false;
 		// } else {
+			FindObjectOfType<AudioManager>().PlaySFX("Jump");
 			pRb2D.velocity = Vector2.up * jumpForce;
 		// }
     }

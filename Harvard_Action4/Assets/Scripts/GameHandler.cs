@@ -216,6 +216,8 @@ public class GameHandler : MonoBehaviour
 		if (essenceParticles != null) {
 			GameObject particleSys = Instantiate(essenceParticles, playerPos.position, Quaternion.identity);
 			StartCoroutine(destroyParticles(particleSys));
+			FindObjectOfType<AudioManager>().PlaySFX("Collect");
+			
 		}
     }
 	
@@ -223,6 +225,7 @@ public class GameHandler : MonoBehaviour
 		if (seedParticles != null) {
 			GameObject particleSys = Instantiate(seedParticles, playerPos.position, Quaternion.identity);
 			StartCoroutine(destroyParticles(particleSys));
+			FindObjectOfType<AudioManager>().PlaySFX("Collect");
 		}
     }
 
