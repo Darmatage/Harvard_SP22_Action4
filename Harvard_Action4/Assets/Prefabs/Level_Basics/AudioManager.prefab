@@ -84,4 +84,9 @@ MonoBehaviour:
     volume: 0.15
     loop: 0
     source: {fileID: 0}
+  - name: BankOpen
+    clip: {fileID: 8300000, guid: 986c3645016185b44b08f53c8c8c59a3, type: 3}
+    volume: 0.25
+    loop: 0
+    source: {fileID: 0}
   mixer: {fileID: 24300002, guid: ba87a615801120b4c9fa37504ec7d3e2, type: 2}

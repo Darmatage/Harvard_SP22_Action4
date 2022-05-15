@@ -61,10 +61,10 @@ public class GameHandler : MonoBehaviour
 	//tree options
 	public static bool SeedOptionOne = true;
 	public static bool SeedOptionTwo = true;
-	public static bool SeedOptionThree = true;
-	public static bool SeedOptionFour = true;
-	public static bool SeedOptionFive = true;
-	public static bool SeedOptionSix = true;
+	public static bool SeedOptionThree = false;
+	public static bool SeedOptionFour = false;
+	public static bool SeedOptionFive = false;
+	public static bool SeedOptionSix = false;
 
 	//Audio
 	public AudioMixer mixer;
