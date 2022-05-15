@@ -164,7 +164,7 @@ public class GameHandler : MonoBehaviour
 			bankedEssence = 0;
 			heldEssence = 0;
 			Time.timeScale = 1f;
-            SceneManager.LoadScene(NextLevel);
+            SceneManager.LoadScene("Story");
 		}
 	}
 
@@ -277,8 +277,6 @@ public class GameHandler : MonoBehaviour
 		newGame = true;
 		heldSeed = 0;
 		GameHandler.sceneChange = true;
-		FindObjectOfType<AudioManager>().Play("Level0");
-		FindObjectOfType<AudioManager>().Stop("MainTheme");
 	}
 
 	public void RestartGame()
