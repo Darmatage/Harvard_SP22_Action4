@@ -18,9 +18,21 @@ public class TreeMenuOptions : MonoBehaviour
 	public GameObject Option4;
 	public GameObject Option5;
 	public GameObject Option6;
+	public GameObject Select1;
+	public GameObject Select2;
+	public GameObject Select3;
+	public GameObject Select4;
+	public GameObject Select5;
+	public GameObject Select6;
 	
 	void Start (){
 		gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
+		Select1.SetActive(false);
+		Select2.SetActive(false);
+		Select3.SetActive(false);
+		Select4.SetActive(false);
+		Select5.SetActive(false);
+		Select6.SetActive(false);
 	}
 	
 	void Update (){
@@ -28,6 +40,7 @@ public class TreeMenuOptions : MonoBehaviour
 			//checks money amount to show purchasable good selection
 			if (GameHandler.SeedOptionOne == true) {
 				Option1.SetActive(true);
+				Select1.SetActive(true);
 			}
 			else {
 				Option1.SetActive(false);
@@ -35,6 +48,7 @@ public class TreeMenuOptions : MonoBehaviour
 			
 			if (GameHandler.SeedOptionTwo == true) {
 				Option2.SetActive(true);
+				Select2.SetActive(true);
 			}
 			else {
 				Option2.SetActive(false);
@@ -42,6 +56,7 @@ public class TreeMenuOptions : MonoBehaviour
 			
 			if (GameHandler.SeedOptionThree == true) {
 				Option3.SetActive(true);
+				Select3.SetActive(true);
 			}
 			else {
 				Option3.SetActive(false);
@@ -49,6 +64,7 @@ public class TreeMenuOptions : MonoBehaviour
 			
 			if (GameHandler.SeedOptionFour == true) {
 				Option4.SetActive(true);
+				Select4.SetActive(true);
 			}
 			else {
 				Option4.SetActive(false);
@@ -56,6 +72,7 @@ public class TreeMenuOptions : MonoBehaviour
 			
 			if (GameHandler.SeedOptionFive == true) {
 				Option5.SetActive(true);
+				Select5.SetActive(true);
 			}
 			else {
 				Option5.SetActive(false);
@@ -63,6 +80,7 @@ public class TreeMenuOptions : MonoBehaviour
 			
 			if (GameHandler.SeedOptionSix == true) {
 				Option6.SetActive(true);
+				Select6.SetActive(true);
 			}
 			else {
 				Option6.SetActive(false);
@@ -74,6 +92,7 @@ public class TreeMenuOptions : MonoBehaviour
 	public void button_Seed_Option1(){
 		if (GameHandler.heldSeed >= sd1){
 			GameHandler.SeedOptionOne = false;
+			GameHandler.SeedOptionThree = true;
 			GameHandler.tree0 = false;
 			GameHandler.tree1 = true;
 			GameHandler.doubleJumpActive = true;
@@ -88,6 +107,7 @@ public class TreeMenuOptions : MonoBehaviour
 	public void button_Seed_Option2(){
 		if (GameHandler.heldSeed >= sd2){
 			GameHandler.SeedOptionTwo = false;
+			GameHandler.SeedOptionFour = true;
 			GameHandler.tree1 = false;
 			GameHandler.tree2 = true;
 			GameHandler.seeInvisibleActive = true;
@@ -102,6 +122,7 @@ public class TreeMenuOptions : MonoBehaviour
 	public void button_Seed_Option3(){
 		if (GameHandler.heldSeed >= sd3){
 			GameHandler.SeedOptionThree = false;
+			GameHandler.SeedOptionFive = true;
 			GameHandler.tree2 = false;
 			GameHandler.tree3 = true;
 			GameHandler.crouchStopWind = true;
@@ -116,6 +137,7 @@ public class TreeMenuOptions : MonoBehaviour
 	public void button_Seed_Option4(){
 		if (GameHandler.heldSeed >= sd4){
 			GameHandler.SeedOptionFour = false;
+			GameHandler.SeedOptionSix = true;
 			GameHandler.tree3 = false;
 			GameHandler.tree4 = true;
 			GameHandler.zoomOut = true;
@@ -144,8 +166,8 @@ public class TreeMenuOptions : MonoBehaviour
 		if (GameHandler.heldSeed >= sd6){
 			GameHandler.SeedOptionSix = false;
 			GameHandler.tree5 = false;
-			FindObjectOfType<AudioManager>().StopAll();
-			FindObjectOfType<AudioManager>().Play("MainTheme");
+			GameHandler.onTree = false;
+			SceneManager.LoadScene("SceneWin");
 			//background change? 
 			//show congrats to finial 
 			//particle effect grow tree

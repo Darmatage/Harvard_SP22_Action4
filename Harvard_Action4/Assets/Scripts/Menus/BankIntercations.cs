@@ -69,6 +69,9 @@ public class BankIntercations : MonoBehaviour
 					// Debug.Log("Bank closed");
 					bankOpen = false;
 					gameHandler.playerGetEssence(GameHandler.bankedEssence * 0.5);
+					if (GameHandler.bankedEssence >= 1) {
+						FindObjectOfType<AudioManager>().Play("BankOpen");
+					}
 					
 					if (finalBank == true) {
 						// Debug.Log("Swap image Final");

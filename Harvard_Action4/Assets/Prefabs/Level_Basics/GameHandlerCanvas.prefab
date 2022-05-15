@@ -6178,6 +6178,7 @@ MonoBehaviour:
   finalBankTitle: {fileID: 6553377771399842701}
   closeOption: {fileID: 6468644277238218180}
   bankNo: 0
+  count: 0
   NextLevel: MainMenu
 --- !u!1 &7756520633584999822
 GameObject:
@@ -7015,7 +7016,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8637676893256171343
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7105,6 +7106,12 @@ MonoBehaviour:
   Option4: {fileID: 90475322853691935}
   Option5: {fileID: 3579319197581005910}
   Option6: {fileID: 2378546695629770622}
+  Select1: {fileID: 3801610696388996113}
+  Select2: {fileID: 3227179394037833171}
+  Select3: {fileID: 6802721761557331654}
+  Select4: {fileID: 1247992057208317709}
+  Select5: {fileID: 7076290776374349776}
+  Select6: {fileID: 5365377460344011022}
 --- !u!1 &8977966161343490197
 GameObject:
   m_ObjectHideFlags: 0
