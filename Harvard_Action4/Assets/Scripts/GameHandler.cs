@@ -164,7 +164,7 @@ public class GameHandler : MonoBehaviour
 			bankedEssence = 0;
 			heldEssence = 0;
 			Time.timeScale = 1f;
-            SceneManager.LoadScene("Story");
+            SceneManager.LoadScene(NextLevel);
 		}
 	}
 
@@ -276,6 +276,7 @@ public class GameHandler : MonoBehaviour
 	public void NewGame() {
 		newGame = true;
 		heldSeed = 0;
+		NextLevel = "Story";
 		GameHandler.sceneChange = true;
 	}
 

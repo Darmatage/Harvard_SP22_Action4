@@ -41,6 +41,7 @@ public class BankMenuOptions : MonoBehaviour
 	private static bool Seed41Have = true;
 	private static bool Seed42Have = true;
 	private static bool Seed43Have = true;
+	public int count = 0;
 	
     public string NextLevel = "MainMenu";
 	
@@ -137,7 +138,11 @@ public class BankMenuOptions : MonoBehaviour
 				Seed3.SetActive(false);
 			}
 			if (GameHandler.finalBank == true) {
-				closeOption.SetActive(true);
+				if (count >= 2) {
+					closeOption.SetActive(true);
+				} else {
+					closeOption.SetActive(false);
+				}
 				finalBankTitle.SetActive(true);
 				bankTitle.SetActive(false);
 			}
@@ -169,18 +174,21 @@ public class BankMenuOptions : MonoBehaviour
 		playerBuySeed(s1);
 		FindObjectOfType<AudioManager>().PlaySFX("Collect");
 		Seed1Have = false;
+		count += 1;
 	}
 	
 	public void button_Seed2(){
 		playerBuySeed(s2);
 		FindObjectOfType<AudioManager>().PlaySFX("Collect");
 		Seed2Have = false;
+		count += 1;
 	}
 	
 	public void button_Seed3(){
 		playerBuySeed(s3);
 		FindObjectOfType<AudioManager>().PlaySFX("Collect");
 		Seed3Have = false;
+		count += 1;
 	}
 	
 	public void playerInvestEssence(double essence){
