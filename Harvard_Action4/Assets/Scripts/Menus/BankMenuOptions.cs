@@ -23,9 +23,9 @@ public class BankMenuOptions : MonoBehaviour
 	public GameObject closeOption;
 	
 	public int bankNo;
-	private bool Seed1Have;
-	private bool Seed2Have;
-	private bool Seed3Have;
+	public bool Seed1Have;
+	public bool Seed2Have;
+	public bool Seed3Have;
 	private static bool Seed01Have = true;
 	private static bool Seed02Have = true;
 	private static bool Seed03Have = true;
